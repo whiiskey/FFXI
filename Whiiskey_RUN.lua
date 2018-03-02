@@ -1,24 +1,44 @@
 -------------------------------------------------------------------------------------------------------------------
+-- (Kinematics template, uses Motenten functions)
+-------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------
+--    CONTRIBUTORS:
+-------------------------------------------------------------------------------------------------------------------
+--    Whiiskey (Quetz):  I added and edited features based on my playstyle for RUN.
+--    Raesvelg (Quetz):  I used his RUN lua as a starting point. 
+--    Orestes (Quetz):   Pretty sure he contributed to the lua Raes used.
+-------------------------------------------------------------------------------------------------------------------
+     
+     
+-------------------------------------------------------------------------------------------------------------------
+--    FEATURES:
+-------------------------------------------------------------------------------------------------------------------
+--    DT grip
+--    Tank, Hybrid, DD.  Don't like cycling through all those
+--    MDT26, MDT50, meva.  Make one that focuses on status effects
+--    Explain keys
+--    Defense mode skips midcast, goes back to defense
+-------------------------------------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------------------------------------
+--    TODO:
+-------------------------------------------------------------------------------------------------------------------
+--    Get TP3000 earring rule functional
+-------------------------------------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------------------------------------
 -- Setup functions for this job.  Generally should not be modified.
 -------------------------------------------------------------------------------------------------------------------
 
--- todo:
--- grip mode.  Defense sets change depending on if refined grip is equiped or not.  Refined is 3 more dt
--- different DTdef sets.  Different hybrid sets
--- make reso ws sets
--- make ws modes: normal, acc, etc
-
--- Initialization function for this job file.
 function get_sets()
     mote_include_version = 2
-
-	-- Load and initialize the include file.
-	include('Mote-Include.lua')
-
+    include('Mote-Include.lua')
 end
 
 
--- Setup vars that are user-independent.  state.Buff vars initialized here will automatically be tracked.
 function job_setup()
 
     include('Mote-TreasureHunter')
@@ -49,8 +69,10 @@ function job_setup()
     send_command("alias naked gs equip naked")
     
     send_command("alias tp gs equip sets.engaged")
-    send_command("alias ws gs equip sets.precast.WS['Dimidiation']")
-    send_command("alias wsdim gs equip sets.precast.WS['Dimidiation']")
+    send_command("alias ws gs equip sets.precast.WS")
+    send_command("alias wsacc gs equip sets.precast.WS.Acc")
+    send_command("alias wsdim gs equip sets.precast.WS.Dimidiation")
+    send_command("alias wsres gs equip sets.precast.WS.Resolution")
     
     send_command("alias enm gs equip sets.enmity")
     send_command("alias mab gs equip sets.mab")
@@ -61,59 +83,52 @@ function job_setup()
     send_command("alias cur gs equip sets.midcast.Cure")
     send_command("alias th gs equip sets.TreasureHunter")
     
-    send_command("alias pdt gs equip sets.engaged.DTdef")    
-    send_command("alias parry gs equip sets.engaged.Parry")
+    send_command("alias pdt gs equip sets.defense.DTdef")    
+    send_command("alias hybrid gs equip sets.defense.Hybrid")  
+    send_command("alias parry gs equip sets.defense.Parry")
     send_command("alias maxhp gs equip sets.defense.MaxHP")
 
-    send_command("alias mdt gs equip sets.defense.MDT26")
+    send_command("alias mdt26 gs equip sets.defense.MDT26")
+    send_command("alias mdt50 gs equip sets.defense.MDT50")
     send_command("alias md gs equip sets.defense.MDT50")
     send_command("alias meva gs equip sets.defense.meva")
     send_command("alias mevad gs equip sets.defense.mevad")
     send_command("alias meval gs equip sets.defense.meval")
     send_command("alias mevab gs equip sets.defense.mevab")
     send_command("alias mevat gs equip sets.defense.mevat")
-    send_command("alias doom gs equip sets.cursed")    
+    send_command("alias doom gs equip sets.buff.Doom")    
 
 end
 
 
-
--- Setup vars that are user-dependent.  Can override this function in a sidecar file.
 function user_setup()
 
     state.Runes = M{['description']='Runes', "Lux","Tenebrae","Ignis","Unda","Sulpor","Tellus","Flabra","Gelus"}
-	-- Options: Override default values
-	--state.OffenseMode:options('Normal', 'LowAcc', 'MidAcc', 'HighAcc','MaxAcc','Fodder')
-	--state.OffenseMode:options('Normal', 'RefDT')
-	state.OffenseMode:options('Normal','Acc')
-	state.RangedMode:options('Normal')
-	--state.HybridMode:options('Normal','PDT','Tank', 'Death', 'SAMtank')
-	--state.HybridMode:options('Normal','PDT','Tank','MDT')
-	state.HybridMode:options('Tank','Hybrid','DD')
-	--state.HybridMode:options('Tank','DD','Hybrid','Parry")
-	--state.WeaponskillMode:options('Normal', 'Mid', 'Acc')
-	state.WeaponskillMode:options('Normal','Acc')
-	state.CastingMode:options('Normal')
-	--state.IdleMode:options('Normal', 'Tank')
-	state.IdleMode:options('DTdef','Regen','Refresh')
-	state.RestingMode:options('Normal')
-	state.PhysicalDefenseMode:options('DTdef','DThp','Hybrid')
-	--state.PhysicalDefenseMode:options('PDT','Resist','Charm','AbsorbMagic','Knockback', 'Death', 'Erilaz', 'HP', 'Fullers')
-	state.MagicalDefenseMode:options('MDT26','MDT50','meva')
+    state.OffenseMode:options('Normal','Acc')
+    state.RangedMode:options('Normal')
+    state.HybridMode:options('Tank','Hybrid','DD')
+    --state.HybridMode:options('Tank','Hybrid','Parry','DD')
+    state.WeaponskillMode:options('Normal','Acc')
+    state.CastingMode:options('Normal')
+    state.IdleMode:options('DTdef','Regen','Refresh')
+    state.RestingMode:options('Normal')
+    state.PhysicalDefenseMode:options('DTdef','Hybrid')
+    --state.PhysicalDefenseMode:options('DTdef','DThp','Hybrid','Parry')
+    state.MagicalDefenseMode:options('MDT26','MDT50','meva')
 	
-	run_sub_weapons = S{"Usonmunku", "Anahera Sword", "Vampirism", "Fettering Blade", "Flyssa +1", "Flyssa", "Firangi", "Reikiko"}
-
+    -- Marked for deletion
+    run_sub_weapons = S{"Usonmunku", "Anahera Sword", "Vampirism", "Fettering Blade", "Flyssa +1", "Flyssa", "Firangi", "Reikiko"}
     update_combat_form()
 
-        send_command('bind ^` input /ja "Valiance" <me>')
-        send_command('bind !` input /ja "Vallation" <me>')	
-		--send_command('bind != gs c toggle CapacityMode')
-		send_command('bind !- gs c rune')
-		send_command('bind ^- gs c cycle Runes')
-		send_command('bind @` input /ja "Meditate" <me>')
+    send_command('bind ^` input /ja "Valiance" <me>')
+    send_command('bind !` input /ja "Vallation" <me>')	
+    --send_command('bind != gs c toggle CapacityMode')
+    send_command('bind !- gs c rune')
+    send_command('bind ^- gs c cycle Runes')
     send_command('bind ^= gs c cycle treasuremode')
     
-	select_default_macro_book()
+    select_default_macro_book()
+    
 end
 
 
@@ -122,10 +137,10 @@ function file_unload()
 
 	send_command('unbind ^`')
 	send_command('unbind !`')
-	send_command('unbind !=')
-	send_command('unbind ^-')
+	--send_command('unbind !=')
 	send_command('unbind !-')
-	send_command('unbind @`')
+	send_command('unbind ^-')
+	send_command('unbind ^=')
 	
 end
 
@@ -149,7 +164,7 @@ function job_post_precast(spell, action, spellMap, eventArgs)
         if state.CapacityMode.value then
             equip(sets.CapacityMantle)
         end
-		if player.tp == 3000 then
+	if player.tp == 3000 then
             equip(sets.precast.MaxTP)
         end
     end
@@ -170,15 +185,8 @@ function job_midcast(spell, action, spellMap, eventArgs)
         handle_equipping_gear(player.status)
         eventArgs.handled = true
     end
-
-
-	--if spell.english == 'Lunge' or spell.english == 'Swipe' then
-    --        if LastRune == 'Tenebrae' then
-    --            equip(sets.precast.JA['Lunge'],{head="Pixie Hairpin +1"})
-    --        end
-    --    end
-
 end
+
 
 -- Run after the default midcast() is done.
 -- eventArgs is the same one used in job_midcast, in case information needs to be persisted.
@@ -190,8 +198,6 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
         end
     end
 end
-
-
 
 
 -- Set eventArgs.handled to true if we don't want any automatic gear equipping to be done.
@@ -221,60 +227,98 @@ end
 -------------------------------------------------------------------------------------------------------------------
 -- User code that supplements standard library decisions.
 -------------------------------------------------------------------------------------------------------------------
+
 function job_update(cmdParams, eventArgs)
     update_defense_mode()
 end
+
 -- Modify the default idle set after it was constructed.
 function customize_idle_set(idleSet)
-    if player.mpp < 51 then
+
+    if state.IdleMode.value == 'Refresh' and player.mpp < 51 then
         idleSet = set_combine(idleSet, sets.latent_refresh)
     end
-    if buffactive['doom'] then
-        idleSet = set_combine(idleSet, sets.buff.Doom)
+
+    if state.IdleMode.value == 'DTdef' and state.DefenseMode.value == 'None' then
+        if player.equipment.sub == "Refined Grip +1" or buffactive.Vorseal then
+            idleSet = sets.defense.DTdef.DTGrip
+        end
+        if player.equipment.sub == "Refined Grip +1" and buffactive.Vorseal then
+            add_to_chat(8,'Vorseal active!  Use Utu grip!')
+        end
     end
-	
-	if state.CapacityMode.value then
+
+    if state.CapacityMode.value then
         idleSet = set_combine(idleSet, sets.CapacityMantle)
     end
-	
-   
+    
+    if buffactive.Doom then
+        idleSet = set_combine(idleSet, sets.buff.Doom)
+    end    
+    
     return idleSet
 end
 
 
 -- Modify the default melee set after it was constructed.
-
 function customize_melee_set(meleeSet)
+
+    if state.HybridMode.value == 'Tank' and state.DefenseMode.value == 'None' then
+        if player.equipment.sub == "Refined Grip +1" or buffactive.Vorseal then
+            idleSet = sets.defense.DTdef.DTGrip
+        end
+        if player.equipment.sub == "Refined Grip +1" and buffactive.Vorseal then
+            add_to_chat(8,'Vorseal active!  Use Utu grip!')
+        end
+    end
+    
     if state.CapacityMode.value then
         meleeSet = set_combine(meleeSet, sets.CapacityMantle)
     end
 	
-	if buffactive['doom'] then
+    if buffactive.Doom then
         meleeSet = set_combine(meleeSet, sets.buff.Doom)
-    end
-	
-	return meleeSet
+    end    
+    
+    return meleeSet
 end
-
 
 
 -- Modify the default defense set after it was constructed.
 function customize_defense_set(defenseSet)
-    if buffactive['doom'] then
+
+    if state.DefenseMode.value == 'Physical' and state.PhysicalDefenseMode.value == 'DTdef' then
+        if player.equipment.sub == "Refined Grip +1" or buffactive.Vorseal then
+            idleSet = sets.defense.DTdef.DTGrip
+        end
+        if player.equipment.sub == "Refined Grip +1" and buffactive.Vorseal then
+            add_to_chat(8,'Vorseal active!  Use Utu grip!')
+        end
+    end    
+
+    if buffactive.Doom then
         defenseSet = set_combine(defenseSet, sets.buff.Doom)
     end
     
     return defenseSet
 end
 
-function job_buff_change(buff, gain)
 
-	if state.Buff[buff] ~= nil then
-		state.Buff[buff] = gain
-		if not midaction() then
-			handle_equipping_gear(player.status)
-		end
+function job_buff_change(buff, gain)
+    if state.Buff[buff] ~= nil then
+        state.Buff[buff] = gain
+	if not midaction() then
+	    handle_equipping_gear(player.status)
 	end
+    end
+
+    --will need to test this, see if it works
+    if buff == "Doom" and gain then
+        equip(sets.buff.Doom)
+        add_to_chat(8,'Gained buff Doom, equipping Doom set.')        
+    end
+    
+    
 end
 
 -------------------------------------------------------------------------------------------------------------------
@@ -294,37 +338,49 @@ end
 -- I added this, copied it from the thf lua on 12/22/2017.
 -- Return true if display was handled, and you don't want the default info shown.
 function display_current_job_state(eventArgs)
-    local msg = 'Melee'
+    local msg = ''
     
-    if state.CombatForm.has_value then
-        msg = msg .. ' (' .. state.CombatForm.value .. ')'
-    end
+    --if state.CombatForm.has_value then
+    --    msg = msg .. ' (' .. state.CombatForm.value .. ')'
+    --end
     
-    msg = msg .. ': '
+    --msg = msg .. ': '
     
-    msg = msg .. state.OffenseMode.value
-    if state.HybridMode.value ~= 'Normal' then
-        msg = msg .. '/' .. state.HybridMode.value
+    msg = msg .. state.HybridMode.value
+    if state.HybridMode.value == 'DD' then
+        msg = msg .. '/' .. state.OffenseMode.value
     end
     --msg = msg .. ',  WS: ' .. state.WeaponskillMode.value
-    msg = msg .. ',  Idle: ' .. state.IdleMode.value
+    msg = msg .. ',    Idle: ' .. state.IdleMode.value
     
-    if state.DefenseMode.value ~= 'None' then
-        msg = msg .. ',  ' .. 'Defense: ' .. state.DefenseMode.value .. ' (' .. state[state.DefenseMode.value .. 'DefenseMode'].value .. ')'
+    if state.DefenseMode.value == 'Physical' then
+        msg = msg .. ',    Def: ' .. state.PhysicalDefenseMode.value
+    elseif state.DefenseMode.value == 'Magical' then
+        msg = msg .. ',    Def: ' .. state.MagicalDefenseMode.value    
     end
     
     if state.Kiting.value == true then
-        msg = msg .. ',  Kiting'
+        msg = msg .. ',    Kiting'
     end
 
     if state.PCTargetMode.value ~= 'default' then
-        msg = msg .. ',  Target PC: '..state.PCTargetMode.value
+        msg = msg .. ',    Target PC: '..state.PCTargetMode.value
     end
 
     if state.SelectNPCTargets.value == true then
-        msg = msg .. ',  Target NPCs'
+        msg = msg .. ',    Target NPCs'
     end
     
+    --[[
+    if buffactive.Phalanx then
+        msg = msg .. ',   Phalanx active'
+    end
+    
+    if buffactive.Doom then
+        msg = msg .. ',   Doom active'
+    end
+    ]]--
+
     --msg = msg .. ',  TH: ' .. state.TreasureMode.value
 
     add_to_chat(122, msg)
