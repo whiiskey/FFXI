@@ -103,14 +103,13 @@ sets.buff.Embolden = {back="Evasionist's Cape",}
 -- #Defense
 -----------------------------------------------------
 
--- DT 29 (including 3DT grip). PDT 21. acc 1086.
--- Can use Utu for Resienjima when you have 3-6 DT with vorseal.
+-- Set with PDT 26, DT 27.  USe this if you have no vorseal effect and don't have the DT3 grip equiped.
 sets.defense.DTdef = {
-    main="Epeolatry",
-    sub="Refined Grip +1",
+    --main="Epeolatry",
+    --sub="Refined Grip +1",
     --sub="Utu Grip",
-    ammo="Staunch Tathlum",
-    head="Rune. Bandeau +3",
+    ammo="Staunch Tathlum +1",
+    head={ name="Fu. Bandeau +2", augments={'Enhances "Battuta" effect',}},
     body="Runeist's Coat +3",
     hands="Runeist's Mitons +3",
     legs="Eri. Leg Guards +1",
@@ -124,13 +123,10 @@ sets.defense.DTdef = {
     back={ name="Ogma's cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','VIT+10','Enmity+10',}},
 }
 
--- DT 26 (DT grip not included). PDT 26. acc 1041 (Utu grip not included).
--- If I want to use the Utu grip instead of Refined +1 then I lose 3DT.
--- This set switches to relic head for more PDT.
--- Now I just need a rule to make it work!
-sets.defense.DTdef.NoDTGrip ={
-    ammo="Staunch Tathlum",
-    head={ name="Fu. Bandeau +2", augments={'Enhances "Battuta" effect',}},
+-- If the DT3 grip is equiped or vorseal is active, can drop some DT (Relic Head) for more HP, Vit, and defense (AF Head)
+sets.defense.DTdef.DTGrip ={
+    ammo="Staunch Tathlum +1",
+    head="Rune. Bandeau +3",
     body="Runeist's Coat +3",
     hands="Runeist's Mitons +3",
     legs="Eri. Leg Guards +1",
@@ -155,7 +151,7 @@ sets.defense.DTdef.NoDTGrip ={
 sets.defense.DThp = {
     --main="Epeolatry",
     --sub="Refined Grip +1",
-    ammo="Staunch Tathlum",
+    ammo="Staunch Tathlum +1",
     head="Rune. Bandeau +3",
     body="Runeist's Coat +3",
     hands={ name="Herculean Gloves", augments={'DEX+6','INT+11','Damage taken-4%','Accuracy+1 Attack+1','Mag. Acc.+2 "Mag.Atk.Bns."+2',}},
@@ -166,8 +162,8 @@ sets.defense.DThp = {
     left_ear="Odnowa Earring",
     right_ear="Odnowa Earring +1",
     left_ring="Defending Ring",
-    right_ring="Moonbeam Ring",
-    back={ name="Moonbeam Cape", priority=15},
+    right_ring="Moonlight Ring",
+    back={ name="Moonlight Cape", priority=15},
 }
 
 -- Just made it.  This hits 50 w/out grip.  Could use this w Utu.
@@ -184,7 +180,7 @@ sets.defense.Hybrid = {
     left_ear="Telos Earring",
     right_ear="Mache Earring +1",
     left_ring="Defending Ring",
-    right_ring="Moonbeam Ring",
+    right_ring="Moonlight Ring",
     back={ name="Evasionist's Cape", augments={'Enmity+2','"Dbl.Atk."+3','Damage taken-5%',}},
 }
 
@@ -221,15 +217,15 @@ sets.defense.MaxHP = {
     left_ear="Odnowa Earring",
     right_ear="Odnowa Earring +1",
     left_ring="Moonbeam Ring",
-    right_ring="Moonbeam Ring",
-    back={ name="Moonbeam Cape", priority=15},
+    right_ring="Moonlight Ring",
+    back={ name="Moonlight Cape", priority=15},
 }
 
 -- DT 21. MDT 5. Lots of meva.
 sets.defense.MDT26 = {
     --main="Epeolatry",
     --sub="Refined Grip +1",
-    ammo="Staunch Tathlum",
+    ammo="Staunch Tathlum +1",
     head="Turms Cap",
     body="Turms Harness",
     hands="Turms Mittens",
@@ -247,7 +243,7 @@ sets.defense.MDT26 = {
 -- DT 39. MDT 11. For when Shell V is down.
 -- make a rule for this!!
 sets.defense.MDT50 = {
-    ammo="Staunch Tathlum",
+    ammo="Staunch Tathlum +1",
     head="Aya. Zucchetto +2",
     body={ name="Futhark Coat +1", augments={'Enhances "Elemental Sforzo" effect',}},
     hands="Aya. Manopolas +2",
@@ -341,7 +337,7 @@ sets.precast.Waltz = {
     right_ear="Odnowa Earring +1",
     left_ring="Asklepian Ring",
     right_ring="Regal Ring",
-    back={ name="Moonbeam Cape", priority=15},
+    back={ name="Moonlight Cape", priority=15},
 }		
 
 sets.precast.Waltz['Healing Waltz'] = {legs="Dashing Subligar"}
@@ -358,13 +354,13 @@ sets.precast.Step = {
     left_ear="Telos Earring",
     right_ear="Digni. Earring",
     left_ring="Defending Ring",
-    right_ring="Moonbeam Ring",
+    right_ring="Moonlight Ring",
     back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}},
 }	
 
 -- Fast cast sets for spells
 -- Total 63: ammo 2, head 14, neck 4, ear1 2, ear2 2, body 9, hands 8, ring1 4, ring2 2, legs 6, feet 8
--- I kept Moonbeam Cape on to keep up max HP.
+-- I kept Moonlight Cape on to keep up max HP.
 sets.precast.FC = {
     ammo="Sapience Orb",
     head={ name="Rune. Bandeau +3", priority=14},
@@ -378,7 +374,7 @@ sets.precast.FC = {
     right_ear="Enchntr. Earring +1",
     left_ring="Kishar Ring",
     right_ring="Rahab Ring",
-    back={ name="Moonbeam Cape", priority=15},
+    back={ name="Moonlight Cape", priority=15},
 }
 
 -- If i can get 37HP or more on body then i'm good
@@ -394,8 +390,8 @@ sets.precast.FC.HighHP = {
     left_ear="Odnowa Earring",
     right_ear="Odnowa Earring +1",
     left_ring="Moonbeam Ring",
-    right_ring="Moonbeam Ring",
-    back="Moonbeam Cape",
+    right_ring="Moonlight Ring",
+    back="Moonlight Cape",
 }
 
 sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, {body="Passion Jacket",neck="Magoraga Beads",})
@@ -423,7 +419,23 @@ sets.precast.WS = {
     back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}},
 }
 
-sets.precast.WS['Dimidiation'] = {
+sets.precast.WS.Acc = {
+    ammo="Yamarang",
+    head="Rune. Bandeau +3",
+    body="Runeist's Coat +3",
+    hands="Runeist's Mitons +3",
+    legs="Rune. Trousers +3",
+    feet="Runeist's Boots +3",
+    neck="Fotia Gorget",
+    waist="Fotia Belt",
+    left_ear="Mache Earring +1",
+    right_ear="Mache Earring +1",
+    left_ring="Ramuh Ring +1",
+    right_ring="Regal Ring",
+    back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}},
+}
+
+sets.precast.WS.Dimidiation = {
     ammo="Knobkierrie",
     head="Meghanada Visor +2",
     body="Meg. Cuirie +2",
@@ -439,28 +451,33 @@ sets.precast.WS['Dimidiation'] = {
     back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}},
 }
 
--- Max acc sets
-sets.precast.WS['Resolution'] = {
-    ammo="Yamarang",
-    head="Rune. Bandeau +3",
-    body="Runeist's Coat +3",
-    hands="Runeist's Mitons +3",
-    legs="Rune. Trousers +3",
-    feet="Runeist's Boots +3",
+sets.precast.WS.Dimidiation.Acc = sets.precast.WS.Acc
+
+
+sets.precast.WS.Resolution = {
+    ammo="Knobkierrie",
+    head={ name="Adhemar Bonnet +1", augments={'STR+12','DEX+12','Attack+20',}},
+    body={ name="Adhemar Jacket +1", augments={'STR+12','DEX+12','Attack+20',}},
+    --hands={ name="Adhemar Wrist. +1", augments={'STR+12','DEX+12','Attack+20',}},
+    hands="Meg. Gloves +2",
+    legs="Meg. Chausses +2",
+    feet="Meg. Jam. +2",
     neck="Fotia Gorget",
     waist="Fotia Belt",
-    left_ear="Mache Earring +1",
-    right_ear="Mache Earring +1",
-    left_ring="Ramuh Ring +1",
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +25',}},
+    right_ear="Sherida Earring",
+    --left_ring="Niqmaddu Ring",
+    left_ring="Shukuyu Ring",
     right_ring="Regal Ring",
-    back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}},
+    back={ name="Ogma's cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10',}},
 }
-		
-sets.precast.WS['Ground Strike'] = sets.precast.WS.Resolution
+
+sets.precast.WS['Resolution'].Acc = sets.precast.WS.Acc
+
+
+sets.precast.WS['Ground Strike'] = sets.precast.WS.Acc
 sets.precast.WS['Freezebite'] = sets.mab
 sets.precast.WS['Herculean Slash'] = sets.mab
-
-
 
 		
 sets.precast.WS['Savage Blade'] = {
@@ -485,6 +502,8 @@ sets.precast.WS['Red Lotus Blade'] = sets.precast.WS['Herculean Slash']
 sets.precast.WS['Seraph Blade'] = sets.precast.WS['Herculean Slash']
 
 sets.precast.WS.Upheaval = sets.precast.WS.Resolution
+sets.precast.WS.Upheaval.Acc = sets.precast.WS.Acc
+
 sets.precast.WS['Full Break'] = sets.precast.WS.Resolution
 
 sets.precast.MaxTP = {ear1="Ishvara Earring"}
@@ -495,7 +514,7 @@ sets.precast.MaxTP = {ear1="Ishvara Earring"}
 -----------------------------------------------------
 
 sets.midcast.FastRecast = {
-    ammo="Staunch Tathlum",
+    ammo="Staunch Tathlum +1",
     head={ name="Rune. Bandeau +3", priority=14},
     body={ name="Taeon Tabard", augments={'"Fast Cast"+5',}},
     hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
@@ -507,7 +526,7 @@ sets.midcast.FastRecast = {
     right_ear="Enchntr. Earring +1",
     left_ring="Rahab Ring",
     right_ring="Kishar Ring",
-    back={ name="Moonbeam Cape", priority=15},
+    back={ name="Moonlight Cape", priority=15},
 }
 
 -- enmity and fast cast with minimum hp
@@ -530,7 +549,7 @@ sets.midcast.Flash = {
 
 sets.midcast.Foil = set_combine(sets.midcast.Flash, {
     head="Erilaz Galea +1",
-    ammo="Staunch Tathlum",
+    ammo="Staunch Tathlum +1",
     legs="Futhark Trousers +1",
 })
 
@@ -541,7 +560,7 @@ sets.midcast['Enhancing Magic'] = set_combine(sets.midcast.FastRecast, {
     waist="Olympus Sash",
     neck="Incanter's Torque",
     ear2="Andoaa Earring",
-    back={ name="Moonbeam Cape", priority=15},
+    back={ name="Moonlight Cape", priority=15},
 })
 
 sets.midcast.Refresh = set_combine(sets.midcast['Enhancing Magic'], {waist="Gishdubar Sash"})
@@ -549,20 +568,20 @@ sets.midcast.Refresh = set_combine(sets.midcast['Enhancing Magic'], {waist="Gish
 -- Bar-element spells cap at 500 skill, giving 150 resistance.
 -- Total 503: base 440, head 11, neck 10, ear2 5, hands 19, legs 18
 sets.midcast.BarElement = {
-    ammo="Staunch Tathlum",
+    ammo="Staunch Tathlum +1",
     head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},
     hands={ name="Runeist's Mitons +3", priority=14},
     legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}, priority=13},
     neck="Incanter's Torque",
     right_ear="Andoaa Earring",
-    back={ name="Moonbeam Cape", priority=15},
+    back={ name="Moonlight Cape", priority=15},
 }
 
 -- 500 enhancing skill = 20 double attack, 510 = 21, 520 = 22, etc
 -- Total 521: base 440, head 11, neck 10, ear1 3, ear2 5, hands 19, ring1 5, back 5, waist 5, legs 18
 -- 22 double attack.  Can make it 23 with 2 stikini +1 rings
 sets.midcast.Temper = {
-    ammo="Staunch Tathlum",
+    ammo="Staunch Tathlum +1",
     head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},
     body={ name="Runeist's Coat +3", priority=15},
     hands={ name="Runeist's Mitons +3", priority=13},
@@ -572,8 +591,8 @@ sets.midcast.Temper = {
     waist="Olympus Sash",
     left_ear="Augment. Earring",
     right_ear="Andoaa Earring",
-    left_ring="Stikini Ring",
-    right_ring={ name="Moonbeam Ring", priority=14},
+    left_ring="Stikini Ring +1",
+    right_ring="Stikini Ring +1",
     back="Merciful Cape",
 }	
 
@@ -588,7 +607,7 @@ sets.midcast.Stoneskin = set_combine(sets.midcast.FastRecast,{neck="Stone Gorget
 
 -- This set has 473.  Max skill tier, 34 damage reduction, but not a lot of DT or HP.
 sets.phalanx473 = {
-    ammo="Staunch Tathlum",
+    ammo="Staunch Tathlum +1",
     head={ name="Fu. Bandeau +2", augments={'Enhances "Battuta" effect',}},
     body={ name="Taeon Tabard", augments={'Phalanx +3',}},
     hands={ name="Taeon Gloves", augments={'Evasion+21','Spell interruption rate down -10%','Phalanx +3',}},
@@ -599,14 +618,14 @@ sets.phalanx473 = {
     left_ear="Augment. Earring",
     right_ear="Andoaa Earring",
     left_ring="Defending Ring",
-    right_ring="Stikini Ring",
+    right_ring="Stikini Ring +1",
     back="Merciful Cape",
 }
 
 -- This set has 445: base 440, ear1 5.  One less than max skill tier, 33 damage reduction, but more DT and HP.
 -- DT31, (DT34 with the 3DT grip), PDT6
 sets.phalanx445 = {
-    ammo="Staunch Tathlum",
+    ammo="Staunch Tathlum +1",
     head={ name="Fu. Bandeau +2", augments={'Enhances "Battuta" effect',}},
     body={ name="Taeon Tabard", augments={'Phalanx +3',}},
     hands={ name="Taeon Gloves", augments={'Evasion+21','Spell interruption rate down -10%','Phalanx +3',}},
@@ -618,7 +637,7 @@ sets.phalanx445 = {
     right_ear="Genmei Earring",
     left_ring="Defending Ring",
     right_ring="Vocane Ring +1",
-    back="Moonbeam Cape",
+    back="Moonlight Cape",
 }
 
 --sets.midcast.Phalanx = sets.phalanx473
@@ -646,7 +665,7 @@ sets.midcast.Cure = {
 sets.midcast.Curaga = sets.midcast.Cure
 		
 sets.midcast.Cursna = set_combine(sets.midcast.FastRecast, {
-    ammo="Staunch Tathlum",
+    ammo="Staunch Tathlum +1",
     --neck="Malison Medallion",
     waist="Gishdubar Sash",
     neck="Incanter's Torque",
@@ -655,14 +674,14 @@ sets.midcast.Cursna = set_combine(sets.midcast.FastRecast, {
 })
 	
 sets.midcast.Regen = {
-    ammo="Staunch Tathlum",
+    ammo="Staunch Tathlum +1",
     neck="Incanter's Torque",
     head="Rune. Bandeau +3",
     legs="Futhark Trousers +1"
 }
 	
 sets.midcast.Protect = {
-    ammo="Staunch Tathlum",
+    ammo="Staunch Tathlum +1",
     head="Erilaz Galea +1",
     neck="Incanter's Torque",
     legs="Futhark Trousers +1",
@@ -696,10 +715,12 @@ sets.idle.Refresh = {
     waist="Flume Belt +1",
     left_ear="Impreg. Earring",
     right_ear="Infused Earring",
-    left_ring="Paguroidea Ring",
-    right_ring="Sheltered Ring",
-    back={ name="Moonbeam Cape", priority=15},
+    left_ring="Stikini Ring +1",
+    right_ring="Stikini Ring +1",
+    back={ name="Moonlight Cape", priority=15},
 }	
+
+sets.latent_refresh = {waist="Fucho-no-Obi"}
 
 sets.idle.Regen = {
     ammo="Homiliary",
@@ -714,7 +735,7 @@ sets.idle.Regen = {
     right_ear="Infused Earring",
     left_ring="Paguroidea Ring",
     right_ring="Sheltered Ring",
-    back={ name="Moonbeam Cape", priority=15},
+    back={ name="Moonlight Cape", priority=15},
 }
 
 
@@ -740,7 +761,7 @@ sets.engaged = {
     right_ear="Sherida Earring",
     left_ring="Niqmaddu Ring",
     right_ring="Epona's Ring",
-    back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10',}},
+    back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10',}},
 }
 
 sets.engaged.Acc = {
@@ -756,7 +777,7 @@ sets.engaged.Acc = {
     right_ear="Digni. Earring",
     left_ring="Niqmaddu Ring",
     right_ring="Epona's Ring",
-    back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10',}},
+    back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10',}},
 }
 
 sets.engaged.Tank = sets.defense.DTdef
