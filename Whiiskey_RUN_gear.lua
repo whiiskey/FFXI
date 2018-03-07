@@ -96,14 +96,15 @@ sets.Turms = {
 
 sets.CapacityMantle = {back="Mecistopins Mantle"}
 sets.buff.Doom = {ring2="Purity Ring", waist="Gishdubar Sash",}
-sets.buff.Embolden = {back="Evasionist's Cape",}
+sets.buff.Embolden = {back={ name="Evasionist's Cape", augments={'Enmity+2','"Embolden"+15','"Dbl.Atk."+3','Damage taken-3%',}},}
 
 
 -----------------------------------------------------
 -- #Defense
 -----------------------------------------------------
 
--- Set with PDT 26, DT 27.  USe this if you have no vorseal effect and don't have the DT3 grip equiped.
+-- DT 27. PDT 26. Total 53.
+-- I need to get Relic +3 head.
 sets.defense.DTdef = {
     --main="Epeolatry",
     --sub="Refined Grip +1",
@@ -123,8 +124,12 @@ sets.defense.DTdef = {
     back={ name="Ogma's cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','VIT+10','Enmity+10',}},
 }
 
--- If the DT3 grip is equiped or vorseal is active, can drop some DT (Relic Head) for more HP, Vit, and defense (AF Head)
-sets.defense.DTdef.DTGrip ={
+-- DT 27. PDT 21. Total 48.
+-- Swaps out Relic +2 head for AF +3 head.  AF +3 head has more defense, VIT, and HP.
+sets.defense.DTdef.DTGrip = {
+    --main="Epeolatry",
+    --sub="Refined Grip +1",
+    --sub="Utu Grip",    
     ammo="Staunch Tathlum +1",
     head="Rune. Bandeau +3",
     body="Runeist's Coat +3",
@@ -140,35 +145,55 @@ sets.defense.DTdef.DTGrip ={
     back={ name="Ogma's cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','VIT+10','Enmity+10',}},
 }
 
--- DT 34 (including DT grip). PDT 18. MDT 3.
--- changes back, earrings, ring2, and hands (for now)
--- Would be nice to get a rule where you don't lose max HP for fast cast when in this set.
--- get hp on fast cast body
--- with dt grip pdt is 52, wihout 49
--- i want swap out herc hands (6) for af hands (3).  That drops me to 49 (grip included)
--- upgrade either back or ring or ammo and i can make that switch
--- i could also make a no grip set, but i dont use this defense set much, so i prob wont
-sets.defense.DThp = {
+-- DT 33. PDT 18. Total 51.
+-- I need to get Turms +1 hands and feet.
+sets.defense.Parry = {
     --main="Epeolatry",
     --sub="Refined Grip +1",
+    --sub="Utu Grip",
     ammo="Staunch Tathlum +1",
-    head="Rune. Bandeau +3",
-    body="Runeist's Coat +3",
-    hands={ name="Herculean Gloves", augments={'DEX+6','INT+11','Damage taken-4%','Accuracy+1 Attack+1','Mag. Acc.+2 "Mag.Atk.Bns."+2',}},
+    head={ name="Fu. Bandeau +2", augments={'Enhances "Battuta" effect',}},
+    body="Ayanmo Corazza +2",
+    hands="Turms Mittens",
     legs="Eri. Leg Guards +1",
-    feet="Erilaz Greaves +1",
+    feet="Turms Leggings",
     neck="Loricate Torque +1",
     waist="Flume Belt +1",
-    left_ear="Odnowa Earring",
-    right_ear="Odnowa Earring +1",
+    left_ear="Impreg. Earring",
+    right_ear="Genmei Earring",
     left_ring="Defending Ring",
-    right_ring="Moonlight Ring",
-    back={ name="Moonlight Cape", priority=15},
+    right_ring="Vocane Ring +1",
+    back={ name="Ogma's cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','VIT+10','Enmity+10',}},
 }
 
--- Just made it.  This hits 50 w/out grip.  Could use this w Utu.
--- DT 37 (no DT grip included). PDT 13. acc 1176.
+-- DT 30. PDT 18. Total 48.
+-- Swaps out Staunch Tahlum +1 for Amar Cluster.  The Amar Cluster has counter.
+sets.defense.Parry.DTGrip = {
+    --main="Epeolatry",
+    --sub="Refined Grip +1",
+    --sub="Utu Grip",
+    ammo="Amar Cluster",
+    head={ name="Fu. Bandeau +2", augments={'Enhances "Battuta" effect',}},
+    body="Ayanmo Corazza +2",
+    hands="Turms Mittens",
+    legs="Eri. Leg Guards +1",
+    feet="Turms Leggings",
+    neck="Loricate Torque +1",
+    waist="Flume Belt +1",
+    left_ear="Impreg. Earring",
+    right_ear="Genmei Earring",
+    left_ring="Defending Ring",
+    right_ring="Vocane Ring +1",
+    back={ name="Ogma's cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','VIT+10','Enmity+10',}},
+}
+
+
+-- DT 38. PDT 13. Total 51.
+-- Get better augments on Herc Gloves.
 sets.defense.Hybrid = {
+    --main="Epeolatry",
+    --sub="Refined Grip +1",
+    --sub="Utu Grip",    
     ammo="Yamarang",
     head="Aya. Zucchetto +2",
     body="Ayanmo Corazza +2",
@@ -184,23 +209,69 @@ sets.defense.Hybrid = {
     back={ name="Evasionist's Cape", augments={'Enmity+2','"Dbl.Atk."+3','Damage taken-5%',}},
 }
 
--- DT 34. PDT 16. A bit lower on MaxHP.
-sets.defense.Parry = {
+-- DT 38. PDT 11. Total 49.
+-- Drops Herc Gloves for Adhemar Wristbands +1.
+sets.defense.Hybrid.DTGrip = {
     --main="Epeolatry",
     --sub="Refined Grip +1",
-    ammo="Amar Cluster",
+    --sub="Utu Grip",    
+    ammo="Yamarang",
     head="Aya. Zucchetto +2",
-    body={ name="Futhark Coat +1", augments={'Enhances "Elemental Sforzo" effect',}},
-    hands="Turms Mittens",
+    body="Ayanmo Corazza +2",
+    hands={ name="Adhemar Wrist. +1", augments={'STR+12','DEX+12','Attack+20',}},
+    legs="Meg. Chausses +2",
+    feet={ name="Herculean Boots", augments={'Accuracy+22 Attack+22','Damage taken-3%','Accuracy+5','Attack+6',}},
+    neck="Loricate Torque +1",
+    waist="Ioskeha Belt",
+    left_ear="Telos Earring",
+    right_ear="Mache Earring +1",
+    left_ring="Defending Ring",
+    right_ring="Moonlight Ring",
+    back={ name="Evasionist's Cape", augments={'Enmity+2','"Dbl.Atk."+3','Damage taken-5%',}},
+}
+
+-- Would be nice to get a rule where you don't lose max HP for fast cast when in this set.
+-- get hp on fast cast body
+
+-- DT 34. PDT 18. Total 52.
+sets.defense.DThp = {
+    --main="Epeolatry",
+    --sub="Refined Grip +1",
+    --sub="Utu Grip",    
+    ammo="Staunch Tathlum +1",
+    head="Rune. Bandeau +3",
+    body="Runeist's Coat +3",
+    hands={ name="Herculean Gloves", augments={'DEX+6','INT+11','Damage taken-4%','Accuracy+1 Attack+1','Mag. Acc.+2 "Mag.Atk.Bns."+2',}},
     legs="Eri. Leg Guards +1",
-    feet="Turms Leggings",
+    feet="Erilaz Greaves +1",
     neck="Loricate Torque +1",
     waist="Flume Belt +1",
-    left_ear="Impreg. Earring",
-    right_ear="Genmei Earring",
+    left_ear="Odnowa Earring",
+    right_ear="Odnowa Earring +1",
     left_ring="Defending Ring",
-    right_ring="Vocane Ring +1",
-    back={ name="Ogma's cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','VIT+10','Enmity+10',}},
+    right_ring="Moonlight Ring",
+    back={ name="Moonlight Cape", priority=15},
+}
+
+-- DT 30. PDT 19. Total 49.
+-- Drops Herc hands for AF +3 hands.
+sets.defense.DThp.DTGrip = {
+    --main="Epeolatry",
+    --sub="Refined Grip +1",
+    --sub="Utu Grip",    
+    ammo="Staunch Tathlum +1",
+    head="Rune. Bandeau +3",
+    body="Runeist's Coat +3",
+    hands="Runeist's Mitons +3",
+    legs="Eri. Leg Guards +1",
+    feet="Erilaz Greaves +1",
+    neck="Loricate Torque +1",
+    waist="Flume Belt +1",
+    left_ear="Odnowa Earring",
+    right_ear="Odnowa Earring +1",
+    left_ring="Defending Ring",
+    right_ring="Moonlight Ring",
+    back="Moonlight Cape",
 }
 
 sets.defense.MaxHP = {
@@ -213,7 +284,7 @@ sets.defense.MaxHP = {
     legs="Turms Subligar",
     feet="Runeist's Boots +3",
     neck="Dualism Collar +1",
-    waist="Eschan Stone",
+    waist="Oneiros Belt",
     left_ear="Odnowa Earring",
     right_ear="Odnowa Earring +1",
     left_ring="Moonbeam Ring",
@@ -221,7 +292,8 @@ sets.defense.MaxHP = {
     back={ name="Moonlight Cape", priority=15},
 }
 
--- DT 21. MDT 5. Lots of meva.
+-- DT 19. MDT 5. Total 24. With DT Grip 27. Lots of meva. Shadow Ring.
+-- Might redo this. Consider adding Engulfer Cape. Or that AF with the elemental resistance.
 sets.defense.MDT26 = {
     --main="Epeolatry",
     --sub="Refined Grip +1",
@@ -240,7 +312,7 @@ sets.defense.MDT26 = {
     back={ name="Ogma's cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','VIT+10','Enmity+10',}},
 }
 
--- DT 39. MDT 11. For when Shell V is down.
+-- DT 40. MDT 11. For when Shell V is down.
 -- make a rule for this!!
 sets.defense.MDT50 = {
     ammo="Staunch Tathlum +1",
@@ -302,7 +374,9 @@ sets.precast.JA['Swordplay'] = set_combine(sets.enmity, {hands="Futhark Mitons +
 sets.precast.JA['Rayke'] = set_combine(sets.enmity, {feet="Futhark Boots +1"})
 sets.precast.JA['Gambit'] = set_combine(sets.enmity, {hands="Runeist's Mitons +3"})
 sets.precast.JA['Embolden'] = {back={ name="Evasionist's Cape", augments={'Enmity+2','"Embolden"+15','"Dbl.Atk."+3','Damage taken-3%',}}}
-sets.precast.JA['One For All'] = sets.defense.MaxHP
+
+-- When the word "for" in "One for All" was capitalized, this didn't work right.
+sets.precast.JA['One for All'] = sets.defense.MaxHP
 sets.precast.JA['Provoke'] = sets.enmity
 sets.precast.JA['Warcry'] =  sets.enmity
 sets.precast.JA['Vivacious Pulse'] = {
@@ -314,8 +388,8 @@ sets.precast.JA['Vivacious Pulse'] = {
     feet="Runeist's Boots +3",
     neck="Incanter's Torque",
     waist="Engraved Belt",
-    left_ear="Mache Earring",
-    right_ear="Mache Earring",
+    left_ear="Mache Earring +1",
+    right_ear="Mache Earring +1",
     left_ring="Ilabrat Ring",
     right_ring="Regal Ring",
     back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}},
@@ -323,7 +397,9 @@ sets.precast.JA['Vivacious Pulse'] = {
 sets.precast.JA['Lunge'] = sets.mab
 sets.precast.JA['Swipe'] = sets.mab
 
--- Waltz potency. Waltz received potency. VIT. CHR. 
+-- Waltz potency. Waltz received potency. VIT. CHR. HP.
+-- Waltz potency total 51: ammo 5, head 11, ear1 5, hand 10, legs 10, feet 10.
+-- Waltz potency received total 16: body 13, ring1 3
 sets.precast.Waltz = {
     ammo="Yamarang",
     head={ name="Herculean Helm", augments={'Accuracy+6 Attack+6','"Waltz" potency +11%','Accuracy+10',}},
@@ -377,7 +453,8 @@ sets.precast.FC = {
     back={ name="Moonlight Cape", priority=15},
 }
 
--- If i can get 37HP or more on body then i'm good
+-- If i can get a 37+ HP augment on body that would be great.
+-- I need a rule to use this set.  Also need to assign priority to the order of swaps.
 sets.precast.FC.HighHP = {
     ammo="Sapience Orb",
     head="Rune. Bandeau +3",
@@ -577,9 +654,12 @@ sets.midcast.BarElement = {
     back={ name="Moonlight Cape", priority=15},
 }
 
+
+-- Temper
+-- Per BGWiki: This spell is no longer capped at 500 Enhancing magic skill.
 -- 500 enhancing skill = 20 double attack, 510 = 21, 520 = 22, etc
--- Total 521: base 440, head 11, neck 10, ear1 3, ear2 5, hands 19, ring1 5, back 5, waist 5, legs 18
--- 22 double attack.  Can make it 23 with 2 stikini +1 rings
+-- Total 532: base 440, head 11, neck 10, ear1 3, ear2 5, hands 19, ring1 8, ring2 8, back 5, waist 5, legs 18
+-- 23 double attack.
 sets.midcast.Temper = {
     ammo="Staunch Tathlum +1",
     head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},
@@ -598,20 +678,26 @@ sets.midcast.Temper = {
 
 sets.midcast.Stoneskin = set_combine(sets.midcast.FastRecast,{neck="Stone Gorget",waist="Siegel Sash",})
 
--- Phalanx sets
--- Formula: F = 28 + Floor( (Enhancing Magic Skill - 300.5) / 28.5)
--- 472 skill = 34 damage reduction
--- 443 skill = 33 damage reduction
--- 415 skill = 32 damage reduction
--- Naked, skill is 440.
 
--- This set has 473.  Max skill tier, 34 damage reduction, but not a lot of DT or HP.
+-- PHALANX SETS
+
+-- Phanalx damage reduction formula: F = 28 + Floor( (Enhancing Magic Skill - 300.5) / 28.5)
+-- 415 enhancing skill = 32 damage reduction
+-- 443 enhancing skill = 33 damage reduction
+-- 472 enhancing skill = 34 damage reduction
+-- For master RUN, base enhancing magic skill is 440.
+
+
+-- This set has enhancing skill 476 = 34 damage reduction.  Not much DT or HP.
+-- Enhancing skill 476: base 440, neck 10, ear1 3, ear2 5, ring2 8, back 5, waist 5
+-- Gear phalanx bonus 18: head 6, body 3, hands 3, legs 3, feet 3
+-- Total damage reduction from phalanx 52: base 34 + gear 18
 sets.phalanx473 = {
     ammo="Staunch Tathlum +1",
     head={ name="Fu. Bandeau +2", augments={'Enhances "Battuta" effect',}},
-    body={ name="Taeon Tabard", augments={'Phalanx +3',}},
-    hands={ name="Taeon Gloves", augments={'Evasion+21','Spell interruption rate down -10%','Phalanx +3',}},
-    legs={ name="Taeon Tights", augments={'"Dual Wield"+4','Phalanx +3',}},
+    body={ name="Taeon Tabard", augments={'Evasion+24','Spell interruption rate down -10%','Phalanx +3',}},
+    hands={ name="Taeon Gloves", augments={'Evasion+24','Spell interruption rate down -10%','Phalanx +3',}},
+    legs={ name="Taeon Tights", augments={'Evasion+25','Spell interruption rate down -10%','Phalanx +3',}},
     feet={ name="Herculean Boots", augments={'MND+3','Phalanx +3','Mag. Acc.+16 "Mag.Atk.Bns."+16',}},
     neck="Incanter's Torque",
     waist="Olympus Sash",
@@ -622,14 +708,17 @@ sets.phalanx473 = {
     back="Merciful Cape",
 }
 
--- This set has 445: base 440, ear1 5.  One less than max skill tier, 33 damage reduction, but more DT and HP.
--- DT31, (DT34 with the 3DT grip), PDT6
+-- This set has enhancing skill 445 = 33 damage reduction.  More DT and HP.
+-- Enhancing skill 445: base 440, ear1 5
+-- Gear phalanx bonus 18: head 6, body 3, hands 3, legs 3, feet 3
+-- Total damage reduction from phalanx 51: base 33 + gear 18
+-- DT 33. PDT 11. Total 44. It could be 50 with a DT grip and vorseal buffs.
 sets.phalanx445 = {
     ammo="Staunch Tathlum +1",
     head={ name="Fu. Bandeau +2", augments={'Enhances "Battuta" effect',}},
-    body={ name="Taeon Tabard", augments={'Phalanx +3',}},
-    hands={ name="Taeon Gloves", augments={'Evasion+21','Spell interruption rate down -10%','Phalanx +3',}},
-    legs={ name="Taeon Tights", augments={'"Dual Wield"+4','Phalanx +3',}},
+    body={ name="Taeon Tabard", augments={'Evasion+24','Spell interruption rate down -10%','Phalanx +3',}},
+    hands={ name="Taeon Gloves", augments={'Evasion+24','Spell interruption rate down -10%','Phalanx +3',}},
+    legs={ name="Taeon Tights", augments={'Evasion+25','Spell interruption rate down -10%','Phalanx +3',}},
     feet={ name="Herculean Boots", augments={'MND+3','Phalanx +3','Mag. Acc.+16 "Mag.Atk.Bns."+16',}},
     neck="Loricate Torque +1",
     waist="Flume Belt +1",
@@ -767,25 +856,25 @@ sets.engaged = {
 sets.engaged.Acc = {
     ammo="Yamarang",
     head={ name="Dampening Tam", augments={'DEX+10','Accuracy+15','Mag. Acc.+15','Quadruple Attack +3',}},
-    body={ name="Adhemar Jacket", augments={'DEX+10','AGI+10','Accuracy+15',}},
+    body={ name="Adhemar Jacket +1", augments={'STR+12','DEX+12','Attack+20',}},
     hands={ name="Adhemar Wrist. +1", augments={'STR+12','DEX+12','Attack+20',}},
     legs={ name="Samnuha Tights", augments={'STR+10','DEX+10','"Dbl.Atk."+3','"Triple Atk."+3',}},
     feet={ name="Herculean Boots", augments={'"Drain" and "Aspir" potency +11','"Store TP"+4','Quadruple Attack +2','Accuracy+19 Attack+19',}},
     neck="Combatant's Torque",
     waist="Windbuffet Belt +1",
     left_ear="Telos Earring",
-    right_ear="Digni. Earring",
+    right_ear="Sherida Earring",
     left_ring="Niqmaddu Ring",
     right_ring="Epona's Ring",
     back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10',}},
 }
 
-sets.engaged.Tank = sets.defense.DTdef
+sets.engaged.DTdef = sets.defense.DTdef
 sets.engaged.DD = sets.engaged
 sets.engaged.Hybrid = sets.defense.Hybrid
 sets.engaged.Parry = sets.defense.Parry
 
-sets.engaged.Acc.Tank = sets.defense.DTdef
+sets.engaged.Acc.DTdef = sets.defense.DTdef
 sets.engaged.Acc.DD = sets.engaged.Acc
 sets.engaged.Acc.Hybrid = sets.defense.Hybrid
 sets.engaged.Acc.Parry = sets.defense.Parry
