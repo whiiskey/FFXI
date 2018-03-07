@@ -1,32 +1,88 @@
 -------------------------------------------------------------------------------------------------------------------
--- (Kinematics template, uses Motenten functions)
+--  RUN GearSwap lua by Whiiskey (Quetz).
+--  This lua is based on the Kinematics template and uses Motenten functions.
+--  It was later modified by Raesvelg and Orestes.
+--  Then I customized it to my playstyle.
 -------------------------------------------------------------------------------------------------------------------
 
--------------------------------------------------------------------------------------------------------------------
---    CONTRIBUTORS:
--------------------------------------------------------------------------------------------------------------------
---    Whiiskey (Quetz):  I added and edited features based on my playstyle for RUN.
---    Raesvelg (Quetz):  I used his RUN lua as a starting point. 
---    Orestes (Quetz):   Pretty sure he contributed to the lua Raes used.
--------------------------------------------------------------------------------------------------------------------
-     
+
      
 -------------------------------------------------------------------------------------------------------------------
---    FEATURES:
+--  FEATURES:
 -------------------------------------------------------------------------------------------------------------------
---    DT grip
---    Tank, Hybrid, DD.  Don't like cycling through all those
---    MDT26, MDT50, meva.  Make one that focuses on status effects
---    Explain keys
---    Defense mode skips midcast, goes back to defense
+--  Several different options for defense sets.  See list below.
+--  Many aliases to equip the different sets.  Good for making sure the gear is in your inventory.  Good for
+--    showing your sets to other people.  See alias commands below.
+--  If you activate defense mode (push F10 or F11), the midcast phase for spells is skipped.  You briefly swap
+--    into precast gear then you swap back into defense gear.  This eliminates the chance that you "get caught
+--    in midcast gear" when taking damage.  Very useful at times.  If you prefer to use the normal midcast gear
+--    for your spells, then use Control F9 to select your set instead of F10 or F11.  
+--  Checks for vorseal buffs (extra 3-6 DT) and the Refined Grip +1 (extra 3 DT).  These may cause you to be
+--    over-capped on DT.  If detected, the lua automatically uses modified versions of the defense sets.  This
+--    allows you to swap out the unneeded DT gear for other more useful gear.
+--  Capacity mode for using the capacity cape.  I disabled this because I'm capped on capacity points.
+--  The lua is 2 seprate files: one for the rules (this file), and one for the gear sets (separate file).
+--  The gear sets are formatted just like output from the //gs export command.  This makes it easy to insert
+--    your gear into the lua.  Just use the //gs export command then copy and paste.
+
 -------------------------------------------------------------------------------------------------------------------
 
 
+
 -------------------------------------------------------------------------------------------------------------------
---    TODO:
+--    DEFENSE SETS
 -------------------------------------------------------------------------------------------------------------------
---    Get TP3000 earring rule functional
+
+--    DTdef: capped DT, as much defense and VIT as possible.  Great for large pulls in Omen or Dynamis Divergence.
+--    Parry: capped DT, Turms hands, Turms feet.
+--    Hybrid: capped DT and as many DD stats as possible.
+--    DThp: capped DT and as much HP as possible.  Potentially useful if you can't run from Dancing Fullers.
+--    MaxHP: as much HP as possihble.
+--    MDT26: roughly 26 MDT (Shell V is about 24) and magic defense stats: mdef, meva, Shadow Ring.
+--    MDT50: 50 MDT from gear alone.  Use when Shell V is down.
+--    meva: as much magic evasion as possible.
+
+--    I don't regularly use all these sets, but they're here if I need them.
 -------------------------------------------------------------------------------------------------------------------
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+--  KEY FUNCTIONS:
+-------------------------------------------------------------------------------------------------------------------
+--    Control F9: toggle Hybrid Mode.  Use it to choose your defense set.  Or choose the DD option.
+--            F9: toggle melee accuracy.  Only has an effect when hybrid mode is set to DD.
+--    Windows F9: toggle WS Mode.
+--        Alt F9: toggle Ranged Mode.  Not used in this lua.
+--           F10: activate Physical Defense mode
+--   Control F10: toggle Physical Defense modes
+--       Alt F10: toggle Kiting
+--           F11: activate Magical Defense mode
+--   Control F11: toggle Casting modes.  Not used in this lua.
+--       Alt F11: toggle Magical Defense modes
+--           F12: status report for which modes are active
+--   Control F12: toggle idle mode
+--       Alt F12: cancel Defense mode
+--     Control -: toggle Runes
+--         Alt -: use Rune Enhancement job ability
+--     Control =: toggle Treasure Hunter mode
+--         Alt =: toggle Capacity Mode.  I disabled this.
+--     Control `: use Valiance job ability
+--         Alt `: use Vallation job ability
+-------------------------------------------------------------------------------------------------------------------
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+--  TODO:
+-------------------------------------------------------------------------------------------------------------------
+--  Get TP3000 earring rule functional
+--  Upgrade gear: Turms hands +1 and feet +1, relic head +3
+--  Get better augments on hybrid herc hands and DD herc body
+--  Figure out how to automatically equip doom set when doom lands
+--  Get embolden gear to be worn at the right time.
+-------------------------------------------------------------------------------------------------------------------
+
 
 
 -------------------------------------------------------------------------------------------------------------------
@@ -84,10 +140,14 @@ function job_setup()
     send_command("alias th gs equip sets.TreasureHunter")
     
     send_command("alias pdt gs equip sets.defense.DTdef")    
-    send_command("alias hybrid gs equip sets.defense.Hybrid")  
+    send_command("alias pdtg gs equip sets.defense.DTdef.DTGrip")  
     send_command("alias parry gs equip sets.defense.Parry")
+    send_command("alias parryg gs equip sets.defense.Parry.DTGrip")
+    send_command("alias hybrid gs equip sets.defense.Hybrid")  
+    send_command("alias hybridg gs equip sets.defense.Hybrid.DTGrip")
+    send_command("alias dthp gs equip sets.defense.DThp")    
+    send_command("alias dthpg gs equip sets.defense.DThp.DTGrip")    
     send_command("alias maxhp gs equip sets.defense.MaxHP")
-
     send_command("alias mdt26 gs equip sets.defense.MDT26")
     send_command("alias mdt50 gs equip sets.defense.MDT50")
     send_command("alias md gs equip sets.defense.MDT50")
@@ -106,17 +166,15 @@ function user_setup()
     state.Runes = M{['description']='Runes', "Lux","Tenebrae","Ignis","Unda","Sulpor","Tellus","Flabra","Gelus"}
     state.OffenseMode:options('Normal','Acc')
     state.RangedMode:options('Normal')
-    state.HybridMode:options('Tank','Hybrid','DD')
-    --state.HybridMode:options('Tank','Hybrid','Parry','DD')
+    state.HybridMode:options('DTdef','Hybrid','Parry','DD')
     state.WeaponskillMode:options('Normal','Acc')
     state.CastingMode:options('Normal')
     state.IdleMode:options('DTdef','Regen','Refresh')
     state.RestingMode:options('Normal')
-    state.PhysicalDefenseMode:options('DTdef','Hybrid')
-    --state.PhysicalDefenseMode:options('DTdef','DThp','Hybrid','Parry')
+    state.PhysicalDefenseMode:options('DTdef','Parry','Hybrid')
     state.MagicalDefenseMode:options('MDT26','MDT50','meva')
 	
-    -- Marked for deletion
+    -- This is used to check for weapons in the off-hand.  I don't use it and will eventually delete it.
     run_sub_weapons = S{"Usonmunku", "Anahera Sword", "Vampirism", "Fettering Blade", "Flyssa +1", "Flyssa", "Firangi", "Reikiko"}
     update_combat_form()
 
@@ -174,6 +232,8 @@ end
 
 -- Set eventArgs.handled to true if we don't want any automatic gear equipping to be done.
 function job_midcast(spell, action, spellMap, eventArgs)
+    -- I think Orestes wrote the following comment.  I'm not quite sure why we have to exclude Job Abilities.
+    --
     -- If DefenseMode is active, apply that gear over midcast
     -- choices.  Precast is allowed through for fast cast on
     -- spells, but we want to return to def gear before there's
@@ -263,9 +323,9 @@ end
 -- Modify the default melee set after it was constructed.
 function customize_melee_set(meleeSet)
 
-    if state.HybridMode.value == 'Tank' and state.DefenseMode.value == 'None' then
+    if state.HybridMode.value ~= 'DD' and state.DefenseMode.value == 'None' then
         if player.equipment.sub == "Refined Grip +1" or buffactive.Vorseal then
-            idleSet = sets.defense.DTdef.DTGrip
+            meleeSet = sets.defense[state.HybridMode.value].DTGrip
         end
         if player.equipment.sub == "Refined Grip +1" and buffactive.Vorseal then
             add_to_chat(8,'Vorseal active!  Use Utu grip!')
@@ -287,9 +347,9 @@ end
 -- Modify the default defense set after it was constructed.
 function customize_defense_set(defenseSet)
 
-    if state.DefenseMode.value == 'Physical' and state.PhysicalDefenseMode.value == 'DTdef' then
+    if state.DefenseMode.value == 'Physical' then
         if player.equipment.sub == "Refined Grip +1" or buffactive.Vorseal then
-            idleSet = sets.defense.DTdef.DTGrip
+            defenseSet = sets.defense[state.PhysicalDefenseMode.value].DTGrip
         end
         if player.equipment.sub == "Refined Grip +1" and buffactive.Vorseal then
             add_to_chat(8,'Vorseal active!  Use Utu grip!')
@@ -312,12 +372,22 @@ function job_buff_change(buff, gain)
 	end
     end
 
-    --will need to test this, see if it works
+    -- This doesn't work like it should and I don't know why.
     if buff == "Doom" and gain then
         equip(sets.buff.Doom)
-        add_to_chat(8,'Gained buff Doom, equipping Doom set.')        
+        add_to_chat(8,'Gained buff Doom.')        
     end
     
+    --[[
+    -- I used this code to help troubleshoot why the above code doesn't work.
+    -- It will recognize when Phalanx is applied but not doom.  Drat.
+    if buff == "Phalanx" and gain then
+        add_to_chat(8,'Phalanx gained')    
+    end    
+    if buff == "Phalanx" and not gain then
+        add_to_chat(8,'Phalanx lost')    
+    end
+    ]]--    
     
 end
 
@@ -338,7 +408,7 @@ end
 -- I added this, copied it from the thf lua on 12/22/2017.
 -- Return true if display was handled, and you don't want the default info shown.
 function display_current_job_state(eventArgs)
-    local msg = ''
+    local msg = 'Melee: '
     
     --if state.CombatForm.has_value then
     --    msg = msg .. ' (' .. state.CombatForm.value .. ')'
@@ -354,9 +424,9 @@ function display_current_job_state(eventArgs)
     msg = msg .. ',    Idle: ' .. state.IdleMode.value
     
     if state.DefenseMode.value == 'Physical' then
-        msg = msg .. ',    Def: ' .. state.PhysicalDefenseMode.value
+        msg = msg .. ',    PDTMode: ' .. state.PhysicalDefenseMode.value
     elseif state.DefenseMode.value == 'Magical' then
-        msg = msg .. ',    Def: ' .. state.MagicalDefenseMode.value    
+        msg = msg .. ',    MDTMode: ' .. state.MagicalDefenseMode.value    
     end
     
     if state.Kiting.value == true then
@@ -383,7 +453,7 @@ function display_current_job_state(eventArgs)
 
     --msg = msg .. ',  TH: ' .. state.TreasureMode.value
 
-    add_to_chat(122, msg)
+    add_to_chat(123, msg)
 
     eventArgs.handled = true
 end
