@@ -1,0 +1,514 @@
+<?xml version="1.1" ?>
+<settings>
+    <global>
+        <a1>Aero</a1>
+        <a2>Aero II</a2>
+        <a3>Aero III</a3>
+        <a4>Aero IV</a4>
+        <a5>Aero V</a5>
+        <a6>Aero VI</a6>
+        <acc>Accession</acc>
+        <af>Animated Flourish</af>
+        <aff>Afflatus Solace</aff>
+        <ag1>Aeroga</ag1>
+        <ag2>Aeroga II</ag2>
+        <ag3>Aeroga III</ag3>
+        <ag4>Aeroja</ag4>
+        <agg>Aggressor</agg>
+        <ala>Alacrity</ala>
+        <alac>Alacrity</alac>
+        <alli>Allies&apos; Roll</alli>
+        <altep>Teleport-Altep</altep>
+        <amc>Amchuchu</amc>
+        <an>Anvil Lightning</an>
+        <anv>Anvil Lightning</anv>
+        <apu>Apururu (UC)</apu>
+        <aq>Aquaveil</aq>
+        <ar1>Aera</ar1>
+        <ar2>Aera II</ar2>
+        <ar3>Aera III</ar3>
+        <arc>Arciela II</arc>
+        <arm1>Army&apos;s Paeon</arm1>
+        <arm2>Army&apos;s Paeon II</arm2>
+        <arm3>Army&apos;s Paeon III</arm3>
+        <arm4>Army&apos;s Paeon IV</arm4>
+        <arm5>Army&apos;s Paeon V</arm5>
+        <arm6>Army&apos;s Paeon VI</arm6>
+        <as1>Aspir</as1>
+        <as2>Aspir II</as2>
+        <as3>Aspir III</as3>
+        <aug>August</aug>
+        <b>Banishga</b>
+        <b1>Blizzard</b1>
+        <b2>Blizzard II</b2>
+        <b3>Blizzard III</b3>
+        <b4>Blizzard IV</b4>
+        <b5>Blizzard V</b5>
+        <b6>Blizzard VI</b6>
+        <ba>Burst Affinity</ba>
+        <bal1>Mage&apos;s Ballad</bal1>
+        <bal2>Mage&apos;s Ballad II</bal2>
+        <bal3>Mage&apos;s Ballad III</bal3>
+        <bara>Baraero</bara>
+        <baraa>Baraera</baraa>
+        <barb>Barblizzard</barb>
+        <barbb>Barblizzara</barbb>
+        <barf>Barfire</barf>
+        <barff>Barfira</barff>
+        <barp>Barparalyze</barp>
+        <barpp>Barparalyzra</barpp>
+        <bars>Barstone</bars>
+        <barss>Barstonra</barss>
+        <bart>Barthunder</bart>
+        <bartt>Barthundra</bartt>
+        <barw>Barwater</barw>
+        <barww>Barwatera</barww>
+        <bat>Battery Charge</bat>
+        <batt>Battuta</batt>
+        <ber>Berserk</ber>
+        <bf>Blinding Fulgor</bf>
+        <bg>Blank Gaze</bg>
+        <bg1>Blizzaga</bg1>
+        <bg2>Blizzaga II</bg2>
+        <bg3>Blizzaga III</bg3>
+        <bg4>Blizzaja</bg4>
+        <bl>Blink</bl>
+        <bl1>Blind</bl1>
+        <bl2>Blind II</bl2>
+        <bli>Blind</bli>
+        <bna>Blindna</bna>
+        <bog>Blaze of Glory</bog>
+        <br1>Blizzara</br1>
+        <br2>Blizzara II</br2>
+        <br3>Blizzara III</br3>
+        <bry>Brygid</bry>
+        <bs>Box Step</bs>
+        <bt>Barrier Tusk</bt>
+        <bu>Bully</bu>
+        <c1>Cure</c1>
+        <c2>Cure II</c2>
+        <c3>Cure III</c3>
+        <c4>Cure IV</c4>
+        <c5>Cure V</c5>
+        <c6>Cure VI</c6>
+        <car>Carcharian Verve</car>
+        <cara1>Wind Carol</cara1>
+        <cara2>Wind Carol II</cara2>
+        <carb1>Ice Carol</carb1>
+        <carb2>Ice Carol II</carb2>
+        <card1>Dark Carol</card1>
+        <card2>Dark Carol II</card2>
+        <carf1>Fire Carol</carf1>
+        <carf2>Fire Carol II</carf2>
+        <carl1>Light Carol</carl1>
+        <carl2>Light Carol II</carl2>
+        <carn>Carnage Elegy</carn>
+        <cars1>Earth Carol</cars1>
+        <cars2>Earth Carol II</cars2>
+        <cart1>Lightning Carol</cart1>
+        <cart2>Lightning Carol II</cart2>
+        <carw1>Water Carol</carw1>
+        <carw2>Water Carol II</carw2>
+        <cc>Cocoon</cc>
+        <cdc>Chant du Cygne</cdc>
+        <cel>Celerity</cel>
+        <cg1>Curaga</cg1>
+        <cg2>Curaga II</cg2>
+        <cg3>Curaga III</cg3>
+        <cg4>Curaga IV</cg4>
+        <cg5>Curaga V</cg5>
+        <cha>Chaos Roll</cha>
+        <chaos>Chaos Roll</chaos>
+        <che>Cherukiki</che>
+        <cna>Cursna</cna>
+        <co>Coronach</co>
+        <cor>Corsair&apos;s Roll</cor>
+        <cr>Crooked Cards</cr>
+        <cru>Crusade</cru>
+        <cw1>Curing Waltz</cw1>
+        <cw2>Curing Waltz II</cw2>
+        <cw3>Curing Waltz III</cw3>
+        <cw4>Curing Waltz IV</cw4>
+        <cw5>Curing Waltz V</cw5>
+        <d>Dispel</d>
+        <da>Dark Arts</da>
+        <daa>Addendum: Black</daa>
+        <de>Delta Thrust</de>
+        <def>Defender</def>
+        <dem>Dematerialize</dem>
+        <df>Dream Flower</df>
+        <dg>Diaga</dg>
+        <di>Diamondhide</di>
+        <dif>Diffusion</dif>
+        <dim>Dimidiation</dim>
+        <dis>Distract</dis>
+        <dis1>Distract</dis1>
+        <dis2>Distract II</dis2>
+        <dis3>Distract III</dis3>
+        <dr>Drain</dr>
+        <ds>Divine Seal</ds>
+        <du>Double-Up</du>
+        <dw>Divine Waltz</dw>
+        <dw1>Divine Waltz</dw1>
+        <dw2>Divine Waltz II</dw2>
+        <e>Erase</e>
+        <ea>Ecliptic Attrition</ea>
+        <eb>Ebullience</eb>
+        <ec1>Enchanting Etude</ec1>
+        <ec2>Bewitching Etude</ec2>
+        <echr1>Enchanting Etude</echr1>
+        <echr2>Bewitching Etude</echr2>
+        <en>Entrust</en>
+        <ena>Esuna</ena>
+        <ent>Entomb</ent>
+        <er>Erratic Flutter</er>
+        <es>Elemental Seal</es>
+        <evis>Evisceration</evis>
+        <evo>Evoker&apos;s Roll</evo>
+        <ex>Expiacion</ex>
+        <f1>Fire</f1>
+        <f2>Fire II</f2>
+        <f3>Fire III</f3>
+        <f4>Fire IV</f4>
+        <f5>Fire V</f5>
+        <f6>Fire VI</f6>
+        <fc>Full Circle</fc>
+        <fe>Feint</fe>
+        <fg1>Firaga</fg1>
+        <fg2>Firaga II</fg2>
+        <fg3>Firaga III</fg3>
+        <fg4>Firaja</fg4>
+        <fight>Fighter&apos;s Roll</fight>
+        <fin>Magic Finale</fin>
+        <fl>Flash</fl>
+        <flo>Spectral Floe</flo>
+        <fo>Foe Lullaby II</fo>
+        <fo1>Foe Lullaby</fo1>
+        <fo2>Foe Lullaby II</fo2>
+        <foer1>Foe Requiem</foer1>
+        <foer2>Foe Requiem II</foer2>
+        <foer3>Foe Requiem III</foer3>
+        <foer4>Foe Requiem IV</foer4>
+        <foer5>Foe Requiem V</foer5>
+        <foer6>Foe Requiem VI</foer6>
+        <foer7>Foe Requiem VII</foer7>
+        <fr1>Fira</fr1>
+        <fr2>Fira II</fr2>
+        <fr3>Fira III</fr3>
+        <fra>Frazzle</fra>
+        <fra1>Frazzle</fra1>
+        <fra2>Frazzle II</fra2>
+        <fra3>Frazzle III</fra3>
+        <g>Glutinous Dart</g>
+        <gac>Geo-Acumen</gac>
+        <gagi>Geo-AGI</gagi>
+        <gatt>Geo-Attunement</gatt>
+        <gbar>Geo-Barrier</gbar>
+        <gdex>Geo-DEX</gdex>
+        <ges>Gessho</ges>
+        <gfad>Geo-Fade</gfad>
+        <gfen>Geo-Fend</gfen>
+        <gfoc>Geo-Focus</gfoc>
+        <gfra>Geo-Frailty</gfra>
+        <gfur>Geo-Fury</gfur>
+        <gh>Geo-Haste</gh>
+        <glan>Geo-Languor</glan>
+        <gmal>Geo-Malaise</gmal>
+        <gpre>Geo-Precision</gpre>
+        <gr>Gravity</gr>
+        <gr2>Gravity II</gr2>
+        <gref>Geo-Refresh</gref>
+        <greg>Geo-Regen</greg>
+        <gstr>Geo-STR</gstr>
+        <gtor>Geo-Torpor</gtor>
+        <gvex>Geo-Vex</gvex>
+        <gwil>Geo-Wilt</gwil>
+        <h>Haste</h>
+        <h1>Haste</h1>
+        <h2>Haste 2</h2>
+        <har>Harden Shell</har>
+        <hea>Anemohelix II</hea>
+        <hea1>Anemohelix</hea1>
+        <hea2>Anemohelix II</hea2>
+        <heb>Cryohelix II</heb>
+        <heb1>Cryohelix</heb1>
+        <heb2>Cryohelix II</heb2>
+        <hed>Noctohelix II</hed>
+        <hed1>Noctohelix</hed1>
+        <hed2>Noctohelix II</hed2>
+        <hef>Pyrohelix II</hef>
+        <hef1>Pyrohelix</hef1>
+        <hef2>Pyrohelix II</hef2>
+        <hel>Luminohelix II</hel>
+        <hel1>Luminohelix</hel1>
+        <hel2>Luminohelix II</hel2>
+        <hes>Geohelix II</hes>
+        <hes1>Geohelix</hes1>
+        <hes2>Geohelix II</hes2>
+        <het>Ionohelix II</het>
+        <het1>Ionohelix</het1>
+        <het2>Ionohelix II</het2>
+        <hew>Hydrohelix II</hew>
+        <hew1>Hydrohelix</hew1>
+        <hew2>Hydrohelix II</hew2>
+        <hi>Blade: Hi</hi>
+        <ho>Horde Lullaby II</ho>
+        <ho1>Horde Lullaby</ho1>
+        <ho2>Horde Lullaby II</ho2>
+        <holla>Teleport-Holla</holla>
+        <hs>Haste Samba</hs>
+        <hunt>Hunter&apos;s Roll</hunt>
+        <hw>Healing Waltz</hw>
+        <iac>Indi-Acumen</iac>
+        <iagi>Indi-AGI</iagi>
+        <iatt>Indi-Attunement</iatt>
+        <ibar>Indi-Barrier</ibar>
+        <ices>Ice Spikes</ices>
+        <ichi>Utsusemi: Ichi</ichi>
+        <idex>Indi-DEX</idex>
+        <ifad>Indi-Fade</ifad>
+        <ifen>Indi-Fend</ifen>
+        <ifoc>Indi-Focus</ifoc>
+        <ifra>Indi-Frailty</ifra>
+        <ifur>Indi-Fury</ifur>
+        <ih>Indi-Haste</ih>
+        <im>Immanence</im>
+        <imal>Indi-Malaise</imal>
+        <in>Invisible</in>
+        <inu>Inundation</inu>
+        <ipre>Indi-Precision</ipre>
+        <iref>Indi-Refresh</iref>
+        <ireg>Indi-Regen</ireg>
+        <istr>Indi-STR</istr>
+        <itor>Indi-Torpor</itor>
+        <ivex>Indi-Vex</ivex>
+        <iwil>Indi-Wilt</iwil>
+        <j>Spectral Jig</j>
+        <jig>Spectral Jig</jig>
+        <joa>Joachim</joa>
+        <jugner>Recall-Jugner</jugner>
+        <kl>Klimaform</kl>
+        <kn1>Knight&apos;s Minne</kn1>
+        <kn2>Knight&apos;s Minne II</kn2>
+        <kn3>Knight&apos;s Minne III</kn3>
+        <kn4>Knight&apos;s Minne IV</kn4>
+        <kn5>Knight&apos;s Minne V</kn5>
+        <koh>King of Hearts</koh>
+        <kor>Koru-Moru</kor>
+        <kup>Kupipi</kup>
+        <la>Light Arts</la>
+        <laa>Addendum: White</laa>
+        <las>Last Stand</las>
+        <le>Lasting Emanation</le>
+        <learn>Learned Etude</learn>
+        <mad1>Sword Madrigal</mad1>
+        <mad2>Blade Madrigal</mad2>
+        <man>Mandalic Stab</man>
+        <mar1>Advancing March</mar1>
+        <mar2>Victory March</mar2>
+        <mar3>Honor March</mar3>
+        <mea>Teleport-Mea</mea>
+        <meri>Recall-Meriph</meri>
+        <meriph>Recall-Meriph</meriph>
+        <mf>Magic Fruit</mf>
+        <mg>Mighty Guard</mg>
+        <mh>Magic Hammer</mh>
+        <min1>Valor Minuet</min1>
+        <min2>Valor Minuet II</min2>
+        <min3>Valor Minuet III</min3>
+        <min4>Valor Minuet IV</min4>
+        <min5>Valor Minuet V</min5>
+        <mm>Memento Mori</mm>
+        <moo>Moogle</moo>
+        <nat>Nat. Meditation</nat>
+        <ni>Utsusemi: Ni</ni>
+        <night>Nightingale</night>
+        <nof>No Foot Rise</nof>
+        <occ>Occultation</occ>
+        <par>Paralyze</par>
+        <par2>Paralyze II</par2>
+        <pash>Recall-Pashh</pash>
+        <pashh>Recall-Pashh</pashh>
+        <pen>Penury</pen>
+        <per>Perpetuance</per>
+        <pga>Poisonga</pga>
+        <ph>Phalanx</ph>
+        <pi>Pianissimo</pi>
+        <pin>Pining Nocturne</pin>
+        <pna>Paralyna</pna>
+        <po1>Poison</po1>
+        <po2>Poison II</po2>
+        <pona>Poisona</pona>
+        <pr>Presto</pr>
+        <pr1>Protect</pr1>
+        <pr2>Protect II</pr2>
+        <pr3>Protect III</pr3>
+        <pr4>Protect IV</pr4>
+        <pr5>Protect V</pr5>
+        <pre1>Hunter&apos;s Prelude</pre1>
+        <pre2>Archer&apos;s Prelude</pre2>
+        <pro1>Protectra</pro1>
+        <pro2>Protectra II</pro2>
+        <pro3>Protectra III</pro3>
+        <pro4>Protectra IV</pro4>
+        <pro5>Protectra V</pro5>
+        <qs>Quickstep</qs>
+        <qul>Qultada</qul>
+        <r1>Raise</r1>
+        <r2>Raise II</r2>
+        <r3>Raise III</r3>
+        <rail>Rail Cannon</rail>
+        <re1>Regen</re1>
+        <re2>Regen II</re2>
+        <re3>Regen III</re3>
+        <re4>Regen IV</re4>
+        <re5>Regen V</re5>
+        <ref>Refresh</ref>
+        <ref1>Refresh</ref1>
+        <ref2>Refresh II</ref2>
+        <ref3>Refresh III</ref3>
+        <req>Requiescat</req>
+        <res>Resolution</res>
+        <ret>Retinal Glare</ret>
+        <rev>Reverse Flourish</rev>
+        <rog>Rogue&apos;s Roll</rog>
+        <rr>Reraise</rr>
+        <rr1>Reraise</rr1>
+        <rr2>Reraise II</rr2>
+        <rr3>Reraise III</rr3>
+        <rr4>Reraise IV</rr4>
+        <rud>Rudra&apos;s Storm</rud>
+        <s1>Stone</s1>
+        <s2>Stone II</s2>
+        <s3>Stone III</s3>
+        <s4>Stone IV</s4>
+        <s5>Stone V</s5>
+        <s6>Stone VI</s6>
+        <sa>Sanguine Blade</sa>
+        <sac>Sacrifice</sac>
+        <sage>Sage Etude</sage>
+        <sak>Sakura</sak>
+        <sal>Saline Coat</sal>
+        <sam>Samurai Roll</sam>
+        <sav>Savage Blade</sav>
+        <sd>Subduction</sd>
+        <se>Snake Eye</se>
+        <sear>Searing Tempest</sear>
+        <sel>Selh&apos;teus</sel>
+        <sen>Sentinel&apos;s Scherzo</sen>
+        <sg>Stonega</sg>
+        <sg1>Stonega</sg1>
+        <sg2>Stonega II</sg2>
+        <sg3>Stonega III</sg3>
+        <sg4>Stoneja</sg4>
+        <sh1>Shell</sh1>
+        <sh2>Shell II</sh2>
+        <sh3>Shell III</sh3>
+        <sh4>Shell IV</sh4>
+        <sh5>Shell V</sh5>
+        <sha>Shantotto II</sha>
+        <she1>Shellra</she1>
+        <she2>Shellra II</she2>
+        <she3>Shellra III</she3>
+        <she4>Shellra IV</she4>
+        <she5>Shellra V</she5>
+        <sho>Shockwave</sho>
+        <sil>Silence</sil>
+        <sils>Silent Storm</sils>
+        <sl>Sudden Lunge</sl>
+        <sl1>Sleep</sl1>
+        <sl2>Sleep II</sl2>
+        <slg>Sleepga</slg>
+        <slg1>Sleepga</slg1>
+        <slg2>Sleepga II</slg2>
+        <sn>Sneak</sn>
+        <sna>Silena</sna>
+        <sr1>Stonera</sr1>
+        <sr2>Stonera II</sr2>
+        <sr3>Stonera III</sr3>
+        <ss>Stoneskin</ss>
+        <sta>Windstorm II</sta>
+        <sta1>Windstorm</sta1>
+        <sta2>Windstorm II</sta2>
+        <star>Star Sibyl</star>
+        <stb>Hailstorm II</stb>
+        <stb1>Hailstorm</stb1>
+        <stb2>Hailstorm II</stb2>
+        <std>Voidstorm II</std>
+        <std1>Voidstorm</std1>
+        <std2>Voidstorm II</std2>
+        <stem>Searing Tempest</stem>
+        <stf>Firestorm II</stf>
+        <stf1>Firestorm</stf1>
+        <stf2>Firestorm II</stf2>
+        <stl>Aurorastorm II</stl>
+        <stl1>Aurorastorm</stl1>
+        <stl2>Aurorastorm II</stl2>
+        <sts>Sandstorm II</sts>
+        <sts1>Sandstorm</sts1>
+        <sts2>Sandstorm II</sts2>
+        <stt>Thunderstorm II</stt>
+        <stt1>Thunderstorm</stt1>
+        <stt2>Thunderstorm II</stt2>
+        <stw>Rainstorm II</stw>
+        <stw1>Rainstorm</stw1>
+        <stw2>Rainstorm II</stw2>
+        <sub>Sublimation</sub>
+        <sul>Sulpor</sul>
+        <t1>Thunder</t1>
+        <t2>Thunder II</t2>
+        <t3>Thunder III</t3>
+        <t4>Thunder IV</t4>
+        <t5>Thunder V</t5>
+        <t6>Thunder VI</t6>
+        <tc>Tenebral Crush</tc>
+        <tem>Temper</tem>
+        <tem2>Temper II</tem2>
+        <ten>Tenuto</ten>
+        <tg>Thundaga</tg>
+        <tg1>Thundaga</tg1>
+        <tg2>Thundaga II</tg2>
+        <tg3>Thundaga III</tg3>
+        <tg4>Thundaja</tg4>
+        <thf>Fire Threnody II</thf>
+        <tna>Stona</tna>
+        <tr1>Thundara</tr1>
+        <tr2>Thundara II</tr2>
+        <tr3>Thundara III</tr3>
+        <trou>Troubadour</trou>
+        <tru>True Flight</tru>
+        <ul>Unbridled Learning</ul>
+        <ulm>Ulmia</ulm>
+        <utsu1>Utsusemi: Ichi</utsu1>
+        <utsu2>Utsusemi: Ni</utsu2>
+        <v>Provoke</v>
+        <vahzl>Teleport-Vahzl</vahzl>
+        <val>Valaineral</val>
+        <vf>Violent Flourish</vf>
+        <vna>Viruna</vna>
+        <vol>Volt Strike</vol>
+        <vor>Vorpal Blade</vor>
+        <w1>Water</w1>
+        <w2>Water II</w2>
+        <w3>Water III</w3>
+        <w4>Water IV</w4>
+        <w5>Water V</w5>
+        <w6>Water VI</w6>
+        <war>Warlock&apos;s Roll</war>
+        <wb>Water Bomb</wb>
+        <wg1>Waterga</wg1>
+        <wg2>Waterga II</wg2>
+        <wg3>Waterga III</wg3>
+        <wg4>Waterja</wg4>
+        <wh>Whirl of Rage</wh>
+        <wiz>Wizard&apos;s Roll</wiz>
+        <wop>Winds of Promy.</wop>
+        <wor>Whirl of Rage</wor>
+        <wr1>Watera</wr1>
+        <wr2>Watera II</wr2>
+        <wr3>Watera III</wr3>
+        <ww>White Wind</ww>
+        <yhoat>Teleport-Yhoat</yhoat>
+        <yor>Yoran-Oran (UC)</yor>
+    </global>
+</settings>
