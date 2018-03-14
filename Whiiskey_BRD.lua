@@ -1,30 +1,126 @@
 -------------------------------------------------------------------------------------------------------------------
--- Setup functions for this job.  Generally should not be modified.
+--  BARD GearSwap lua by Whiiskey (Quetz)
 -------------------------------------------------------------------------------------------------------------------
 
--- This is Sammeh's LUA.
--- https://onedrive.live.com/?authkey=%21AKFeq76Tdl7LbNM&v=TextFileEditor&id=18521B913EC1C4A9%21131406&cid=18521B913EC1C4A9&parId=18521B913EC1C4A9%21131398
+--  This lua is based on the original Motenten GearSwap lua.
+--  It's two separate files.  This file has all the rules, and a second file has all the gear sets.
+--  You can put both files in the Windower4\addons\GearSwap\data folder.
 
---[[
-    Custom commands:
-    
-    ExtraSongsMode may take one of three values: None, Dummy, FullLength
-    
-    You can set these via the standard 'set' and 'cycle' self-commands.  EG:
-    gs c cycle ExtraSongsMode
-    gs c set ExtraSongsMode Dummy
-    
-    The Dummy state will equip the bonus song instrument and ensure non-duration gear is equipped.
-    The FullLength state will simply equip the bonus song instrument on top of standard gear.
-    
-    
-    Simple macro to cast a dummy Daurdabla song:
-    /console gs c set ExtraSongsMode Dummy
-    /ma "Shining Fantasia" <me>
-    
-    To use a Terpander rather than Daurdabla, set the info.ExtraSongInstrument variable to
-    'Terpander', and info.ExtraSongs to 1.
---]]
+--  It requires all the Mote library files to be in the Windower4\addona\GearSwap\libs folder.
+--  It requires the whiiskey-include.lua in the libs folder too.
+--  This is available at https://github.com/whiiskey/FFXI/blob/master/whiiskey-include.lua
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+--  FEATURES:
+-------------------------------------------------------------------------------------------------------------------
+--  ExtraSongMode.  Helps you apply the third and fourth songs.  Cycle with Control `.  See desription below.
+--  When Nightingale is active, the equipping of precast gear is skipped.  With 5/5 merits, all songs are insta-cast,
+--    and fast cast gear is not needed.
+--  Custom timers.  This lua calculates duration of songs and sends that information to the timers plugin.  This is
+--    most important for sleeping mobs on fights like Vinipata, Albumen, Tumult Curator, and Unafraid of the Dark.
+--    It's not so important for the other songs.
+--  Information about duration of songs is reported in the chat log.  If you want to see less information, then
+--    cycle the ReportSongInfo mode with Windows F12.
+--  Lullaby instrument mode.  Choose which instrument you want to use for Lullaby.  Marsyas has longest duration.
+--    G-horn has most magic accuracy.  Daurdabla has the largest area-of-effect on Horde Lullaby.  Cycle with Alt `.
+--  Lullaby idlde mode lets you idle in Lullaby midcast gear.  Why is this useful?  Because every once in a while,
+--    when you finish casting your spell, you're not actually in midcast gear!  I can't tell you for sure why this
+--    happens (people blame packet loss), but when it does, you don't get the midcast gear's beneficial stats like
+--    Song Duration.  If the mobs wake up earler than you expect, it can ruin your run.  If you idle in Lullaby gear
+--    there's a higher chance you'll actually be in midcast gear when the spell completes.  Note that if you idle in
+--    Lullaby midcast gear and activate Nightingale (which skeps precast gear), then you don't actually swap any gear.
+--    Even if packet loss occurs, your Lullaby songs still have full duration.
+--  There are many aliases for various gear sets.  Aliaases specific to this job are defined in this file.  More
+--    general aliases are defined in the whiiskey-inlcude.lua file.
+--  The gear sets in this lua have the same format as the //gs export command.  This makes it easy to copy and paste
+--    your gear into this lua.
+--    1) Equip the gear you want to use for a certain set
+--    2) Type //gs export
+--    3) Open the newest file in Windower4\addons\GearSwap\data\export folder
+--    4) Copy your geasr from that file, paste it into the lua file with all the gear sets
+--    5) Save the lua file and type //gs r to reload the new file
+-------------------------------------------------------------------------------------------------------------------
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+--  EXTRA SONG MODE:
+-------------------------------------------------------------------------------------------------------------------
+--  ExtraSongsMode may take one of three values: None, Dummy, FullLength
+
+--  You can set these via the standard 'set' and 'cycle' self-commands.  EG:
+--  gs c cycle ExtraSongsMode
+--  gs c set ExtraSongsMode Dummy
+
+--  Alternatively, you can cycle through the ExtraSongMode options with Control`.
+
+--  The Dummy state will equip the bonus song instrument and ensure non-duration gear is equipped.
+--  The FullLength state will simply equip the bonus song instrument on top of standard gear. 
+
+--  Simple macro to cast a dummy Daurdabla song:
+--  /console gs c set ExtraSongsMode Dummy
+--  /ma "Shining Fantasia" <me>
+
+--  To use a Terpander rather than Daurdabla, set the info.ExtraSongInstrument variable to
+--  'Terpander', and info.ExtraSongs to 1.
+-------------------------------------------------------------------------------------------------------------------
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+--  KEY FUNCTIONS:
+-------------------------------------------------------------------------------------------------------------------
+--    Control F9: cycle Hybrid Mode.  Not used in this lua.
+--            F9: cycle melee accuracy.
+--    Windows F9: cycle WS Mode.  Not used in this lua.
+--        Alt F9: cycle Ranged Mode.  Not used in this lua.
+--           F10: activate Physical Defense mode
+--   Control F10: cycle Physical Defense modes
+--       Alt F10: toggle Kiting
+--           F11: activate Magical Defense mode
+--   Control F11: cycle Casting modes.  Determines which gear set to use for song debuffs.
+--           F12: status report.  Displays values for selected state variables.
+--   Control F12: cycle idle mode
+--       Alt F12: cancel Defense mode
+--   Windows F12: cycle ReportSongInfo.  Choose to see all, some, or none of the duration info in the chatlog.
+--     Control `: cycle Extra Songs mode
+--         Alt `: cycle Lullaby Instrument mode
+--     Control -: cycle NPC target mode.  I don't understand this. 
+--     Control =: cycle PC target mode.  I don't understand this either.
+-------------------------------------------------------------------------------------------------------------------
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+--  RESOURCES:
+-------------------------------------------------------------------------------------------------------------------
+--  Shortcuts lua.  Get it through Windower.  Very useful for bard.  You can see my data file (aliases.xml) here:
+--    https://github.com/whiiskey/FFXI/blob/master/shortcuts%20data
+--  Timers lua.  Get it through Windower.  I prefer slim mode.  Also make sure custom timers are active.
+--  Sleeper lua.  Written by Sammeh.  Very useful for bard on fights like Vinipata.
+--    Sammeh's original version: https://github.com/SammehFFXI/FFXIAddons/tree/master/Sleeper
+--    I prefer my version (his version with minor edits): https://github.com/whiiskey/FFXI/blob/master/sleeper.lua
+-------------------------------------------------------------------------------------------------------------------
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+--  TODO:
+-------------------------------------------------------------------------------------------------------------------
+--  If waiting on recast, dont report Too Soon!
+--  Add song info mode
+--  Change FastCast to FC, this matches Kinematic's original format
+--  RE-look at cure set.  Look at the set I put in the blm lua
+--  Notification to switch to Lullaby idle mode if you cast Lullaby when Nightengale is active
+-------------------------------------------------------------------------------------------------------------------
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+-- Setup functions for this job.  Generally should not be modified.
+-------------------------------------------------------------------------------------------------------------------
 
 -- Initialization function for this job file.
 function get_sets()
@@ -32,11 +128,9 @@ function get_sets()
     
     -- Load and initialize the include file.
     include('Mote-Include.lua')
-    include('sammeh_custom_functions.lua')
-    include('lullaby.lua')
-      -- //gs c show ---- Shows the txt box
-      -- //gs c hide ---- Hides the txt box (default)
-      -- //gs c reset ---- Resets the mob list (this is issued on zone. But if you sleep and run away while staying in zone it will hang out in memory forever). 
+
+    -- #nottoosoon #1/4
+    include('whiiskey_include.lua')
     
 end
 
@@ -44,20 +138,17 @@ end
 -- Setup vars that are user-independent.  state.Buff vars initialized here will automatically be tracked.
 function job_setup()
     state.ExtraSongsMode = M{['description']='Extra Songs', 'None', 'Dummy', 'FullLength'}
-    -- My test, I added this #1
-    state.LullabyInstrumentMode =M{['description']='Lullaby Instrument', 'Ghorn', 'Daurdabla', 'Marsyas'}
+    state.LullabyInstrumentMode =M{['description']='Lullaby Instrument', 'Marsyas', 'Ghorn', 'Daurdabla'}
+    state.ReportSongInfo = M{['description']='Report Song Info', 'Full', 'Some', 'None'}
     state.Buff['Pianissimo'] = buffactive['pianissimo'] or false
 	
 	send_command("alias buff gs equip sets.midcast.SongEffect")
+	send_command("alias dummy gs equip sets.midcast.DaurdablaDummy")
         send_command("alias debuff gs equip sets.midcast.SongDebuff")
-        send_command("alias macc gs equip sets.midcast.ResistantSongDebuff")
+        send_command("alias debuffacc gs equip sets.midcast.ResistantSongDebuff")
 	send_command("alias lul gs equip sets.midcast.LullabyFull")
-	send_command("alias fast gs equip sets.precast.FastCast.BardSong")
-	send_command("alias tp gs equip sets.engaged")
-	send_command("alias tpacc gs equip sets.engaged.Acc")
-	send_command("alias th gs equip sets.TreasureHunter")
 	send_command("alias wsrud gs equip sets.rud")    
-    
+	
     -- For tracking current recast timers via the Timers plugin.
     custom_timers = {}
 end
@@ -89,16 +180,15 @@ function user_setup()
     
     -- Additional local binds
     send_command('bind ^` gs c cycle ExtraSongsMode')
-    -- I added this #2
     send_command('bind !` gs c cycle LullabyInstrumentMode')
-    --send_command('bind !` input /ma "Chocobo Mazurka" <me>')
+    send_command('bind @f12 gs c cycle ReportSongInfo')
 
     select_default_macro_book()
     --send_command('@wait 1;input /lockstyleset 40')
 
-    -- This was the #nottoosoon code #1/3
+    -- #nottoosoon code #2/4
     -- 2.6 to be risky.  2.7 to play it safe
-    waittime = 2.6
+    waittime = 2.7
 
 end
 
@@ -107,91 +197,85 @@ end
 function user_unload()
     send_command('unbind ^`')
     send_command('unbind !`')
+    send_command('unbind @f12')
 end
 
 -------------------------------------------------------------------------------------------------------------------
 -- Job-specific hooks for standard casting events.
 -------------------------------------------------------------------------------------------------------------------
 
+
+function job_pretarget(spell)    
+
+    -- #nottoosoon #3/4
+    checkblocking(spell)
+        --add_to_chat(8,got_blocked.value)
+        ----if not got_blocked then
+	    if spell.action_type == 'Magic' then
+	    	if aftercast_start and os.clock() - aftercast_start < waittime then
+            		windower.add_to_chat(8,"Too soon!  Adding delay: " .. 0.01 * math.floor(100*(waittime - (os.clock() - aftercast_start))) .. " seconds")
+            		cast_delay(waittime - (os.clock() - aftercast_start))
+            	end
+            end 
+        --end
+     --end
+     -- #keep_warp_ring #1/2
+     handle_equipping_gear(player.status)
+
+end
+
+
 -- Set eventArgs.handled to true if we don't want any automatic gear equipping to be done.
 -- Set eventArgs.useMidcastGear to true if we want midcast gear equipped on precast.
 -- This makes sure that when Nightengale is up, we dont use a precast set.  Midcast only.
 function job_precast(spell, action, spellMap, eventArgs)
     -- handle_equipping_gear(player.status)
-	checkblocking(spell)
-   if spell.type == 'BardSong' then
-	if buffactive.Nightingale then
-		local generalClass = get_song_class(spell)
-		if generalClass and sets.midcast[generalClass] then
-			windower.add_to_chat(8,'Equipping Midcast - Nightingale active.'..generalClass)
-			equip(sets.midcast[generalClass])
-		end
+    checkblocking(spell)
+    
+  if state.ReportSongInfo.value ~= 'None' then
+    if string.find(spell.name,'Lullaby') then
+	if state.LullabyInstrumentMode.value == 'Marsyas' and state.CastingMode.value == "Duration" and not spell.interrupted then
+  	    add_to_chat(3,'LULLABY,  Marsyas,  Duration')
+	elseif not spell.interrupted then
+  	    add_to_chat(3,'LULLABY,  '..state.LullabyInstrumentMode.value..',  '..state.CastingMode.value..'    **NOT MAX DURATION!**')
 	end
-
-	
-	
-	
-	
-	
-	-- I couldn't get this part to work.  So I just made sets called sets.precast.FC.BardSong
-	--[[
-	if spell.name == 'Honor March' then
-        	equip({range="Marsyas"})
-        else
-        	equip(sets.precast.FastCast.BardSong)
+    end
+  end
+    
+    if spell.type == 'BardSong' then
+       if buffactive.Nightingale then
+           local generalClass = get_song_class(spell)
+           if generalClass and sets.midcast[generalClass] then
+               if state.ReportSongInfo.value ~= 'None' then
+                   windower.add_to_chat(3,'NIGHTINGALE, skipping precast, '..generalClass..' gear')
+               end
+               equip(sets.midcast[generalClass])
+	    end
 	end
-	]]--
+    end	
+    
 
-   -- I dont know why this part is here.  It was in Sammeh's lua
-   -- I thought GS would do this automatically.  If you named the sets FC instead of FastCast.  O well.
-   elseif string.find(spell.name,'Cur') and spell.name ~= 'Cursna' then
-		equip(sets.precast.FastCast.Cure)
-   elseif spell.name == 'Stoneskin' then 
-		equip(sets.precast.FastCast.Stoneskin)
-   else
-		equip(sets.precast.FastCast)
-   end
-	
+    
+    
+end
 
 
-   -- I added this #3
-   -- This is to precast in the right Lullaby horn.
-   -- Perhaps the Ghorn equip is redundant.  Since you precast in that anyway.  O well.
+
+function job_post_precast(spell, action, spellMap, eventArgs)
    if string.find(spell.name,'Lullaby') then
 	if state.LullabyInstrumentMode.value == 'Ghorn' then
-		if state.CastingMode.value == 'Resistant' then
-			add_to_chat(3,'Lullaby: G-HORN m-acc ***** NOT MAX DURATION!!! *****')
-		else
-			add_to_chat(3,'Lullaby: G-HORN Max Duration ***** NOT MAX DURATION!!! *****')
-		end
-		equip({ranged="Gjallarhorn"})
-	elseif state.LullabyInstrumentMode.value == 'Daurdabla' then
-		if state.CastingMode.value == 'Resistant' then
-			add_to_chat(3,'Lullaby: DAUR m-acc ***** NOT MAX DURATION!!! *****')
-		else
-			add_to_chat(3,'Lullaby: DAUR Duration ***** NOT MAX DURATION!!! *****')
-		end
-		equip({ranged="Daurdabla"})
-	elseif state.LullabyInstrumentMode.value == 'Marsyas' then
-		if state.CastingMode.value == 'Resistant' then
-			add_to_chat(3,'Lullaby: MARS m-acc ***** NOT MAX DURATION!!! *****')
-		else
-			add_to_chat(3,'Lullaby: MARS Duration')
-		end
-		equip({ranged="Marsyas"})
+	    equip({ranged="Gjallarhorn"})
+	else
+	    equip({ranged=state.LullabyInstrumentMode.value})
 	end
-   end
 
-   -- #nottoosoon #2/3
-    if spell.action_type == 'Magic' then
-        if aftercast_start and os.clock() - aftercast_start < waittime then
-            windower.add_to_chat(8,"Precast too early! Adding Delay:"..waittime - (os.clock() - aftercast_start))
-            cast_delay(waittime - (os.clock() - aftercast_start))
-        end
-    end   
-   
-   
-   
+
+    end
+
+    if spell.name == 'Honor March' then
+        equip({range="Marsyas"})
+    end
+    
 end
 
 
@@ -209,70 +293,101 @@ function job_midcast(spell, action, spellMap, eventArgs)
                 equip(sets.midcast[generalClass])
             end
         end
-    end
-
-    -- You want the Aeonic horn in the midcast for Honor March.
-    -- You also want the +1 march gloves on.  This does both.
-    if spell.name == 'Honor March' then
-        equip(sets.midcast.HonorMarch)
-    end
-
-    -- I added this #4
-    -- Wonder if there's a better way to do this.
-    if string.find(spell.name,'Lullaby') then
-	if state.LullabyInstrumentMode.value == 'Ghorn' then
-		equip({ranged="Gjallarhorn"})
-	elseif state.LullabyInstrumentMode.value == 'Daurdabla' then
-		equip({ranged="Daurdabla"})			
-	elseif state.LullabyInstrumentMode.value == 'Marsyas' then
-		equip({ranged="Marsyas"})
-	end
-    end
-	weathercheck(spell.element)
+    end    
 end
 
 function job_post_midcast(spell, action, spellMap, eventArgs)
     if spell.type == 'BardSong' then
+        if state.ExtraSongsMode.value == 'Dummy' then
+            add_to_chat(8,'Xtra: DUMMY')
+        end
         if state.ExtraSongsMode.value == 'FullLength' then
             add_to_chat(8,'Xtra: FULL')
             equip(sets.midcast.Daurdabla)
         end
     end
-	weathercheck(spell.element)
+
+    if string.find(spell.name,'Lullaby') then
+	if state.LullabyInstrumentMode.value == 'Ghorn' then
+	    equip({ranged="Gjallarhorn"})
+	else
+	    equip({ranged=state.LullabyInstrumentMode.value})
+	end
+    end
+    
+    -- This is probably redundant.  Might take it out someday.
+    if spell.name == 'Honor March' then
+        equip({range="Marsyas"})
+    end    
+
 end
 
 -- Set eventArgs.handled to true if we don't want automatic gear equipping to be done.
 function job_aftercast(spell, action, spellMap, eventArgs)
     if spell.type == 'BardSong' and not spell.interrupted then
-        -- if spell.target and spell.target.type == 'SELF' then
-		if spell.target.type ~= 'SELF' and spell.name ~= "Magic Finale" then
+    
+
+
+        
+        if spell.target.type ~= 'SELF' and spell.name ~= "Magic Finale" then
             -- adjust_timers(spell, spellMap)
 			local dur = calculate_duration(spell, spellMap)
 			send_command('timers create "'..spell.target.name..':'..spell.name..'" '..dur..' down')
-         end
-		state.ExtraSongsMode:reset()
+	elseif spell.name ~= "Magic Finale" then
+	    calculate_duration(spell, spellMap)
+        end
+        state.ExtraSongsMode:reset()
     end
 
-   -- #nottoosoon #3/3
-  aftercast_start = os.clock()
-  if spell.action_type ~= 'Magic' then
-    aftercast_start = nil
-  end    
+    -- #nottoosoon #4/4
+    aftercast_start = os.clock()
+    if spell.action_type ~= 'Magic' then
+      aftercast_start = nil
+    end   
     
 end
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+-- Customization hooks for idle and melee sets, after they've been automatically constructed.
+-------------------------------------------------------------------------------------------------------------------
+
+-- #keep_warp_ring #2/2
+-- Called before the Include starts constructing melee/idle/resting sets.
+-- Can customize state or custom melee class values at this point.
+-- Set eventArgs.handled to true if we don't want any automatic gear equipping to be done.
+function job_handle_equipping_gear(playerStatus, eventArgs)
+	local lockables = T{'Mecisto. Mantle', 'Aptitude Mantle', 'Nexus Cape', 'Aptitude Mantle +1', 'Warp Ring', 'Vocation Ring', 'Reraise Earring', 'Capacity Ring', 'Trizek Ring', 'Echad Ring', 'Facility Ring', 'Dim. Ring (Holla)', 'Dim. Ring (Dem)', 'Dim. Ring (Mea)'}
+	local watch_slots = T{'lear','rear','ring1','ring2','back','head'}
+
+	for _,v in pairs(watch_slots) do
+		if lockables:contains(player.equipment[v]) then
+			disable(v)
+			if has_charges(player.equipment[v]) and (not is_enchant_ready(player.equipment[v])) then
+				enable(v)
+			end
+		else
+			enable(v)
+		end
+	end
+end
+
+
 
 -------------------------------------------------------------------------------------------------------------------
 -- Job-specific hooks for non-casting events.
 -------------------------------------------------------------------------------------------------------------------
-
 
 function job_buff_change(buff, gain)
         job_update(cmdParams, eventArgs)
         handle_equipping_gear(player.status)
 end
 
-
-
+-- I might take this out.  IDK
 -- Handle notifications of general user state change.
 function job_state_change(stateField, newValue, oldValue)
     handle_equipping_gear(player.status)
@@ -316,28 +431,29 @@ function display_current_job_state(eventArgs)
     --    msg = msg .. '/' .. state.HybridMode.value
     --end
     --msg = msg .. ',   WS: ' .. state.WeaponskillMode.value
-    msg = msg .. ',   Debuffs: ' .. state.CastingMode.value
-    --msg = msg .. ',   Idle: ' .. state.IdleMode.value
+    msg = msg .. ',    ' .. state.CastingMode.value
 
-    msg = msg .. ',   Lul: ' .. state.LullabyInstrumentMode.value
+    msg = msg .. ',    Lul: ' .. state.LullabyInstrumentMode.value
+
+    msg = msg .. ',    Idle: ' .. state.IdleMode.value
     
     if state.DefenseMode.value ~= 'None' then
-        msg = msg .. ',  ' .. 'Defense: ' .. state.DefenseMode.value .. ' (' .. state[state.DefenseMode.value .. 'DefenseMode'].value .. ')'
+        msg = msg .. ',    Def: ' .. state[state.DefenseMode.value .. 'DefenseMode'].value
     end
     
     if state.Kiting.value == true then
-        msg = msg .. ',  Kiting'
+        msg = msg .. ',    Kiting'
     end
 
     if state.PCTargetMode.value ~= 'default' then
-        msg = msg .. ',  Target PC: '..state.PCTargetMode.value
+        msg = msg .. ',    Target PC: '..state.PCTargetMode.value
     end
 
     if state.SelectNPCTargets.value == true then
-        msg = msg .. ',  Target NPCs'
+        msg = msg .. ',    Target NPCs'
     end
 
-    add_to_chat(122, msg)
+    add_to_chat(123, msg)
 
     eventArgs.handled = true
 end
@@ -356,9 +472,7 @@ function get_song_class(spell)
             return 'SongDebuff'
         end
     elseif state.ExtraSongsMode.value == 'Dummy' then
-        add_to_chat(8,'Xtra: DUMMY')
-    	return 'DaurdablaDummy'
-        
+    	return 'DaurdablaDummy'        
     else
         return 'SongEffect'
     end
@@ -442,6 +556,7 @@ end
 
 -- Function to calculate the duration of a song based on the equipment used to cast it.
 -- Called from adjust_timers(), which is only called on aftercast().
+
 function calculate_duration(spell, spellMap)
     local mult = 1
     if player.equipment.range == 'Daurdabla' then mult = mult + 0.3 end -- change to 0.25 with 90 Daur
@@ -455,7 +570,7 @@ function calculate_duration(spell, spellMap)
     if player.equipment.sub == "Kali" then mult = mult + 0.05 end
     if player.equipment.neck == "Aoidos' Matinee" then mult = mult + 0.1 end
     if player.equipment.neck == "Moonbow Whistle" then mult = mult + 0.2 end
-    if player.equipment.neck == "Moonbow Whistle +1" then mult = mult + 0.3 end
+    if player.equipment.neck == "Mnbw. Whistle +1" then mult = mult + 0.3 end
     if player.equipment.body == "Fili Hongreline +1" then mult = mult + 0.12 end
     if player.equipment.legs == "Inyanga Shalwar +1" then mult = mult + 0.15 end
     if player.equipment.legs == "Inyanga Shalwar +2" then mult = mult + 0.17 end
@@ -474,7 +589,10 @@ function calculate_duration(spell, spellMap)
     if spellMap == 'Lullaby' and player.equipment.hands == 'Brioso Cuffs +3' then mult = mult + 0.2 end
     if spell.name == "Sentinel's Scherzo" and player.equipment.feet == "Fili Cothurnes +1" then mult = mult + 0.1 end
 -- I need to add (and then test) rules to add time for Intarabus's Cape
-    
+
+-- Total multiplier 2.89: base 1, main 0.5, instrument 0.4, neck 0.3, body 0.12, hands 0.2, legs 0.17, feet 0.15, gift 0.05
+
+
     if MaxJobPoints == 1 then
 	mult = mult + 0.05 -- 1200 JP gift: all songs +5% duration
 	        -- add_to_chat(8,'Adding Song 5% to Timer for 1200 JP gift') 
@@ -492,8 +610,9 @@ function calculate_duration(spell, spellMap)
     end
 	
 
+        -- Interesting to note that this function is not called for Finale or Honor March.  Maybe others who knows!
         local generalClass = get_song_class(spell)
-	   -- add_to_chat(8,'Info: Spell Name'..spell.name..' Spell Map:'..spellMap..' General Class:'..generalClass..' Multiplier:'..mult)
+	   --add_to_chat(8,'Spell Name: '..spell.name..', Spell Map: '..spellMap..', General Class: '..generalClass..', Multiplier: '..mult)
 	if spell.name == "Foe Lullaby II" or spell.name == "Horde Lullaby II" then 
 		base = 60
 	elseif spell.name == "Foe Lullaby" or spell.name == "Horde Lullaby" then 
@@ -504,27 +623,43 @@ function calculate_duration(spell, spellMap)
 		base = 120
 	elseif spell.name == "Pining Nocturne" then
 		base = 120
+		
+	-- Actually the "Song effect duration" gear like Brioso Slippers doesn't make Virelai last longer.
+	-- However "All songs +" gear like G-horn and Moonbow Whistle +1 make it last longer.
+	-- So with Virelai +7 lasts 51 seconds.
+	-- This timer doesn't account for that, but oh well.  Virelai isn't a common song.
 	elseif spell.name == "Maiden's Virelai" then
-		base = 20
+		base = 30
 		
 	end
 	
-	if generalClass == 'SongEffect' then 
+	-- Error in Mote's original lua.
+	-- It didn't establish a base value for the 'DaurdablaDummy' generalClass.
+	-- Original line was:
+	-- if generalClass == 'SongEffect' then
+	-- I added the 'DaurdablaDummy' part
+	if generalClass == 'SongEffect' or 'DaurdablaDummy' then 
 		base = 120
 		totalDuration = math.floor(mult*base)		
 	end
-
-	add_to_chat(8,'Base: '..base..', Multiplier: '..mult..', Product: '..base*mult)
+	
+	if state.ReportSongInfo.value == 'Full' then
+	    add_to_chat(8,'Base: '..base..', Multiplier: '..mult..', Product: '..base*mult)
+	end
 	
 	totalDuration = math.floor(mult*base)		
 	
 	if MaxJobPoints == 1 then 
 		if string.find(spell.name,'Lullaby') then
+		    if state.ReportSongInfo.value == 'Full' then
 			add_to_chat(8,'Add 20 seconds for Lullaby Job Points')
+		    end
 			totalDuration = totalDuration + 20
 		end
 		if buffactive['Clarion Call'] then
+		    if state.ReportSongInfo.value == 'Full' then
 			add_to_chat(8,'Add 40 seconds for Clarion Call Job Points')
+		    end
 			totalDuration = totalDuration + 40
 		end
 		-- Tenuto does not affect Lullaby duration at all.
@@ -542,44 +677,32 @@ function calculate_duration(spell, spellMap)
     -- It does not double the 20 second Job Point bonus for Tenuto.
     if buffactive.Troubadour then
         totalDuration = totalDuration*2
-        add_to_chat(8,'Double duration for Troubadour') 
+        if state.ReportSongInfo.value == 'Full' then
+            add_to_chat(8,'Double duration for Troubadour')
+        end
     end
 
 
     	if MaxJobPoints == 1 then 
 		if buffactive['Marcato'] then
-			add_to_chat(8,'Add 20 seconds for Marcato Job Points')
+			if state.ReportSongInfo.value == 'Full' then
+			    add_to_chat(8,'Add 20 seconds for Marcato Job Points')
+			end
 			-- seems like this does increase sleep duration
 			totalDuration = totalDuration + 20
 		end
 	end
 
--- My sleep durations for Foe Lullaby II and Horde Lullaby II
--- 2.79 multiplier, 2100 job points
--- 187, 3:07 no JAs
--- 374, 6:14 Troubador
--- 454, 7:34 Troubador and Clarion Call
--- 474, 7:54 Troubador and Clarion call and Marcato
-
--- Here are my old numbers.  This is when I first used this lua.
--- 2.08 multiplier, 2100 job points
--- 144, 2:24 no JAs
--- 288, 4:48 Troubador
--- 184, 3:04 Clarion Call
--- 368, 6:08 Troubador and Clarion Call
--- 164, 2:44 Marcato
--- 308, 5:08 Troubador and Marcato
--- 204, 3:24 Clarion call and Marcato
--- 388, 6:28 Troubador and Clarion call and Marcato
-
    totalDurationMinutes = math.floor(totalDuration/60)
    totalDurationSeconds = totalDuration - 60*totalDurationMinutes
     
+   if state.ReportSongInfo.value ~= 'None' then
     if totalDurationSeconds < 10 then
    	add_to_chat(8,'Total Duration: '..totalDuration..' seconds ('..totalDurationMinutes..':0'..totalDurationSeconds..')')
     else
    	add_to_chat(8,'Total Duration: '..totalDuration..' seconds ('..totalDurationMinutes..':'..totalDurationSeconds..')')
     end	
+   end
 
     return totalDuration
 	
@@ -587,7 +710,7 @@ end
 
 
 -- Examine equipment to determine what our current TP weapon is.
---[[
+--[[wea
 function pick_tp_weapon()
     if brd_daggers:contains(player.equipment.main) then
         state.CombatWeapon:set('Dagger')
@@ -610,27 +733,6 @@ function reset_timers()
         send_command('timers delete "'..i..'"')
     end
     custom_timers = {}
-end
-
--- Called any time we attempt to handle automatic gear equips (ie: engaged or idle gear).
-function job_handle_equipping_gear(playerStatus, eventArgs)    	
-	disable_specialgear()
-end
-
-
-function weathercheck(spell_element)
-    if spell_element == world.weather_element then
-        equip(sets.weather)
-        if sets.obi[spell_element] then
-            equip(sets.obi[spell_element])
-        end
-    end
-    if spell_element == world.day_element then
-        equip(sets.day)
-        if sets.obi[spell_element] then
-            equip(sets.obi[spell_element])
-        end
-    end
 end
 
 -- Select default macro book on initial load or subjob change.
