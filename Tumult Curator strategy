@@ -1,4 +1,14 @@
 ----------------------------------------------------------------------------------------------------------------------------------
+-- THE FIGHT
+----------------------------------------------------------------------------------------------------------------------------------
+
+Phase 1: Chariots.  Recommended order: Long-Armed Chariot, and then any others.
+Phase 2: Kings.  Recommended order: Gurfurlur, Gulool, Medusa.
+Phase 3: HNMs.  Recommended order: Hydra, Khimaira, Cerberus.
+Phase 4: Dvergr.
+
+
+----------------------------------------------------------------------------------------------------------------------------------
 -- PARTY SET UP
 ----------------------------------------------------------------------------------------------------------------------------------
 
@@ -9,6 +19,7 @@ BLU/RUN - Taki
 WHM     - Bzt
 GEO     - Tess
 COR     - Langly
+BRD     - Whiiskey
 
 
 PARTY 2
@@ -16,14 +27,12 @@ PARTY 2
 RUN/BLU - Falk - Alliance lead - Popper
 SCH/BLM - Sammeh
 RDM     - Gnomie
-BRD     - Whiiskey
 
 
 SWAPPING
 
-COR and BRD regularly swap parties.
-SCH can quickly swap to Party 1 for Regen V if it's safe.
-RDM, GEO, WHM, BLU don't swap.
+COR, BRD, SCH swap parties during Phases 1, 2, 3.
+No more party swapping after the Dvergr is pulled.
 
 
 ----------------------------------------------------------------------------------------------------------------------------------
@@ -31,7 +40,8 @@ RDM, GEO, WHM, BLU don't swap.
 ----------------------------------------------------------------------------------------------------------------------------------
 
 RUN/DRK: Damage dealer/tank hybrid.
-Pull mobs off RUN/BLU one at a time.  Keep up defensive buffs.  Use a hybrid DD/DT set for TP.
+Keep up defensive buffs.  Use a hybrid DD/DT set for TP.
+Pull mobs off RUN/BLU one at a time.  Accurate pulls are essential.
 Use One for All during Astral Flow at 74%, 49%, 24%, and 4%.
 One for All will need to be reset three times during the fight.
 Try not to use too many JAs so One for All actually gets reset.
@@ -40,17 +50,17 @@ SP abilities may be useful in emergency situations.
 BLU/RUN: Non-squishy damage dealer.
 Keep up defensive buffs.
 Use a hybrid DD/DT set for TP.  Good gear choices include Defending Ring, Loricate Torque +1, Dampening Tam, and Staunch +1.
-Give Mighty Guard to party during final form.
+Give Mighty Guard to party during Phase 4.
 The RUN/DRK should be capped on magical haste from Haste II and Honor March, so the haste effect from Mighty Guard isn't needed.
 However, the +30 HP regen, 25% defense, and 15 Magic Defense Bonus offered by Mighty Guard is useful.
-The Random Deals and Wild Card should reset Diffusion.  Should be able to keep up Mighty Guard throughout the final form.
+The Random Deals and Wild Card should reset Diffusion.  Should be able to keep up Mighty Guard throughout Phase 4.
 
 GEO: Typical GEO stuff.
 Use Geo-Frailty and Indi-Fade.
 Indi-Vex isn't that potent anymore, so Fade is probably better than Vex.
 The magical attacks are worse than the physical attacks, so Fade is better than Wilt.
 Entrust Indi-Fend during the final form.
-Random Deals and Wild Card should reset Entrust.  You should be able to keep up Entrust-Fend throught the final form.
+Random Deals and Wild Card should reset Entrust.  You should be able to keep up Entrust-Fend throught Phase 4.
 If it's time for Astral Flow and Entrust-Fend isn't up, temporarily switch from Geo-Frailty to Geo-Fend.
 Bolster right before Wild Card is used.  Wild Card will be used between 49% and 24%.
 
@@ -60,7 +70,7 @@ Curaga spam during Bio aura is essential.
 COR: Typical COR stuff.
 Offensive rolls for Party 1.  Samauri/Chaos seems good.
 Swaps parties to give RUN/BLU defensive rolls.  Gallant/Magus seems good.
-Party swaps should no longer be needed during final form.
+Party swaps should no longer be needed Phase 4.
 Reset the JA One for All for the RUN/DRK three separate times:
 1st time between 74% and 49%.  Use Random Deal.
 2nd time between 49% and 24%.  Use Wild Card.
@@ -73,6 +83,18 @@ Light Shot Dia III of course.
 CORs don't have much magic defense.  Consider subbing WHM, RDM, or RUN.  This gives you magic defense bonus and stoneskin.
 Feel free to DD if it seems safe, but proceed with caution.  Use a hybrid DD/DT set.
 It may be better to not DD, stay in DT set, and stay alive.  Use your judgment.
+
+BRD: Typical BRD stuff.  Sleep lamps.
+Defensive songs for RUN/BLU.  Four Minnes seem good.
+Offensive songs for RUN/DRK and BLU.  Honor March, Blade Madrigal, Minuet V.  Fourth song can be either Sword Madrigal or Minuet IV.
+Ballads for GEO and WHM.
+Ballads for RDM and SCH when possible, but they should be ok without Ballads.
+I don't think Carol or Scherzo would be useful for this fight, but I'm open to suggestions.
+Nightingale - Troubadour - Horde Lullaby II for the Tumult Lamps is essential.
+An accurate and reliable sleep timer is essential.  BRD needs to tell the SCH when to Break-ga.
+Reliably equipping the correct gear for Lullaby is essential.  There is no margin for error!
+Favorable positioning of the Tumult Lamps is essential.  The AOE range for Horde Lullaby II is tiny!
+It's only a 4 yalm radius around the target when using a Wind Instrument.  String instruments aren't much better.
 
 RUN/BLU: Super tank.
 Be as beefy as possible.
@@ -87,20 +109,10 @@ I would be interested to know how well all the debuffs land on the different mob
 SCH/BLM: Support.  Break-ga lamps.
 Backup healer for RUN/BLU.
 Elemental seal - Manifestation - Break is essential for re-sleeping Tumult Lamps.
-SCH can quickly swap to Party 1 for Accession - Perpetuation - Regen V if it's safe.
-I suppose the SCH could also Accession - Perpetuation - Embrava towards the end of the fight if it's safe.
+SCH can quickly swap to Party 1 for Accession - Perpetuation - Regen V when its safe.
+Swapping to Party 1 is fairly safe during the first 3 phases.
+Do Regen V one final time at the beginning of Phase 4, before sleeping the Lamps and pulling Tumult Curator.
 
-BRD: Typical BRD stuff.  Sleep lamps.
-Defensive songs for RUN/BLU.  Four Minnes seem good.
-Offensive songs for RUN/DRK and BLU.  Honor March, Blade Madrigal, Minuet V.  Fourth song can be either Sword Madrigal or Minuet IV.
-Ballads for GEO and WHM.
-Ballads for RDM and SCH when possible, but they should be ok without much support.
-I don't think Carol or Scherzo would be useful for this fight, but I'm open to suggestions.
-Nightingale - Troubadour - Horde Lullaby II for the Tumult Lamps is essential.
-An accurate and reliable sleep timer is essential.  BRD needs to tell the SCH when to Break-ga.
-Reliably equipping the correct gear for Lullaby is essential.  There is no margin for error!
-Favorable positioning of the Tumult Lamps is essential.  The AOE range for Horde Lullaby II is tiny!
-It's only a 4 yalm radius around the target when using a Wind Instrument.  String instruments aren't much better.
 
 
 ----------------------------------------------------------------------------------------------------------------------------------
@@ -109,19 +121,38 @@ It's only a 4 yalm radius around the target when using a Wind Instrument.  Strin
 
 DEFENSE
 This fight is about defense.  Stay alive!
-Survive the TP moves!  Survive Astral Flow!  Survive the Bio aura!  Survive Dread Spikes!
+Survive the Bio aura!  Survive Astral Flow!
 DPS will not be a problem as long as people stay alive.
 Have DT sets ready.  Use them thoughout the fight.
 
+SURVIVE THE BIO AURA
+The Bio aura is the #1 cause of wipes.
+Per BGWiki: Gains a temporary 300/tic Bio aura (30') following Bilgestorm.
+Party 1: During Bio aura, everyone gather at the boss.  The WHM will spam Curagas.
+Every person in Party 1 needs to get hit by every single Curaga.
+Assess the situation and figure out if we should continue damage, slow damage, or halt damage during Bio aura.
+Party 2: Run far, far away.  Stay outside of the aura.  Party 2 should stay 30' away from the boss as much as possible.
+
+DON'T LET THE LAMPS WAKE UP
+Tumult Lamps are the #2 cause of wipes.
+A skilled BRD, a skilled SCH, and good communication are essential.
+Hopefully the Bio aura isn't active when the Lamps wake up.
+Try to position the boss more than 30' away from the sleeping Lamps.
+
 SURVIVE ASTRAL FLOW
-During Astral Flow, turtle up to the max!
-Astral Flow survival set should have capped MDT (26 gear + Shell V) and as much Magic Defense Bonus and Magic Evasion as possible.
-Maybe even a Shadow Ring or Engulfer Cape +1.
-If you know an Astral Flow is coming, try to get Stoneskin up.
+Astral Flow is the #3 cause of wipes.
+During Astral Flow, turtle up to the max!  Astral Flow survival set should have capped MDT (26 in gear because Shell V is 24ish)
+and as much Magic Defense Bonus and Magic Evasion as possible.  Maybe even a Shadow Ring.
+Don't force Astral Flow if the Bio aura is up.  Don't force Astral Flow if the Lamps are about to wake up.
+Party 1: Defensive buffs should up already.  Stoneskin if you can.  Turtle up.  RUN/DRK uses One for All.
+Force Astral Flow with damage.  Eat the nukes.  Survive.
+Party 2: Run far, far away.  Spread out.  Don't be close to anyone.  The avatars might kill one or two people in Party 2,
+but they can't kill everyone if you're spread out.  Make sure Reraise is up.  Turtle up.  Stoneskin up.
+Try to eat the nuke and survive.  If you die, get up and re-apply Reraise ASAP.  Use a Reraise item if you have to.
+Get prepared for the next Astral Flow.  One for All from the RUN/BLU can help Party 2 survive one of the Astral Flows.
+It would probably be best to use the RUN/BLU's One for All on the first Astral Flow.
 
-ITEMS
-
-
+SURVIVE DREAD SPIKES
 Dread Spikes
 Gear is very good now.
 Macc food may help.
@@ -130,3 +161,7 @@ Light Shot
 Blank Gaze
 Nitro - Finale
 Stymie - Dispel
+
+ITEMS
+Everyone have Echo Drops, Remedies, and Reraise items.
+
