@@ -1,4 +1,9 @@
+----------------------------------------------------------------------------------------------------------------------------------
+-- JOB ASSIGNMENTS
+----------------------------------------------------------------------------------------------------------------------------------
+
 PARTY 1
+
 RUN/DRK - Raes - Party lead
 BLU/RUN - Taki
 WHM     - Bzt
@@ -7,6 +12,7 @@ COR     - Langly
 
 
 PARTY 2
+
 RUN/BLU - Falk - Alliance lead - Popper
 SCH/BLM - Sammeh
 RDM     - Gnomie
@@ -14,6 +20,7 @@ BRD     - Whiiskey
 
 
 SWAPPING
+
 COR and BRD regularly swap parties.
 SCH can quickly swap to Party 1 for Regen V if it's safe.
 RDM, GEO, WHM, BLU don't swap.
@@ -26,6 +33,7 @@ Pull mobs off RUN/BLU one at a time.  Keep up defensive buffs.  Use a hybrid DD/
 Use One for All during Astral Flow at 74%, 49%, 24%, and 4%.
 One for All will need to be reset three times during the fight.
 Try not to use too many JAs so One for All actually gets reset.
+SP abilities may be useful in emergency situations.
 
 BLU/RUN: Non-squishy damage dealer.
 Keep up defensive buffs.
@@ -34,17 +42,20 @@ Set Winds of Promy and use if needed.
 Give Mighty Guard to party during final form.
 The RUN/DRK should be capped on magical haste from Haste II and Honor March, so the haste effect from Mighty Guard isn't needed.
 However, the +30 HP regen, 25% defense, and 15 MDT offered by Mighty Guard is useful.
-The Random Deals and Wild Cards should reset Diffusion.  Should be able to keep up Mighty Guard throughout the final form.
+The Random Deals and Wild Card should reset Diffusion.  Should be able to keep up Mighty Guard throughout the final form.
 
 GEO: Typical GEO stuff.
-Geo-Frailty for most of the fight.  During the 4 Astral Flows, switch from Geo-Frailty to Geo-Fend.
+Use Geo-Frailty for most of the fight.  During the 4 Astral Flows, switch from Geo-Frailty to Geo-Fend.
 Use a defensive Indi spell.  Indi-Fade seems best for me.
 Indi-Vex isn't that potent anymore, so Fade is probably better than Vex.
 The magical attacks are worse than the physical attacks, so Fade is better than Wilt.
 Not quite sure what to Entrust or when to do it.  Might not be necessary.  Use your judgment.  I'm open to suggestions.
+Bolster right before Wild Card is used.  Wild Card will be used between 49% and 24%.
 
 WHM: Typical WHM stuff.
-Curaga spam during Bio aura is essential.  
+Curaga spam during Bio aura is essential.
+Sacrosanctity may be useful for Astral Flow.
+Asylum may be useful for final 5%.
 
 COR: Typical COR stuff.
 Offensive rolls for Party 1.  Samauri/Chaos seems good.
@@ -70,7 +81,7 @@ RDM: Typical RDM stuff.
 Main healer for RUN/BLU.
 Typical RDM buffs including Haste II, Refresh III.
 Typical RDM debuffs.  Dia III is a given.
-I would be interested to know how well the other debuffs land on the different mobs.
+I would be interested to know how well all the debuffs land on the different mobs.
 
 SCH/BLM: Support.  Break-ga lamps.
 Backup healer for RUN/BLU.
@@ -78,15 +89,27 @@ Elemental seal - Manifestation - Break is essential for re-sleeping Tumult Lamps
 SCH can quickly swap to Party 1 for Accession - Perpetuation - Regen V if it's safe.
 I suppose the SCH could also Accession - Perpetuation - Embrava towards the end of the fight if it's safe.
 
-BRD
+BRD: Typical BRD stuff.  Sleep lamps.
+Defensive songs for RUN/BLU.  Four Minnes seem good.
+Offensive songs for RUN/DRK and BLU.  Honor March, Blade Madrigal, Minuet V.  Fourth song can be either Sword Madrigal or Minuet IV.
+Ballads for GEO and WHM.
+Ballads for RDM and SCH when possible, but they should be ok without much support.
+I don't think Carol or Scherzo would be useful for this fight, but I'm open to suggestions.
+Nightingale - Troubadour - Horde Lullaby II for the Tumult Lamps is essential.
+An accurate and reliable sleep timer is essential.  BRD needs to tell the SCH when to Break-ga.
+Reliably equipping the correct gear for Lullaby is essential.  There is no margin for error!
+Favorable positioning of the Tumult Lamps is essential.  The AOE range for Horde Lullaby II is tiny!
+It's only a 4 yalm radius around the target when using a Wind Instrument.  String instruments aren't much better.
 
 
+DEFENSE
+This fight is about defense.  Stay alive!
+Survive the TP moves!  Survive Astral Flow!  Survive the Bio aura!
+DPS has never been a problem.  DPS will not be a problem as long as people stay alive.
+Have DT sets ready.  Use them thoughout the fight.  During Astral Flow, turtle up to the max!
+Astral Flow survival set should have capped MDT (26 gear + Shell V) and as much Magic Defense Bonus and Magic Evasion as possible.
+If you know an Astral Flow is coming, try to get Stoneskin up.
 
-
-EVERYONE
-Meds
-Have a DT set.  Use it thoughout the fight, especially on Astral Flow.
-Use stonkeskin.  MDT, 
 
 
 Light Shot
