@@ -1,6 +1,6 @@
 PARTY 1
 RUN/DRK - Raes - Party lead
-BLU     - Taki
+BLU/RUN - Taki
 WHM     - Bzt
 GEO     - Tess
 COR     - Langly
@@ -15,8 +15,8 @@ BRD     - Whiiskey
 
 SWAPPING
 Support jobs will swap parties for buffs.
-Leaders have auto-invite set up to facilitate swapping.
-COR and BRD should be swapping.
+Leaders should have auto-invite set up to facilitate swapping.
+COR and BRD need to swap.
 RDM could possibly swap for Refresh III on RUN/DRK and GEO.  BLU shouldn't need refresh with Tizona.  WHM might prefer Sublimation over refresh.
 SCH could possibly swap for Regen V and Embrava.
 GEO, WHM, BLU don't swap.
@@ -25,26 +25,44 @@ GEO, WHM, BLU don't swap.
 ROLES
 
 RUN/DRK: Damage dealer/tank hybrid.
-Pulls mobs off RUN/BLU one at a time.  Keep up defensive buffs.
+Pull mobs off RUN/BLU one at a time.  Keep up defensive buffs.  Use a hybrid DD/DT set.
 Use One for All during Astral Flow at 74%, 49%, 24%, and 4%.
+One for All will need to be reset three times during the fight.
+Try not to use too many JAs so One for All actually gets reset.
 
 BLU/RUN: Non-squishy damage dealer.
-Keep up defensive buffs.  Set Winds of Promy and use when needed.
-Gives Mighty Guard to party during final form.
+Keep up defensive buffs.
+Use a hybrid DD/DT set that includes Defending Ring, Loricate Torque +1, Dampening Tam, and Staunch +1.
+Set Winds of Promy and use if needed.
+Give Mighty Guard to party during final form.
 The RUN/DRK should be capped on magical haste from Haste II and Honor March, so the haste effect from Mighty Guard isn't needed.
 However, the +30 HP regen, 25% defense, and 15 MDT offered by Mighty Guard is useful.
 The Random Deals and Wild Cards should reset Diffusion.  Should be able to keep up Mighty Guard throughout the final form.
 
-GEO: Geo-Frailty for most of the fight.  During Astral Flow, switch from Geo-Frailty to Geo-Fend.
+GEO: Geo-Frailty for most of the fight.  During the 4 Astral Flows, switch from Geo-Frailty to Geo-Fend.
 Use a defensive Indi spell.  Indi-Fade seems best for me.
 Indi-Vex isn't that potent anymore, so Fade is probably better than Vex.
-The mob's magical attacks are worse than the physical ttacks, so Fade is probably better than Wilt.
+The magical attacks are worse than the physical attacks, so Fade is better than Wilt.
 Not quite sure what to Entrust or when to do it.  Might not be necessary.  Use your judgment.  I'm open to suggestions.
 
 WHM: Normal WHM stuff.
 Curaga spam during Bio aura is essential.  
 
-COR: 
+COR: Normal COR stuff.
+Offensive rolls for Party 1.  Swaps parties to give RUN/BLU defensive rolls.
+Party swaps should no longer be needed during final form.
+Reset the JA One for All for the RUN/DRK three separate times:
+1st time between 74% and 49%.  Use Random Deal.
+2nd time between 49% and 24%.  Use Wild Card.
+3rd time bteween 24% and 4%.  Use Random Deal again.
+Make sure you have the necessary gear and merits to successfully reset One for All.
+The BRD will need Nightingale and Troubadour reset during the fight.
+Make sure BRD is in the party and next to you before using Random Deal and Wild Card.
+Perhaps GEO can Bolster and BRD can Soul Voice and Nitro before Wild Card.  We might get lucky.
+Feel free to DD if it seems safe, but proceed with caution.  Use a hybrid DD/DT set.
+It may be better to not DD, stay in DT set, and stay alive.  Use your judgment.
+
+
 
 RDM: Normal RDM stuff.  Haste II, Refresh III, Dia III, Distract III and Frazzle III if they will land.
 COR: Offensive buffs for Party 1, defensive buffs for Party 2.
@@ -53,3 +71,8 @@ COR: Offensive buffs for Party 1, defensive buffs for Party 2.
 
 Have a DT set.  Use it thoughout the fight, especially on Astral Flow.
 Use stonkeskin.  MDT, 
+
+Light Shot
+Blank Gaze
+Finale
+Dispel
