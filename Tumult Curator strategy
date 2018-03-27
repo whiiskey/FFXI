@@ -14,12 +14,9 @@ BRD     - Whiiskey
 
 
 SWAPPING
-Support jobs will swap parties for buffs.
-Leaders should have auto-invite set up to facilitate swapping.
-COR and BRD need to swap.
-RDM could possibly swap for Refresh III on RUN/DRK and GEO.  BLU shouldn't need refresh with Tizona.  WHM might prefer Sublimation over refresh.
-SCH could possibly swap for Regen V and Embrava.
-GEO, WHM, BLU don't swap.
+COR and BRD regularly swap parties.
+SCH can quickly swap to Party 1 for Regen V if it's safe.
+RDM, GEO, WHM, BLU don't swap.
 
 
 ROLES
@@ -39,17 +36,19 @@ The RUN/DRK should be capped on magical haste from Haste II and Honor March, so 
 However, the +30 HP regen, 25% defense, and 15 MDT offered by Mighty Guard is useful.
 The Random Deals and Wild Cards should reset Diffusion.  Should be able to keep up Mighty Guard throughout the final form.
 
-GEO: Geo-Frailty for most of the fight.  During the 4 Astral Flows, switch from Geo-Frailty to Geo-Fend.
+GEO: Typical GEO stuff.
+Geo-Frailty for most of the fight.  During the 4 Astral Flows, switch from Geo-Frailty to Geo-Fend.
 Use a defensive Indi spell.  Indi-Fade seems best for me.
 Indi-Vex isn't that potent anymore, so Fade is probably better than Vex.
 The magical attacks are worse than the physical attacks, so Fade is better than Wilt.
 Not quite sure what to Entrust or when to do it.  Might not be necessary.  Use your judgment.  I'm open to suggestions.
 
-WHM: Normal WHM stuff.
+WHM: Typical WHM stuff.
 Curaga spam during Bio aura is essential.  
 
-COR: Normal COR stuff.
-Offensive rolls for Party 1.  Swaps parties to give RUN/BLU defensive rolls.
+COR: Typical COR stuff.
+Offensive rolls for Party 1.  Samauri and Chaos seems good to me.
+Swaps parties to give RUN/BLU defensive rolls.  Gallant and Magus seems good to me.
 Party swaps should no longer be needed during final form.
 Reset the JA One for All for the RUN/DRK three separate times:
 1st time between 74% and 49%.  Use Random Deal.
@@ -59,18 +58,34 @@ Make sure you have the necessary gear and merits to successfully reset One for A
 The BRD will need Nightingale and Troubadour reset during the fight.
 Make sure BRD is in the party and next to you before using Random Deal and Wild Card.
 Perhaps GEO can Bolster and BRD can Soul Voice and Nitro before Wild Card.  We might get lucky.
+Light Shot Dia III.  
+CORs don't have much magic defense.  Consider subbing WHM, RDM, or RUN.  This gives you magic defense bonus and stoneskin.
 Feel free to DD if it seems safe, but proceed with caution.  Use a hybrid DD/DT set.
 It may be better to not DD, stay in DT set, and stay alive.  Use your judgment.
 
+RUN/BLU: Super tank.
+Be as beefy as possible.
+
+RDM: Typical RDM stuff.
+Main healer for RUN/BLU.
+Typical RDM buffs including Haste II, Refresh III.
+Typical RDM debuffs.  Dia III is a given.
+I would be interested to know how well the other debuffs land on the different mobs.
+
+SCH/BLM: Support 
+Backup healer for RUN/BLU.
+Elemental seal, Manifestation, Break is essential for re-sleeping Tumult Lamps.
+
+BRD
 
 
-RDM: Normal RDM stuff.  Haste II, Refresh III, Dia III, Distract III and Frazzle III if they will land.
-COR: Offensive buffs for Party 1, defensive buffs for Party 2.
 
 
-
+EVERYONE
+Meds
 Have a DT set.  Use it thoughout the fight, especially on Astral Flow.
 Use stonkeskin.  MDT, 
+
 
 Light Shot
 Blank Gaze
