@@ -3,7 +3,7 @@
 ----------------------------------------------------------------------------------------------------------------------------------
 
 Phase 1: Chariots.  Recommended order: Long-Armed Chariot, and then any others.
-Phase 2: Beastmen Kings.  Recommended order: Gurfurlur, Gulool, Medusa.
+Phase 2: Beastmen Kings.  Recommended order: Gurfurlur (Troll), Gulool (Mamool Ja, has two heads), Medusa.
 Phase 3: ToAU HNMs.  Recommended order: Hydra, Khimaira, Cerberus.
 Phase 4: Dvergr.
 
@@ -42,9 +42,10 @@ No more party swapping after the Dvergr is pulled.
 RUN/DRK: Damage dealer/tank hybrid.
 Keep up defensive buffs.  Use a hybrid DD/DT set for TP.
 Pull mobs off RUN/BLU one at a time.  Accurate pulls are essential.
-Use One for All during Astral Flow at 74%, 49%, 24%, and 4%.
+Use One for All for Astral Flow at 74%, 49%, 24%, and 4%.
 One for All will need to be reset three times during the fight.
-Try not to use too many JAs so One for All actually gets reset.
+Try not to have too many JAs on cooldown during Random Deal.  We want One for All to be successfully reset.
+Feel free to use more JAs before Wild Card.
 SP abilities may be useful in emergency situations.
 
 BLU/RUN: Non-squishy damage dealer.
@@ -61,7 +62,8 @@ Indi-Vex isn't that potent anymore, so Fade is probably better than Vex.
 The magical attacks are worse than the physical attacks, so Fade is better than Wilt.
 Entrust Indi-Fend during the final form.
 Random Deals and Wild Card should reset Entrust.  You should be able to keep up Entrust-Fend throught Phase 4.
-If it's time for Astral Flow and Entrust-Fend isn't up, temporarily switch from Geo-Frailty to Geo-Fend.
+If it's time for Astral Flow and Entrust-Fend isn't up, consider temporarily switching from Geo-Frailty to Geo-Fend.
+Temporarily switching might be useful or it might be overkill.  Hard to tell.
 Bolster right before Wild Card is used.  Wild Card will be used between 49% and 24%.
 
 WHM: Typical WHM stuff.
@@ -69,15 +71,15 @@ Curaga spam during Bio aura is essential.
 
 COR: Typical COR stuff.
 Offensive rolls for Party 1.  Samauri/Chaos seems good.
-Swaps parties to give RUN/BLU defensive rolls.  Gallant/Magus seems good.
-Party swaps should no longer be needed Phase 4.
+Swaps parties in Phases 1-3 to give RUN/BLU defensive rolls.  Gallant/Magus seems good.
+Party swaps are not needed in Phase 4.
 Reset the JA One for All for the RUN/DRK three separate times:
 1st time between 74% and 49%.  Use Random Deal.
 2nd time between 49% and 24%.  Use Wild Card.
 3rd time bteween 24% and 4%.  Use Random Deal again.
 Make sure you have the necessary gear and merits to successfully reset One for All.
 The BRD will need Nightingale and Troubadour reset during the fight.
-Make sure BRD is in the party and next to you before using Random Deal and Wild Card.
+Make sure BRD is next to you before using Random Deal and Wild Card.
 Perhaps GEO can Bolster and BRD can Soul Voice and Nitro before Wild Card.  We might get lucky with SP reset.
 Light Shot Dia III of course.
 CORs don't have much magic defense.  Consider subbing WHM, RDM, or RUN.  This gives you magic defense bonus and stoneskin.
@@ -107,7 +109,7 @@ RDM: Typical RDM stuff.
 Main healer for RUN/BLU.
 Typical RDM buffs including Haste II, Refresh III.
 Typical RDM debuffs.  Dia III is a given.
-I would be interested to know how well all the debuffs land on the different mobs.
+I would be interested to know which debuffs land on the different mobs.
 
 SCH/BLM: Support.  Break-ga lamps.
 Backup healer for RUN/BLU.
@@ -133,26 +135,30 @@ Per BGWiki: Gains a temporary 300/tic Bio aura (30') following Bilgestorm.
 Party 1: During Bio aura, everyone gather at the boss.  The WHM will spam Curagas.
 Every person in Party 1 needs to get hit by every single Curaga.
 Assess the situation and figure out if we should continue damage, slow damage, or halt damage during Bio aura.
+It would be great if we could continue damage during the aura, but it might be risky.  We'll have to try it.
 Party 2: Run far, far away.  Stay outside of the aura.  Party 2 should stay 30' away from the boss as much as possible.
 
 DON'T LET THE LAMPS WAKE UP
 Tumult Lamps are the #2 cause of wipes.
 A skilled BRD, a skilled SCH, and good communication are essential.
-Hopefully the Bio aura isn't active when the Lamps wake up.
+Hopefully the Bio aura isn't active when the Lamps wake up.  Otherwise the BRD and SCH might die, and the alliance might wipe.
 Try to position the boss more than 30' away from the sleeping Lamps.
 
 SURVIVE ASTRAL FLOW
 Astral Flow is the #3 cause of wipes.
 During Astral Flow, turtle up to the max!  Astral Flow survival set should have capped MDT (26 in gear because Shell V is 24ish)
-and as much Magic Defense Bonus and Magic Evasion as possible.  Maybe even a Shadow Ring.
+and as much Magic Defense Bonus and Magic Evasion as possible.  Shadow Ring might be a good choice too.
 Don't force Astral Flow if the Bio aura is up.  Don't force Astral Flow if the Lamps are about to wake up.
 Party 1: Defensive buffs should up already.  Stoneskin if you can.  Turtle up.  RUN/DRK uses One for All.
 Force Astral Flow with damage.  Eat the nukes.  Survive.
 Party 2: Run far, far away.  Spread out.  Don't be close to anyone.  The avatars might kill one or two people in Party 2,
 but they can't kill everyone if you're spread out.  Make sure Reraise is up.  Turtle up.  Stoneskin up.
 Try to eat the nuke and survive.  If you die, get up and re-apply Reraise ASAP.  Use a Reraise item if you have to.
-Get prepared for the next Astral Flow.  One for All from the RUN/BLU can help Party 2 survive one of the Astral Flows.
+Re-buff ASAP.  The next Astral Flow is moments away.  Get ready.
+One for All from the RUN/BLU can help Party 2 survive one of the Astral Flows.
 It would probably be best to use the RUN/BLU's One for All on the first Astral Flow.
+Special note about All for One: The potency is based on each individual player's maximum HP.  Each person should consider
+making a special high-HP DT set.  Swap into this defense set right before the RUN hits you with All for One.
 
 SURVIVE DREAD SPIKES
 The Dvergr can use Dread Spikes.
