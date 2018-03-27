@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------------------------------------------------------------
--- JOB ASSIGNMENTS
+-- PARTY SET UP
 ----------------------------------------------------------------------------------------------------------------------------------
 
 PARTY 1
@@ -26,10 +26,12 @@ SCH can quickly swap to Party 1 for Regen V if it's safe.
 RDM, GEO, WHM, BLU don't swap.
 
 
-ROLES
+----------------------------------------------------------------------------------------------------------------------------------
+-- JOB ROLES
+----------------------------------------------------------------------------------------------------------------------------------
 
 RUN/DRK: Damage dealer/tank hybrid.
-Pull mobs off RUN/BLU one at a time.  Keep up defensive buffs.  Use a hybrid DD/DT set.
+Pull mobs off RUN/BLU one at a time.  Keep up defensive buffs.  Use a hybrid DD/DT set for TP.
 Use One for All during Astral Flow at 74%, 49%, 24%, and 4%.
 One for All will need to be reset three times during the fight.
 Try not to use too many JAs so One for All actually gets reset.
@@ -37,25 +39,23 @@ SP abilities may be useful in emergency situations.
 
 BLU/RUN: Non-squishy damage dealer.
 Keep up defensive buffs.
-Use a hybrid DD/DT set that includes Defending Ring, Loricate Torque +1, Dampening Tam, and Staunch +1.
-Set Winds of Promy and use if needed.
+Use a hybrid DD/DT set for TP.  Good gear choices include Defending Ring, Loricate Torque +1, Dampening Tam, and Staunch +1.
 Give Mighty Guard to party during final form.
 The RUN/DRK should be capped on magical haste from Haste II and Honor March, so the haste effect from Mighty Guard isn't needed.
-However, the +30 HP regen, 25% defense, and 15 MDT offered by Mighty Guard is useful.
+However, the +30 HP regen, 25% defense, and 15 Magic Defense Bonus offered by Mighty Guard is useful.
 The Random Deals and Wild Card should reset Diffusion.  Should be able to keep up Mighty Guard throughout the final form.
 
 GEO: Typical GEO stuff.
-Use Geo-Frailty for most of the fight.  During the 4 Astral Flows, switch from Geo-Frailty to Geo-Fend.
-Use a defensive Indi spell.  Indi-Fade seems best for me.
+Use Geo-Frailty and Indi-Fade.
 Indi-Vex isn't that potent anymore, so Fade is probably better than Vex.
 The magical attacks are worse than the physical attacks, so Fade is better than Wilt.
-Not quite sure what to Entrust or when to do it.  Might not be necessary.  Use your judgment.  I'm open to suggestions.
+Entrust Indi-Fend during the final form.
+Random Deals and Wild Card should reset Entrust.  You should be able to keep up Entrust-Fend throught the final form.
+If it's time for Astral Flow and Entrust-Fend isn't up, temporarily switch from Geo-Frailty to Geo-Fend.
 Bolster right before Wild Card is used.  Wild Card will be used between 49% and 24%.
 
 WHM: Typical WHM stuff.
 Curaga spam during Bio aura is essential.
-Sacrosanctity may be useful for Astral Flow.
-Asylum may be useful for final 5%.
 
 COR: Typical COR stuff.
 Offensive rolls for Party 1.  Samauri/Chaos seems good.
@@ -68,7 +68,7 @@ Reset the JA One for All for the RUN/DRK three separate times:
 Make sure you have the necessary gear and merits to successfully reset One for All.
 The BRD will need Nightingale and Troubadour reset during the fight.
 Make sure BRD is in the party and next to you before using Random Deal and Wild Card.
-Perhaps GEO can Bolster and BRD can Soul Voice and Nitro before Wild Card.  We might get lucky.
+Perhaps GEO can Bolster and BRD can Soul Voice and Nitro before Wild Card.  We might get lucky with SP reset.
 Light Shot Dia III of course.
 CORs don't have much magic defense.  Consider subbing WHM, RDM, or RUN.  This gives you magic defense bonus and stoneskin.
 Feel free to DD if it seems safe, but proceed with caution.  Use a hybrid DD/DT set.
@@ -76,6 +76,7 @@ It may be better to not DD, stay in DT set, and stay alive.  Use your judgment.
 
 RUN/BLU: Super tank.
 Be as beefy as possible.
+SP abilities may be useful in emergency situations.
 
 RDM: Typical RDM stuff.
 Main healer for RUN/BLU.
@@ -102,17 +103,30 @@ Favorable positioning of the Tumult Lamps is essential.  The AOE range for Horde
 It's only a 4 yalm radius around the target when using a Wind Instrument.  String instruments aren't much better.
 
 
+----------------------------------------------------------------------------------------------------------------------------------
+-- SURVIVAL INFO
+----------------------------------------------------------------------------------------------------------------------------------
+
 DEFENSE
 This fight is about defense.  Stay alive!
-Survive the TP moves!  Survive Astral Flow!  Survive the Bio aura!
-DPS has never been a problem.  DPS will not be a problem as long as people stay alive.
-Have DT sets ready.  Use them thoughout the fight.  During Astral Flow, turtle up to the max!
+Survive the TP moves!  Survive Astral Flow!  Survive the Bio aura!  Survive Dread Spikes!
+DPS will not be a problem as long as people stay alive.
+Have DT sets ready.  Use them thoughout the fight.
+
+SURVIVE ASTRAL FLOW
+During Astral Flow, turtle up to the max!
 Astral Flow survival set should have capped MDT (26 gear + Shell V) and as much Magic Defense Bonus and Magic Evasion as possible.
+Maybe even a Shadow Ring or Engulfer Cape +1.
 If you know an Astral Flow is coming, try to get Stoneskin up.
 
+ITEMS
 
 
+Dread Spikes
+Gear is very good now.
+Macc food may help.
+Focus/Langour may help.
 Light Shot
 Blank Gaze
-Finale
-Dispel
+Nitro - Finale
+Stymie - Dispel
