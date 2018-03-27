@@ -3,8 +3,8 @@
 ----------------------------------------------------------------------------------------------------------------------------------
 
 Phase 1: Chariots.  Recommended order: Long-Armed Chariot, and then any others.
-Phase 2: Kings.  Recommended order: Gurfurlur, Gulool, Medusa.
-Phase 3: HNMs.  Recommended order: Hydra, Khimaira, Cerberus.
+Phase 2: Beastmen Kings.  Recommended order: Gurfurlur, Gulool, Medusa.
+Phase 3: ToAU HNMs.  Recommended order: Hydra, Khimaira, Cerberus.
 Phase 4: Dvergr.
 
 
@@ -91,10 +91,13 @@ Ballads for GEO and WHM.
 Ballads for RDM and SCH when possible, but they should be ok without Ballads.
 I don't think Carol or Scherzo would be useful for this fight, but I'm open to suggestions.
 Nightingale - Troubadour - Horde Lullaby II for the Tumult Lamps is essential.
+With all JAs and today's best gear, Horde Lullaby II duration is over 8 minutes.  That may be enough time to kill the Dvergr.
+If more than 8 minutes is needed, the SCH needs to Break-ga right before Lullaby wears off, and the BRD needs to re-apply Lullaby.
 An accurate and reliable sleep timer is essential.  BRD needs to tell the SCH when to Break-ga.
 Reliably equipping the correct gear for Lullaby is essential.  There is no margin for error!
 Favorable positioning of the Tumult Lamps is essential.  The AOE range for Horde Lullaby II is tiny!
 It's only a 4 yalm radius around the target when using a Wind Instrument.  String instruments aren't much better.
+While Ni-Tro is active, the BRD can try to land Elegy and Nocturne on the Dvergr.
 
 RUN/BLU: Super tank.
 Be as beefy as possible.
@@ -110,9 +113,8 @@ SCH/BLM: Support.  Break-ga lamps.
 Backup healer for RUN/BLU.
 Elemental seal - Manifestation - Break is essential for re-sleeping Tumult Lamps.
 SCH can quickly swap to Party 1 for Accession - Perpetuation - Regen V when its safe.
-Swapping to Party 1 is fairly safe during the first 3 phases.
+Swapping to Party 1 is fairly safe during Phases 1, 2, 3.
 Do Regen V one final time at the beginning of Phase 4, before sleeping the Lamps and pulling Tumult Curator.
-
 
 
 ----------------------------------------------------------------------------------------------------------------------------------
@@ -153,15 +155,26 @@ Get prepared for the next Astral Flow.  One for All from the RUN/BLU can help Pa
 It would probably be best to use the RUN/BLU's One for All on the first Astral Flow.
 
 SURVIVE DREAD SPIKES
-Dread Spikes
-Gear is very good now.
-Macc food may help.
-Focus/Langour may help.
-Light Shot
-Blank Gaze
-Nitro - Finale
-Stymie - Dispel
+The Dvergr can use Dread Spikes.
+Watch out for this.  This is a hazzard to the melees, especially the BLU.
+If the mob puts up Dread Spikes, stop damage and turn.  Try to dispel the effect.
+BGWiki reports that this effect is very difficult to dispel.  Finale worked only with Elemental seal or Troubadour.
+We have very good magic accuracy gear now.  I'd like to try to dispel it without using JAs.  
+I'd like to try Finale with maximum magic accuracy gear and a Marine Stewpot.
+If that doesn't work, we can re-try with Indi-Focus and Geo-Languor.
+If that doesn't work, I suppose we could use Troubadour.  Or BRD could sub BLM and use Elemental Seal.
+We could try COR's Light Shot, but that might not work.
+We could try BLU's Blank Gaze, but that might not work either.
+We could also try RDM's Dispel.  I wouldn't expect Dispel to land on a dark-based boss like Dvergr, but it's worth a try.
+RDM has a lot of magic accuracy gear now too.  Stymie - Dispel may land, and this could be used as a last resort.
+
+SURVIVE PHASES 1, 2, 3
+The Chariots, Beastmen Kings, and ToAU HNMs all have nasty TP moves, but they're not THAT bad compared to the Dvergr.
+Be smart and safe during the first three phases.  Protect yourself.  Use the right barspells, runes, and buffs.
+Stand in the right place for the HNMs.  Not at the head, not at the tail.  The front leg seems to be the best place.
 
 ITEMS
-Everyone have Echo Drops, Remedies, and Reraise items.
-
+Everyone needs to have Echo Drops, Remedies, and Reraise items.
+Items like Reraiser, Hi-Reraiser, and Super Reraiser, are better than equipment like Reraise Earring and Reraise Hairpins.
+The equipment takes too long to use.  Have the instant use items in your inevntory and use them if needed.
+Vile Elixir and Vile Elixir +1 are good for emergency situations.
