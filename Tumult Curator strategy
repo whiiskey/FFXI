@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------------------------------------------------------
 -- TUMULT CURATOR STRATEGY
--- Strategy for 2018, a time when when Indi-Vex is weak, but you can hit the mobs!
+-- Strategy for 2018, a time when when Indi-Vex is weak, but at least you can hit the mobs!
 -- Customized for our group
 ----------------------------------------------------------------------------------------------------------------------------------
 -- References:
@@ -10,13 +10,12 @@
 ----------------------------------------------------------------------------------------------------------------------------------
 
 
-
 ----------------------------------------------------------------------------------------------------------------------------------
 -- THE FIGHT
 ----------------------------------------------------------------------------------------------------------------------------------
 
-Phase 1: Chariots.  Recommended order: Long-Armed Chariot, and then any others.
-Phase 2: Beastmen Kings.  Recommended order: Gurfurlur (Troll), Gulool (Mamool Ja, has two heads), Medusa.
+Phase 1: Chariots.  Recommended order: Long-Armed Chariot (the one with long arms), and then any others.
+Phase 2: Beastmen Kings.  Recommended order: Gurfurlur (Troll), Gulool Ja Ja (Mamool Ja, has two heads), Medusa.
 Phase 3: ToAU HNMs.  Recommended order: Hydra, Khimaira, Cerberus.
 Phase 4: Dvergr.
 
@@ -26,26 +25,24 @@ Phase 4: Dvergr.
 ----------------------------------------------------------------------------------------------------------------------------------
 
 PARTY 1
-
 RUN/DRK - Raes - Party lead
 BLU/RUN - Taki
-WHM     - Bzt
+WHM/SCH - Bzt
 GEO     - Tess
 COR     - Langly
 BRD     - Whiiskey
 
-
 PARTY 2
-
 RUN/BLU - Falk - Alliance lead - Popper
 SCH/BLM - Sammeh
 RDM     - Gnomie
 
-
 SWAPPING
-
 COR, BRD, SCH swap parties during Phases 1, 2, 3.
 No more party swapping after the Dvergr is pulled.
+
+ALLIANCE SIZE
+I want to keep the alliance as small as possible in order to keep the mob HP low.
 
 
 ----------------------------------------------------------------------------------------------------------------------------------
@@ -70,17 +67,20 @@ However, the +30 HP regen, 25% defense, and 15 Magic Defense Bonus offered by Mi
 The Random Deals and Wild Card should reset Diffusion.  Should be able to keep up Mighty Guard throughout Phase 4.
 
 GEO: Typical GEO stuff.
-Use Geo-Frailty and Indi-Fade.
-Indi-Vex isn't that potent anymore, so Fade is probably better than Vex.
-The magical attacks are worse than the physical attacks, so Fade is better than Wilt.
+Use Geo-Frailty throughout the fight.
+Use Indi-Vex during Phases 1, 2, 3.  Switch to Indi-Fade on Gulool Ja Ja just in case Mijin Gakure gets off.
+Use Indi-Fade on Phase 4.  That's probaby the best choice for defense against Meteor, Tier VI nukes, and Tier V -ga nukes.
 Entrust Indi-Fend during the final form.
 Random Deals and Wild Card should reset Entrust.  You should be able to keep up Entrust-Fend throught Phase 4.
 If it's time for Astral Flow and Entrust-Fend isn't up, consider temporarily switching from Geo-Frailty to Geo-Fend.
 Temporarily switching might be useful or it might be overkill.  Hard to tell.
 Bolster right before Wild Card is used.  Wild Card will be used between 49% and 24%.
+Idle in DT gear.  Don't idle in Refresh gear.  MP should not be a problem if the BRD keeps up Ballads.
 
 WHM: Typical WHM stuff.
 Curaga spam during Bio aura is essential.
+Idle in DT gear.  Inyanga +2 set is a great choice for this fight.  All that Magic Defense Bonus!  All that Magic Evasion!
+MP should not be a problem if the BRD keeps up Ballads.
 
 COR: Typical COR stuff.
 Offensive rolls for Party 1.  Samauri/Chaos seems good.  If we hit the attack cap, could swap out Chaos for Fighter's.
@@ -93,9 +93,9 @@ Reset the JA One for All for the RUN/DRK three separate times:
 Make sure you have the necessary gear and merits to successfully reset One for All.
 The BRD will need Nightingale and Troubadour reset during the fight.
 Make sure BRD is next to you before using Random Deal and Wild Card.
-Perhaps GEO can Bolster and BRD can Soul Voice and Nitro before Wild Card.  We might get lucky with SP reset.
+GEO should Bolster before Wild Card.  We might get lucky with SP ability reset.
 Light Shot Dia III of course.
-CORs don't have much magic defense.  Consider subbing WHM, RDM, or RUN.  This gives you magic defense bonus and stoneskin.
+CORs don't have much magic defense.  Consider subbing WHM, RDM, or RUN.  This gives you Magic Defense Bonus and Stoneskin.
 Feel free to DD if it seems safe, but proceed with caution.  Use a hybrid DD/DT set.
 It may be better to not DD, stay in DT set, and stay alive.  Use your judgment.
 
@@ -106,9 +106,12 @@ Ballads for GEO and WHM.
 Ballads for RDM and SCH when possible, but they should be ok without Ballads.
 I don't think Carol or Scherzo would be useful for this fight, but I'm open to suggestions.
 Nightingale - Troubadour - Horde Lullaby II for the Tumult Lamps is essential.
+Use Clarion Call before sleeping the lamps.  That increases Lullaby duration by 1:20.  (40 second bonus is doubled by Troubadour.)
+You can use Marcato too for an extra 20 seconds.  I would recommend saving Marcato for dispelling Dread Spikes with Finale.
+Marcato mutiplies Finale's magic accuracy by 1.5x.
 With all JAs and today's best gear, Horde Lullaby II duration is over 8 minutes.  That may be enough time to kill the Dvergr.
 If more than 8 minutes is needed, the SCH needs to Break-ga right before Lullaby wears off, and the BRD needs to re-apply Lullaby.
-An accurate and reliable sleep timer is essential.  BRD needs to tell the SCH when to Break-ga.
+An accurate and reliable sleep timer is essential.  Use a stopwatch on your phone if you have to.
 Reliably equipping the correct gear for Lullaby is essential.  There is no margin for error!
 Favorable positioning of the Tumult Lamps is essential.  The AOE range for Horde Lullaby II is tiny!
 It's only a 4 yalm radius around the target when using a Wind Instrument.  String instruments aren't much better.
@@ -121,7 +124,7 @@ SP abilities may be useful in emergency situations.
 RDM: Typical RDM stuff.
 Main healer for RUN/BLU.
 Typical RDM buffs including Haste II, Refresh III.
-Typical RDM debuffs.  Dia III is a given.
+Typical RDM debuffs.  Use Dia III of course.
 I would be interested to know which debuffs land on the different mobs.
 
 SCH/BLM: Support.  Break-ga lamps.
@@ -131,6 +134,26 @@ SCH can quickly swap to Party 1 for Accession - Perpetuation - Regen V when its 
 Swapping to Party 1 is fairly safe during Phases 1, 2, 3.
 Do Regen V one final time at the beginning of Phase 4, before sleeping the Lamps and pulling Tumult Curator.
 Regen V with optimal gear should be 11 or 12 minutes.  Hopefully we don't need that much time on Dvergr.
+
+----------------------------------------------------------------------------------------------------------------------------------
+-- PULLING THE DVERGR
+----------------------------------------------------------------------------------------------------------------------------------
+
+POSITIONING
+At the start of Phase 4, the RUN/BLU holds and positions the mobs.
+Take the mobs to the location where the Lamps will be slept.  There needs to be a minimum of 30' between the sleeping Lamps
+and the Dvergr during the fight.  Also, get the Lamps bunched together as close as possible.  This reduces the the chance
+that Lullaby misses one of the Lamps.
+
+BUFFS
+Party 1 gathers together.  BRD drops, SCH swaps in and does Accession - Perpetuation - Regen V.
+SCH drops, BRD swaps in and pops Soul Voice and Clarion Call. BRD applies 5 songs to Party 1.
+Party 1 separates.  GEO and WHM stand together.  RUN/DRK, BLU, and COR stand together.  BRD pops Ni-Tro.  
+BRD gives the mages three Ballads.  That's +60 MP/tick with best current gear.
+Fourth mage song is Victory March, which reduces the recast timers for Curaga.
+Fifth mage song doesn't matter.  It's probably best to skip it and save time.  Ni-Tro doesn't last that long.
+BRD gives the melees Honor March, Blade Madrigal, Sword Madrigal, Valor Minuet V, and Valor Minuet IV.
+BRD sleeps 
 
 
 ----------------------------------------------------------------------------------------------------------------------------------
