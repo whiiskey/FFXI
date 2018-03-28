@@ -1,4 +1,14 @@
 ----------------------------------------------------------------------------------------------------------------------------------
+-- TUMULT CURATOR STRATEGY
+-- Customized for our group
+----------------------------------------------------------------------------------------------------------------------------------
+-- References:
+-- BG Wiki: https://www.bg-wiki.com/bg/Tumult_Curator
+-- Mischief's notes were very useful: https://pastebin.com/HgqAu1U8
+-- Mischief's video is useful too: https://www.youtube.com/watch?v=IaX5HpK4L40
+----------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------
 -- THE FIGHT
 ----------------------------------------------------------------------------------------------------------------------------------
 
@@ -169,8 +179,8 @@ We have very good magic accuracy gear now.  I'd like to try to dispel it without
 I'd like to try Finale with maximum magic accuracy gear and a Marine Stewpot.
 If that doesn't work, we can re-try with Indi-Focus and Geo-Languor.
 If that doesn't work, I suppose we could use Troubadour.  Or BRD could sub BLM and use Elemental Seal.
-We could try COR's Light Shot, but that might not work.
-We could try BLU's Blank Gaze, but that might not work either.
+We could try COR's Dark Shot, but I doubt that works.
+We could try BLU's Blank Gaze, but that probably won't work either.
 We could also try RDM's Dispel.  I wouldn't expect Dispel to land on a dark-based boss like Dvergr, but it's worth a try.
 RDM has a lot of magic accuracy gear now too.  Stymie - Dispel may land, and this could be used as a last resort.
 
