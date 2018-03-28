@@ -30,7 +30,7 @@
 --    happens (people blame packet loss), but when it does, you don't get the midcast gear's beneficial stats like
 --    Song Duration.  If the mobs wake up earler than you expect, it can ruin your run.  If you idle in Lullaby gear
 --    there's a higher chance you'll actually be in midcast gear when the spell completes.  Note that if you idle in
---    Lullaby midcast gear and activate Nightingale (which skeps precast gear), then you don't actually swap any gear.
+--    Lullaby midcast gear and activate Nightingale (which skips precast gear), then you don't actually swap any gear.
 --    Even if packet loss occurs, your Lullaby songs still have full duration.
 --  There are many aliases for various gear sets.  Aliaases specific to this job are defined in this file.  More
 --    general aliases are defined in the whiiskey-inlcude.lua file.
@@ -98,10 +98,10 @@
 -------------------------------------------------------------------------------------------------------------------
 --  Shortcuts lua.  Get it through Windower.  Very useful for bard.  You can see my data file (aliases.xml) here:
 --    https://github.com/whiiskey/FFXI/blob/master/shortcuts%20data
---  Timers lua.  Get it through Windower.  I prefer slim mode.  Also make sure custom timers are active.
+--  Timers lua.  Get it through Windower.  I prefer slim mode.
 --  Sleeper lua.  Written by Sammeh.  Very useful for bard on fights like Vinipata.
 --    Sammeh's original version: https://github.com/SammehFFXI/FFXIAddons/tree/master/Sleeper
---    I prefer my version (his version with minor edits): https://github.com/whiiskey/FFXI/blob/master/sleeper.lua
+--    I made minor edits to his lua, I prefer my verion: https://github.com/whiiskey/FFXI/blob/master/sleeper.lua
 -------------------------------------------------------------------------------------------------------------------
 
 
