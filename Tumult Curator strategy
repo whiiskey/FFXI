@@ -100,25 +100,23 @@ Feel free to DD if it seems safe, but proceed with caution.  Use a hybrid DD/DT 
 It may be better to not DD, stay in DT set, and stay alive.  Use your judgment.
 
 BRD: Typical BRD stuff.  Sleep lamps.
-Defensive songs for RUN/BLU.  Four Minnes seem good.
-Offensive songs for RUN/DRK and BLU.  Honor March, Blade Madrigal, Minuet V.  Fourth song can be either Sword Madrigal or Minuet IV.
+Defensive songs for RUN/BLU.  Four Minnes.
+Offensive songs for RUN/DRK and BLU.  Honor March, Blade Madrigal, Minuet V, and either Sword Madrigal or Minuet IV.
 Ballads for GEO and WHM.
 Ballads for RDM and SCH when possible, but they should be ok without Ballads.
 I don't think Carol or Scherzo would be useful for this fight, but I'm open to suggestions.
-Nightingale - Troubadour - Horde Lullaby II for the Tumult Lamps is essential.
-Use Clarion Call before sleeping the lamps.  That increases Lullaby duration by 1:20.  (40 second bonus is doubled by Troubadour.)
-You can use Marcato too for an extra 20 seconds.  I would recommend saving Marcato for dispelling Dread Spikes with Finale.
-Marcato mutiplies Finale's magic accuracy by 1.5x.
+Use Soul Voice and Clarion Call at the beginning of Phase 4.  See "BUFFS" section below for more details.
+Troubador - Horde Lullaby II for the Tumult Lamps is essential.
+You could use Marcato for an extra 20 seconds on Lullaby, but I would recommend saving Marcato for dispelling Dread Spikes
+with Finale.  Marcato mutiplies Finale's magic accuracy by 1.5x.
 With all JAs and today's best gear, Horde Lullaby II duration is over 8 minutes.  That may be enough time to kill the Dvergr.
 If more than 8 minutes is needed, the SCH needs to Break-ga right before Lullaby wears off, and the BRD needs to re-apply Lullaby.
 An accurate and reliable sleep timer is essential.  Use a stopwatch on your phone if you have to.
 Reliably equipping the correct gear for Lullaby is essential.  There is no margin for error!
-Favorable positioning of the Tumult Lamps is essential.  The AOE range for Horde Lullaby II is tiny!
-It's only a 4 yalm radius around the target when using a Wind Instrument.  String instruments aren't much better.
-While Ni-Tro is active, the BRD can try to land Elegy and Nocturne on the Dvergr.
 
 RUN/BLU: Super tank.
 Be as beefy as possible.
+Hold mobs passively.  Just stand there and let them hit you.
 SP abilities may be useful in emergency situations.
 
 RDM: Typical RDM stuff.
@@ -126,6 +124,7 @@ Main healer for RUN/BLU.
 Typical RDM buffs including Haste II, Refresh III.
 Typical RDM debuffs.  Use Dia III of course.
 I would be interested to know which debuffs land on the different mobs.
+Magic accuracy is very good now.  And Vitiation Gloves +3 give an incredible boost to Gain-MND and Gain-INT.
 
 SCH/BLM: Support.  Break-ga lamps.
 Backup healer for RUN/BLU.
@@ -141,19 +140,31 @@ Regen V with optimal gear should be 11 or 12 minutes.  Hopefully we don't need t
 
 POSITIONING
 At the start of Phase 4, the RUN/BLU holds and positions the mobs.
-Take the mobs to the location where the Lamps will be slept.  There needs to be a minimum of 30' between the sleeping Lamps
-and the Dvergr during the fight.  Also, get the Lamps bunched together as close as possible.  This reduces the the chance
-that Lullaby misses one of the Lamps.
+Take the mobs to a good location for sleeping the Lamps.  There needs to be a minimum of 30' between the sleeping Lamps and the
+Dvergr during the fight.
+Also, get the Lamps bunched together as closely as possible.  Favorable positioning of the Lamps is essential because
+the AOE range for Horde Lullaby II is tiny!  It's only a 4 yalm radius around the target when using a Wind Instrument.
 
 BUFFS
 Party 1 gathers together.  BRD drops, SCH swaps in and does Accession - Perpetuation - Regen V.
 SCH drops, BRD swaps in and pops Soul Voice and Clarion Call. BRD applies 5 songs to Party 1.
-Party 1 separates.  GEO and WHM stand together.  RUN/DRK, BLU, and COR stand together.  BRD pops Ni-Tro.  
-BRD gives the mages three Ballads.  That's +60 MP/tick with best current gear.
-Fourth mage song is Victory March, which reduces the recast timers for Curaga.
+Party 1 separates.  GEO and WHM stand together.  RUN/DRK, BLU, and COR stand together.  BRD pops Ni-Tro.
+Ni-Tro doesn't last long, so it's important to move quickly and to not waste time.
+BRD gives the mages three Ballads.  That's +60 MP/tick with today's best gear.
+Next BRD does Tenuto - Victory March for mages.  Victory March reduces recast timers, speeding up Curaga spam and Finale spam.
 Fifth mage song doesn't matter.  It's probably best to skip it and save time.  Ni-Tro doesn't last that long.
-BRD gives the melees Honor March, Blade Madrigal, Sword Madrigal, Valor Minuet V, and Valor Minuet IV.
-BRD sleeps 
+WHM does Boost-CHR, making sure to hit the BRD.
+BRD moves to the melees for Honor March, Blade Madrigal, Sword Madrigal, Valor Minuet V, and Valor Minuet IV.
+BRD sleeps the Lamps.  Make sure to target one of the Lamps in the middle.  Don't target one on the end.
+RUN/DRK Flashes boss immediately after Lullaby.  At this point, the RUN/BLU's job is done.
+Wait about 10 seconds before moving the mob.  Give RDM and BRD a chance to apply debuffs.  Then move 30' away from the Lamps.
+BRD applies Carnage Elegy while Ni-Tro is up.  Also try to land Light Threnody II while Ni-Tro is up.
+RDM applies Dia III and whatever else can land.
+BRD moves away from the party to do Tenuto - Bewitching Etude and Tenuto - Enchanting Etude.
+Depending on the BRD's Etude gearsets, Tenuto may or may not be needed to over-write the BRD's existing songs.
+Hopefully Ni-Tro is still up so the Soul Voice - CHR Etudes last a long time.
+WHM moves away from the BRD and gives Boost-STR to the melees.  Or maybe Boost-DEX.
+COR can re-apply offensive rolls whenever needed.  It can happen at any point in the fight.
 
 
 ----------------------------------------------------------------------------------------------------------------------------------
@@ -203,8 +214,8 @@ Watch out for this.  This is a hazzard to the melees, especially the BLU.
 If the mob puts up Dread Spikes, stop damage and turn.  Try to dispel the effect.
 BGWiki reports that this effect is very difficult to dispel.  Finale worked only with Elemental seal or Troubadour.
 We have very good magic accuracy gear now.  I'd like to try to dispel it without using JAs.  
-I'd like to try Finale with maximum magic accuracy gear, CHR etdues, and a Marine Stewpot.
-If that doesn't work, we can re-try with Indi-Focus, Geo-Languor, and Boost-CHR.
+I'd like to try Finale with maximum magic accuracy gear, Soul Voice - CHR etdues, Boost-CHR, and a Marine Stewpot.
+If that doesn't work, we can re-try with Indi-Focus and Geo-Languor.
 If that doesn't work, I suppose we could use Troubadour.  Or BRD could sub BLM and use Elemental Seal.
 We could try COR's Dark Shot, but I doubt that works.
 We could try BLU's Blank Gaze, but that probably won't work either.
