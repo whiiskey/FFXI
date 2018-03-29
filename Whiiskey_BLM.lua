@@ -1,25 +1,4 @@
--- TODO list:
--- priority to hp/mp so i don't lose it
--- redo idle sets
--- red	o DT sets
-   -- i'm over-capped w dt, take out dt, add mp, add vit and defense
-   -- different DT sets: 1 for no mana wall.  1 for mana wall (that doesn't rely on feet and back to hit 50PDT).
 
-
--- different aspir sets so when mp is high can still aspir
--- put Pixie Hairpin +1 in the Comet set, make a rule
--- maybe make different Death sets with different macc
--- make a 119 proc sets that works for popping plouton
--- melee in the melee cape when mana wall is up
--- convert sets
--- put in langly's warp ring code
--- earring rule for myrkr
-
--- get closing's lua working
--- get the fusion skillchain in a script 
--- put this on github
--- make bind keys for geo bubble and skillchain
--- geo feature: if a luopan is already out, party notification
 	
 
 
