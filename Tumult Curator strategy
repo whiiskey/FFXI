@@ -54,8 +54,9 @@ Keep up defensive buffs.  Use a hybrid DD/DT set for TP.
 Pull mobs off RUN/BLU one at a time.  Accurate pulls are essential.
 Use One for All for Astral Flow at 74%, 49%, 24%, and 4%.
 One for All will need to be reset three times during the fight.
-Try not to have too many JAs on cooldown during Random Deal.  We want One for All to be successfully reset.
-Feel free to use more JAs before Wild Card.
+1st time between 74% and 49%.  Random Deal is used.  Don't have any JAs on cooldown other than One for All.
+2nd time between 49% and 24%.  Wild Card is used.  JAs can be used before Wild Card.
+3rd time bteween 24% and 4%.  Random Deal is used again.  Don't have any JAs on cooldown other than One for All.
 SP abilities may be useful in emergency situations.
 
 BLU/RUN: Non-squishy damage dealer.
@@ -114,10 +115,11 @@ If more than 8 minutes is needed, the SCH needs to Break-ga right before Lullaby
 An accurate and reliable sleep timer is essential.  Use a stopwatch on your phone if you have to.
 Reliably equipping the correct gear for Lullaby is essential.  There is no margin for error!
 
-RUN/BLU: Super tank.
+RUN/BLU: Super tank.  Popper.
 Be as beefy as possible.
 Hold mobs passively.  Just stand there and let them hit you.
 SP abilities may be useful in emergency situations.
+During Phase 4, after Lamps are slept and Dvergr is pulled, RUN/BLU's job is done for the most part.
 
 RDM: Typical RDM stuff.
 Main healer for RUN/BLU.
@@ -156,9 +158,10 @@ Fifth mage song doesn't matter.  It's probably best to skip it and save time.  N
 WHM does Boost-CHR, making sure to hit the BRD.
 BRD moves to the melees for Honor March, Blade Madrigal, Sword Madrigal, Valor Minuet V, and Valor Minuet IV.
 BRD sleeps the Lamps.  Make sure to target one of the Lamps in the middle.  Don't target one on the end.
-RUN/DRK Flashes boss immediately after Lullaby.  At this point, the RUN/BLU's job is done.
+If BRD happens to miss a lamp, quickly sleep it with Foe Lullaby II.
+RUN/DRK Flashes boss immediately after Lullaby.
 Wait about 10 seconds before moving the mob.  Give RDM and BRD a chance to apply debuffs.  Then move 30' away from the Lamps.
-BRD applies Carnage Elegy while Ni-Tro is up.  Also try to land Light Threnody II while Ni-Tro is up.
+BRD applies Carnage Elegy while Ni-Tro is up.  Try to land Light Threnody II while Ni-Tro is up.
 RDM applies Dia III and whatever else can land.
 BRD moves away from the party to do Tenuto - Bewitching Etude and Tenuto - Enchanting Etude.
 Depending on the BRD's Etude gearsets, Tenuto may or may not be needed to over-write the BRD's existing songs.
@@ -173,8 +176,8 @@ COR can re-apply offensive rolls whenever needed.  It can happen at any point in
 
 DEFENSE
 This fight is about defense.  Stay alive!
-Survive the Bio aura!  Survive Astral Flow!
-DPS will not be a problem as long as people stay alive.
+Survive the Bio aura!  Survive Astral Flow!  Survive Dread Spikes!
+DPS should not be a problem as long as people stay alive.
 Have DT sets ready.  Use them thoughout the fight.
 
 SURVIVE THE BIO AURA
@@ -185,6 +188,7 @@ Every person in Party 1 needs to get hit by every single Curaga.
 Assess the situation and figure out if we should continue damage, slow damage, or halt damage during Bio aura.
 It would be great if we could continue damage during the aura, but it might be risky.  We'll have to try it.
 Party 2: Run far, far away.  Stay outside of the aura.  Party 2 should stay 30' away from the boss as much as possible.
+RDM can run into range to apply buffs and debuffs as needed when the aura is not up.
 
 DON'T LET THE LAMPS WAKE UP
 Tumult Lamps are the #2 cause of wipes.
@@ -209,16 +213,17 @@ Special note about All for One: The potency is based on each individual player's
 making a special high-HP DT set.  Swap into this defense set right before the RUN hits you with All for One.
 
 SURVIVE DREAD SPIKES
-The Dvergr can use Dread Spikes.
+The Dvergr can use Dread Spikes, and this is the #4 cause of wipes.
 Watch out for this.  This is a hazzard to the melees, especially the BLU.
 If the mob puts up Dread Spikes, stop damage and turn.  Try to dispel the effect.
 BGWiki reports that this effect is very difficult to dispel.  Finale worked only with Elemental seal or Troubadour.
 We have very good magic accuracy gear now.  I'd like to try to dispel it without using JAs.  
 I'd like to try Finale with maximum magic accuracy gear, Soul Voice - CHR etdues, Boost-CHR, and a Marine Stewpot.
+Hopefully BRD was able to land Light Threnody II previously when Troubadour was up.
 If that doesn't work, we can re-try with Indi-Focus and Geo-Languor.
 If that doesn't work, I suppose we could use Troubadour.  Or BRD could sub BLM and use Elemental Seal.
-We could try COR's Dark Shot, but I doubt that works.
-We could try BLU's Blank Gaze, but that probably won't work either.
+Marcto may be useful too since it gives Finale 50% magic accuracy bonus.
+We could try COR's Dark Shot, or BLU's Blank Gaze, but I don't expect those to land.
 We could also try RDM's Dispel.  I wouldn't expect Dispel to land on a dark-based boss like Dvergr, but it's worth a try.
 RDM has a lot of magic accuracy gear now too.  Stymie - Dispel may land, and this could be tried as a last resort.
 
