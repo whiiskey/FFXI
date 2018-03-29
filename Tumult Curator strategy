@@ -33,7 +33,7 @@ COR     - Langly
 BRD     - Whiiskey
 
 PARTY 2
-RUN/BLU - Falk - Alliance lead - Popper
+RUN/BLU - Falk - Alliance lead
 SCH/BLM - Sammeh
 RDM     - Gnomie
 
@@ -52,12 +52,13 @@ I want to keep the alliance as small as possible in order to keep the mob HP low
 RUN/DRK: Damage dealer/tank hybrid.
 Keep up defensive buffs.  Use a hybrid DD/DT set for TP.
 Pull mobs off RUN/BLU one at a time.  Accurate pulls are essential.
-Use One for All for Astral Flow at 74%, 49%, 24%, and 4%.
+Use One for All to help the party survive Astral Flow at 74%, 49%, 24%, and 4%.  Make sure One for All hits all party members.
 One for All will need to be reset three times during the fight.
-1st time between 74% and 49%.  Random Deal is used.  Don't have any JAs on cooldown other than One for All.
-2nd time between 49% and 24%.  Wild Card is used.  You can use other JAs before Wild Card.
-3rd time bteween 24% and 4%.  Random Deal is used again.  Don't have any JAs on cooldown other than One for All.
+1st reset after 74%, before 49%.  Random Deal is used.  Don't have any JAs on cooldown other than One for All.
+2nd reset after 49%, before 24%.  Wild Card is used.  You can use other JAs before Wild Card.
+3rd reset after 24%, before 4%.  Random Deal is used again.  Don't have any JAs on cooldown other than One for All.
 SP abilities may be useful in emergency situations.
+If the fight is going well, pop both SP abilities right before 4% and crush it while other people turtle up.
 
 BLU/RUN: Non-squishy damage dealer.
 Keep up defensive buffs.
@@ -65,7 +66,7 @@ Use a hybrid DD/DT set for TP.  Good gear choices include Defending Ring, Lorica
 Give Mighty Guard to party during Phase 4.
 The RUN/DRK should be capped on magical haste from Haste II and Honor March, so the haste effect from Mighty Guard isn't needed.
 However, the +30 HP regen, 25% defense, and 15 Magic Defense Bonus offered by Mighty Guard is useful.
-The Random Deals and Wild Card should reset Diffusion.  Should be able to keep up Mighty Guard throughout Phase 4.
+The Random Deals and Wild Card should reset Diffusion.  Should be able to keep up Mighty Guard on the party throughout Phase 4.
 
 GEO: Typical GEO stuff.
 Use Geo-Frailty throughout the fight.
@@ -73,9 +74,7 @@ Use Indi-Vex during Phases 1, 2, 3.  Switch to Indi-Fade on Gulool Ja Ja just in
 Use Indi-Fade on Phase 4.  That's probaby the best choice for defense against Meteor, Tier VI nukes, and Tier V -ga nukes.
 Entrust Indi-Fend during the final form.
 Random Deals and Wild Card should reset Entrust.  You should be able to keep up Entrust-Fend throught Phase 4.
-If it's time for Astral Flow and Entrust-Fend isn't up, consider temporarily switching from Geo-Frailty to Geo-Fend.
-Temporarily switching might be useful or it might be overkill.  Hard to tell.
-Bolster right before Wild Card is used.  Wild Card will be used between 49% and 24%.
+Bolster right before Wild Card is used.  Wild Card will be used after 49%.
 Idle in DT gear.  Don't idle in Refresh gear.  MP should not be a problem if the BRD keeps up Ballads.
 
 WHM: Typical WHM stuff.
@@ -84,72 +83,63 @@ Idle in DT gear.  Inyanga +2 set is a great choice for this fight.  All that Mag
 MP should not be a problem if the BRD keeps up Ballads.
 
 COR: Typical COR stuff.
-Offensive rolls for Party 1.  Samauri/Chaos seems good.  If we hit the attack cap, could swap out Chaos for Fighter's.
-Swaps parties in Phases 1-3 to give RUN/BLU defensive rolls.  Gallant/Magus seems good.
-Party swaps are not needed in Phase 4.
+Samauri/Chaos for Party 1.  Swap parties in Phases 1-3 to give RUN/BLU Gallant/Magus.  Light Shot Dia III (of course).
 Reset the JA One for All for the RUN/DRK three separate times:
-1st time between 74% and 49%.  Use Random Deal.
-2nd time between 49% and 24%.  Use Wild Card.
-3rd time bteween 24% and 4%.  Use Random Deal again.
+1st reset after 74%.  Use Random Deal.
+2nd reset after 49%.  Use Wild Card.
+3rd reset after 24%.  Use Random Deal again.
 Make sure you have the necessary gear and merits to successfully reset One for All.
-The BRD will need Nightingale and Troubadour reset during the fight.
-Make sure BRD is next to you before using Random Deal and Wild Card.
-GEO should Bolster before Wild Card.  We might get lucky with SP ability reset.
-Light Shot Dia III of course.
-CORs don't have much magic defense.  Consider subbing WHM, RDM, or RUN.  This gives you Magic Defense Bonus and Stoneskin.
-Feel free to DD if it seems safe, but proceed with caution.  Use a hybrid DD/DT set.
-It may be better to not DD, stay in DT set, and stay alive.  Use your judgment.
+Make sure party members are next to you before using Random Deal and Wild Card, especially the RUN/DRK and the BRD.
+What's the best subjob?  Consider subbing RUN for defensive traits and JAs.
+Feel free to DD if it seems safe, but proceed with caution.  Use a hybrid DD/DT set.  Use your judgment.
 
 BRD: Typical BRD stuff.  Sleep lamps.
 Defensive songs for RUN/BLU.  Four Minnes.
 Offensive songs for RUN/DRK and BLU.  Honor March, Blade Madrigal, Minuet V, and either Sword Madrigal or Minuet IV.
-Ballads for GEO and WHM.
-Ballads for RDM and SCH when possible, but they should be ok without Ballads.
+Ballads for GEO and WHM.  Ballads for RDM and SCH when possible.
 I don't think Carol or Scherzo would be useful for this fight, but I'm open to suggestions.
 Use Soul Voice and Clarion Call at the beginning of Phase 4.  See "BUFFS" section below for more details.
-Troubador - Horde Lullaby II for the Tumult Lamps is essential.
-You could use Marcato for an extra 20 seconds on Lullaby, but I would recommend saving Marcato for dispelling Dread Spikes
-with Finale.  Marcato mutiplies Finale's magic accuracy by 1.5x.
-With all JAs and today's best gear, Horde Lullaby II duration is over 8 minutes.  That may be enough time to kill the Dvergr.
+Sleeping all Phase 4 Tumult Lamps with Troubador - Lullaby is essential.
+With JAs and today's gear, Horde Lullaby II duration is over 8 minutes.  That may be enough time to kill the Dvergr.
 If more than 8 minutes is needed, the SCH needs to Break-ga right before Lullaby wears off, and the BRD needs to re-apply Lullaby.
 An accurate and reliable sleep timer is essential.  Use a stopwatch on your phone if you have to.
 Reliably equipping the correct gear for Lullaby is essential.  There is no margin for error!
+You could use Marcato for an extra 20 seconds on Lullaby, but I would recommend saving Marcato for dispelling Dread Spikes
+with Finale.  Marcato mutiplies Finale's magic accuracy by 1.5x.
 
 RUN/BLU: Super tank.  Popper.
 Be as beefy as possible.
 Hold mobs passively.  Just stand there and let them hit you.
 SP abilities may be useful in emergency situations.
-During Phase 4, after Lamps are slept and Dvergr is pulled, RUN/BLU's job is done for the most part.
 
 RDM: Typical RDM stuff.
 Main healer for RUN/BLU.
 Typical RDM buffs including Haste II, Refresh III.
-Typical RDM debuffs.  Use Dia III of course.
-I would be interested to know which debuffs land on the different mobs.
-Magic accuracy is very good now.  And Vitiation Gloves +3 give an incredible boost to Gain-MND and Gain-INT.
+Typical RDM debuff including Dia III (of course).
+I would be interested to know which debuffs land on the mobs.  Magic accuracy is very good now.
+Vitiation Gloves +3 give an incredible boost to Gain-MND and Gain-INT to help those debuffs land.
 
 SCH/BLM: Support.  Break-ga lamps.
 Backup healer for RUN/BLU.
 Elemental seal - Manifestation - Break is essential for re-sleeping Tumult Lamps.
-SCH can quickly swap to Party 1 for Accession - Perpetuation - Regen V when its safe.
+Swap to Party 1 for Accession - Perpetuation - Regen V when its safe.
 Swapping to Party 1 is fairly safe during Phases 1, 2, 3.
-Do Regen V one final time at the beginning of Phase 4, before sleeping the Lamps and pulling Tumult Curator.
-Regen V with optimal gear should be 11 or 12 minutes.  Hopefully we don't need that much time on Dvergr.
+Do Regen V one final time at the beginning of Phase 4, just before sleeping the Lamps and pulling Tumult Curator.
+Regen V with optimal gear should be 11 or 12 minutes.  Hopefully we don't need that much time for Dvergr.
 
 ----------------------------------------------------------------------------------------------------------------------------------
 -- PULLING THE DVERGR
 ----------------------------------------------------------------------------------------------------------------------------------
 
 POSITIONING
-At the start of Phase 4, the RUN/BLU holds and positions the mobs.
-Take the mobs to a good location for sleeping the Lamps.  There needs to be a minimum of 30' between the sleeping Lamps and the
-Dvergr during the fight.
+At the start of Phase 4, the RUN/BLU holds and positions the mobs.  Take the mobs to a good location for sleeping the Lamps.
+There needs to be a minimum of 30' between the sleeping Lamps and the Dvergr during the fight.
 Also, get the Lamps bunched together as closely as possible.  Favorable positioning of the Lamps is essential because
-the AOE range for Horde Lullaby II is tiny!  It's only a 4 yalm radius around the target when using a Wind Instrument.
+the AOE range for Horde Lullaby II is tiny!  It's only a 4 yalm radius around the target.
 
 BUFFS
 Party 1 gathers together.  BRD drops, SCH swaps in and does Accession - Perpetuation - Regen V.
-SCH drops, BRD swaps in and pops Soul Voice and Clarion Call. BRD applies 5 songs to Party 1.
+SCH drops, BRD swaps in and pops Soul Voice and Clarion Call. BRD applies 5 songs to all Party 1 members.
 Party 1 separates.  GEO and WHM stand together.  RUN/DRK, BLU, and COR stand together.  BRD pops Ni-Tro.
 Ni-Tro doesn't last long, so it's important to move quickly and to not waste time.
 BRD gives the mages three Ballads.  That's +60 MP/tick with today's best gear.
@@ -163,8 +153,8 @@ RUN/DRK Flashes boss immediately after Lullaby.
 Wait about 10 seconds before moving the mob.  Give RDM and BRD a chance to apply debuffs.  Then move 30' away from the Lamps.
 BRD applies Carnage Elegy while Ni-Tro is up.  Try to land Light Threnody II while Ni-Tro is up.
 RDM applies Dia III and whatever else can land.
-BRD moves away from the party to do Tenuto - Bewitching Etude and Tenuto - Enchanting Etude.
-Depending on the BRD's Etude gearsets, Tenuto may or may not be needed to over-write the BRD's existing songs.
+BRD moves away from the party to do Bewitching Etude and Enchanting Etude.
+Depending on the BRD's gearsets, Tenuto may or may not be needed to over-write the BRD's existing songs.
 Hopefully Ni-Tro is still up so the Soul Voice - CHR Etudes last a long time.
 WHM moves away from the BRD and gives Boost-STR to the melees.  Or maybe Boost-DEX.
 COR can re-apply offensive rolls whenever needed.  It can happen at any point in the fight.
@@ -234,6 +224,6 @@ Stand in the right place for the HNMs.  Not at the head, not at the tail.  The f
 
 ITEMS
 Everyone needs to have Echo Drops, Remedies, and Reraise items.
-Items like Reraiser, Hi-Reraiser, and Super Reraiser, are better than equipment like Reraise Earring and Reraise Hairpins.
+Items like Reraiser, Hi-Reraiser, and Super Reraiser, are better than equipment like Reraise Earring and Reraise Hairpin.
 The equipment takes too long to use.  Have the instant use items in your inevntory and use them if needed.
 Vile Elixir and Vile Elixir +1 are good for emergency situations.
