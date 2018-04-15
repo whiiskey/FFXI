@@ -1,12 +1,61 @@
 ----------------------------------------------------------------------------------------------------------------------------------
--- TUMULT CURATOR STRATEGY
+-- So we actually fought TC and won on March 30, 2018.
+-- The fight was somewhat like what I expected, but some things were a surprise.
+-- Based on that experience, I would alter my strategy, but I'm not going to re-write the document.
+-- So in lieu of re-writing the document, here are notes from that night:
+
+-- Sammeh and Gnomie weren't on that night, so the party setup was slightly different.
+-- Party 1: RUN/DRK, BLU/RUN, BRD, GEO, COR, WHM
+-- Party 2: RUN/BLU, WHM mule
+-- Pahses 1-3 took about 10 minutes.  Phase 4 took about 13 minutes.
+
+-- We didn't have a SCH for Breakga.  It was surprisingly easy to resleep the lamps w/out Breakga.
+-- Here's what I did: pop ni-tro about 20 seconds before sleep wears off.
+-- Target the lamps w Horde Lullaby II, ready to push the button as soon as they wake.
+-- When they wake up, they instantly started casting a spell on me.  They didn't move while casting.
+-- They take 1-2 seconds to cast their spells.  You need to re-sleep them before their spells go off.
+-- I was successful.  My Lullaby landed before their spells went off.  They were re-slept w/out problems.
+-- Better hope you don't lag when it's time to resleep the lamps!
+
+-- So the dread spikes weren't bad at all.  That was a surprise.  Dispelling them was a huge pain, so we didn't.
+-- You know, even if you did pop a JA to dispel the spikes, he can put them right back up.
+-- We just ate the Dread Spikes.  And it wasn't that bad.
+-- Never thought I'd say that about Dread Spikes!  But they weren't that bad.  Not compared to the Bio Aura.
+
+-- The Bio Aura was a huge pain.  It was up about half the time.
+-- The aura itself isn't the issue.  It's just that...
+-- During the aura, you get stunned, paralyzed, cursed, intimidated, nuked, and dispeled.
+-- So, while the WHM is stunned for 10s and everyone is cursed, you just watch the HP go down.
+-- Vex probably used to prevent all that.  Back before the GEO nerf.  Vex probably doesn't do that well anymore.
+-- All people in the party need to be non-squishy.  Very good magic defense sets are needed.
+-- A very, very good WHM is essential to survive the aura.  Our WHM had Yagrush.
+-- The COR switched to defensive rolls in Phase 4: magic defense and magic evasion.  We ate Miso Ramen +1.
+-- I helped WHM cure.  I spammed Curaga I and II right along with him.
+-- I had Soul Voiced Ballads on, so MP wasn't an issue.
+
+-- The RUN/DRK wasn't supposed to use any JAs during Phase 4 so One for All would be successfully reset each time.
+-- He did this, but it really gimped the RUN.  JAs are really beneficial for RUN, and he couldn't use them.
+-- If I ever do this again, I would swap out the BLU/RUN for another RUN/DRK.  I'd have 2 RUN/DRK for DDs.  
+-- First RUN/DRK pops One for All at 74%.  Other one pops at 49%.  Use Wild Card.
+-- Then first one does it again at 24%, other one does it at 4%.
+-- Damage from RUN/DRK and BLU/RUN was fairly equal.  Maybe like 30-ish% versus 40-ish%.
+-- So I'd expect 2 RUN/DRKs to put out enough damage to take this guy down.
+-- COR did DD during phase 1-3.  COR just turtled up and tried to stay alive during Phase 4.
+
+-- I would actually love to do this again.
+-- If you got a group, I'd BRD or RUN for it.  But you better have top-notch players because the fight is HARD!
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+-- TUMULT CURATOR STRATEGY (OLD VERSION, BEFORE WE ACTUALLY FOUGHT IT)
 -- Strategy for 2018, a time when when Indi-Vex is weak, but at least you can hit the mobs!
 -- Customized for our group
 -- Copied these notes at: https://pastebin.com/DiczgUSb
 ----------------------------------------------------------------------------------------------------------------------------------
 -- References:
 -- BG Wiki: https://www.bg-wiki.com/bg/Tumult_Curator
--- Mischief's notes are useful, but based on pre-Vex-nerf mechanics: https://pastebin.com/HgqAu1U8
+-- Mischief's strategy notes are useful, but based on pre-Vex-nerf mechanics: https://pastebin.com/HgqAu1U8
+-- He counted on Vex to eliminate the stuns, curse, paralysis, etc.  But Vex doesn't work like that anymore!
 -- Mischief's video is useful too: https://www.youtube.com/watch?v=IaX5HpK4L40
 ----------------------------------------------------------------------------------------------------------------------------------
 
