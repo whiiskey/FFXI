@@ -1,0 +1,162 @@
+alias bar1 input /targetnpc
+alias bar2 input /item "SP Gobbie Key" <t>
+
+alias barx25 pause .25
+alias barx1 pause 1
+alias barx5 barx1; barx1; barx1; barx1; barx1
+alias barx15 barx5; barx5; barx5
+
+alias cl clearaliases
+bind ^escape clearaliases; input /echo clear
+
+alias thewheel bar1; barx1; bar2; barx15
+
+input /echo 1 
+thewheel
+
+input /echo 2
+thewheel
+
+input /echo 3
+thewheel
+
+input /echo 4
+thewheel
+
+input /echo 5
+thewheel
+
+input /echo 6
+thewheel
+
+input /echo 7
+thewheel
+
+input /echo 8
+thewheel
+
+input /echo 9
+thewheel
+
+input /echo 10
+thewheel
+
+input /echo 11
+thewheel
+
+input /echo 12
+thewheel
+
+input /echo 13
+thewheel
+
+input /echo 14
+thewheel
+
+input /echo 15
+thewheel
+
+input /echo 16
+thewheel
+
+input /echo 17
+thewheel
+
+input /echo 18
+thewheel
+
+input /echo 19
+thewheel
+
+input /echo 20
+thewheel
+
+input /echo 21 
+thewheel
+
+input /echo 22
+thewheel
+
+input /echo 23
+thewheel
+
+input /echo 24
+thewheel
+
+input /echo 25
+thewheel
+
+input /echo 26
+thewheel
+
+input /echo 27
+thewheel
+
+input /echo 28
+thewheel
+
+input /echo 29
+thewheel
+
+input /echo 30
+thewheel
+
+input /echo 31 
+thewheel
+
+input /echo 32
+thewheel
+
+input /echo 33
+thewheel
+
+input /echo 34
+thewheel
+
+input /echo 35
+thewheel
+
+input /echo 36
+thewheel
+
+input /echo 37
+thewheel
+
+input /echo 38
+thewheel
+
+input /echo 39
+thewheel
+
+input /echo 40
+thewheel
+
+input /echo 41 
+thewheel
+
+input /echo 42
+thewheel
+
+input /echo 43
+thewheel
+
+input /echo 44
+thewheel
+
+input /echo 45
+thewheel
+
+input /echo 46
+thewheel
+
+input /echo 47
+thewheel
+
+input /echo 48
+thewheel
+
+input /echo 49
+thewheel
+
+input /echo 50
+thewheel
