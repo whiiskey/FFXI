@@ -1,8 +1,9 @@
 -------------------------------------------------------------------------------------------------------------------
---  RUN GearSwap lua by Whiiskey (Quetz).
+--  GearSwap lua for Rune Fencer by Whiiskey (Quetz)
+--
 --  This lua is based on the Kinematics template and uses Motenten functions.
---  It was later modified by Raesvelg and Orestes.
---  Then I customized it to my playstyle.
+--  It was later modified by Orestes.
+--  I got this lua from Raesvelg and adapted it to fit my needs.
 -------------------------------------------------------------------------------------------------------------------
 
 
@@ -17,32 +18,36 @@
 --    into precast gear then you swap back into defense gear.  This eliminates the chance that you "get caught
 --    in midcast gear" when taking damage.  Very useful at times.  If you prefer to use the normal midcast gear
 --    for your spells, then use Control F9 to select your set instead of F10 or F11.  
---  Checks for vorseal buffs (extra 3-6 DT) and the Refined Grip +1 (extra 3 DT).  These may cause you to be
+--  The lua checks for vorseal buffs (assumes extra 3DT) and Refined Grip +1 (extra 3DT).  These may cause you to be
 --    over-capped on DT.  If detected, the lua automatically uses modified versions of the defense sets.  This
---    allows you to swap out the unneeded DT gear for other more useful gear.
---  Capacity mode for using the capacity cape.  I disabled this because I'm capped on capacity points.
---  The lua is 2 seprate files: one for the rules (this file), and one for the gear sets (separate file).
+--    allows you to swap out unneeded DT gear for more useful gear.  Look for the sets that end in DTGrip.
+--  There is a capacity mode for using a capacity point cape.  I disabled this because I'm capped on job points.
+--  The lua is 2 seprate fi les: one for the rules (this file), and one for the gear sets (separate file).
 --  The gear sets are formatted just like output from the //gs export command.  This makes it easy to insert
 --    your gear into the lua.  Just use the //gs export command then copy and paste.
-
+--  In the defense sets there are commented-out lines for the main and sub gear slots.  If you're fighting
+--    a mob that unequips gear (like Seiryu), remove the comment dashes.  That way, when your weapon or grip is
+--    unequipped, you can hit F10 or F12 to instantly re-equip it.  I suppose that I could add a toggle with
+--    this functionality, but I prefer to do it this way.
 -------------------------------------------------------------------------------------------------------------------
 
 
 
 -------------------------------------------------------------------------------------------------------------------
---    DEFENSE SETS
+--  DEFENSE SETS
 -------------------------------------------------------------------------------------------------------------------
 
---    DTdef: capped DT, as much defense and VIT as possible.  Great for large pulls in Omen or Dynamis Divergence.
---    Parry: capped DT, Turms hands, Turms feet.
---    Hybrid: capped DT and as many DD stats as possible.
---    DThp: capped DT and as much HP as possible.  Potentially useful if you can't run from Dancing Fullers.
---    MaxHP: as much HP as possihble.
---    MDT26: roughly 26 MDT (Shell V is about 24) and magic defense stats: mdef, meva, Shadow Ring.
---    MDT50: 50 MDT from gear alone.  Use when Shell V is down.
---    meva: as much magic evasion as possible.
+--  DTdef: capped DT, as much defense and VIT as possible.  Great for large pulls in Omen or Dynamis Divergence.
+--  Parry: capped DT, Turms hands, Turms feet.
+--  Hybrid: capped DT and as many DD stats as possible.
+--  DThp: capped DT and as much HP as possible.  Potentially useful if you can't run from Dancing Fullers.
+--  MaxHP: as much HP as possihble.
+--  MDT26: roughly 26 MDT (Shell V is about 24) and magic defense stats: mdef, meva, Shadow Ring.
+--  MDT50: 50 MDT from gear alone.  Use when Shell V is down.
+--  meva: as much magic evasion as possible.
 
---    I don't regularly use all these sets, but they're here if I need them.
+--  I don't regularly use all these sets.  Not all of them are included in the options for Hybrid Mode and 
+--    Physical Defense Mode.  I can add them later if I need them.
 -------------------------------------------------------------------------------------------------------------------
 
 
@@ -56,7 +61,7 @@
 --        Alt F9: toggle Ranged Mode.  Not used in this lua.
 --           F10: activate Physical Defense mode
 --   Control F10: toggle Physical Defense modes
---       Alt F10: toggle Kiting
+--       Alt F10: toggle Kiting.  I didn't put a kiting set in.
 --           F11: activate Magical Defense mode
 --   Control F11: toggle Casting modes.  Not used in this lua.
 --       Alt F11: toggle Magical Defense modes
@@ -64,11 +69,11 @@
 --   Control F12: toggle idle mode
 --       Alt F12: cancel Defense mode
 --     Control -: toggle Runes
---         Alt -: use Rune Enhancement job ability
+--         Alt -: use the Rune Enhancement job ability
 --     Control =: toggle Treasure Hunter mode
 --         Alt =: toggle Capacity Mode.  I disabled this.
---     Control `: use Valiance job ability
---         Alt `: use Vallation job ability
+--     Control `: use the Valiance job ability
+--         Alt `: use the Vallation job ability
 -------------------------------------------------------------------------------------------------------------------
 
 
@@ -76,11 +81,14 @@
 -------------------------------------------------------------------------------------------------------------------
 --  TODO:
 -------------------------------------------------------------------------------------------------------------------
---  Get TP3000 earring rule functional
+--  Make a rule for using a different earring at 3000 TP.
 --  Upgrade gear: Turms hands +1 and feet +1, relic head +3
 --  Get better augments on hybrid herc hands and DD herc body
 --  Figure out how to automatically equip doom set when doom lands
 --  Get embolden gear to be worn at the right time.
+--  Add Langly code to keep on warp rings until they're used.
+--  Assign priorities to gear so I don't lose HP when swapping.
+--  Figure out why JA's don't equip gear in defense mode.  Looks like it should eliminate only midcast for spells.
 -------------------------------------------------------------------------------------------------------------------
 
 
@@ -98,7 +106,9 @@ end
 function job_setup()
 
     include('Mote-TreasureHunter')
-
+    -- #nottoosoon #1/4.  4 pieces of code written by Sammeh to prevent you from casting too soon.
+    include('whiiskey_include.lua')
+    
     -- Table of entries
     rune_timers = T{}
     -- entry = rune, index, expires
@@ -186,6 +196,10 @@ function user_setup()
     send_command('bind ^= gs c cycle treasuremode')
     
     select_default_macro_book()
+
+    -- #nottoosoon code #2/4
+    -- 2.6 to be risky.  2.7 to play it safe
+    waittime = 2.7
     
 end
 
@@ -207,6 +221,19 @@ end
 -- Job-specific hooks for standard casting events.
 -------------------------------------------------------------------------------------------------------------------
 
+-- Set eventArgs.handled to true if we don't want any automatic gear equipping to be done.
+-- Set eventArgs.useMidcastGear to true if we want midcast gear equipped on precast.
+
+-- #nottoosoon #3/4
+function job_pretarget(spell)    
+    checkblocking(spell)
+	    if spell.action_type == 'Magic' then
+	    	if aftercast_start and os.clock() - aftercast_start < waittime then
+            		windower.add_to_chat(8,"Too soon!  Adding delay: " .. 0.01 * math.floor(100*(waittime - (os.clock() - aftercast_start))) .. " seconds")
+            		cast_delay(waittime - (os.clock() - aftercast_start))
+            	end
+            end 
+end
 
 -- Run after the default precast() is done.
 -- eventArgs is the same one used in job_precast, in case information needs to be persisted.
@@ -262,6 +289,12 @@ end
 
 -- Set eventArgs.handled to true if we don't want any automatic gear equipping to be done.
 function job_aftercast(spell)
+    -- #nottoosoon #4/4
+    aftercast_start = os.clock()
+    if spell.action_type ~= 'Magic' then
+      aftercast_start = nil
+    end 
+
     if not spell.interrupted then
         if spell.type == 'Rune' then
             update_timers(spell)
@@ -473,6 +506,7 @@ end
 
 
 
+-- None of these macro pages applies to me.  I'll change it at some point.
 -- Select default macro book on initial load or subjob change.
 function select_default_macro_book()
 	-- Default macro set/book
