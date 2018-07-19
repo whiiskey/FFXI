@@ -120,28 +120,63 @@ send_command("alias naked gs equip naked")
 
 
 
+
 -------------------------------------------------------------------------------------------------------------------
 --  MY FUNCTIONS
---  https://github.com/sethmccauley/GearSwap
 -------------------------------------------------------------------------------------------------------------------
 
---Arrays for auto-nuking with commands like //gs c nuke blm4 or //gs c nuke blu3
---Assign //gs c nuke blm4 to a bind key.
---Then each time you hit the key, you'll nuke the highest priority spell on the blm4 list that's ready for recast.
+------------------------------------------------------
+-- NUKING ARRAYS
+------------------------------------------------------
+
+--This fucntion chooses and casts nuke spells based on recast timers.
+--It takes a given list of spells, checks the recast timers, selects the first spell that's ready, and casts it.
+
+--How to use:
+--Typing "//gs c nuke blm4" nukes the first available spell from the blm4 list that's not on recast cooldown.
+--This is how to put the command in the macro palatte: /console gs c nuke blm4 
+--I prefer to use bind keys.  This is how to assign the function to the End key: //bind end gs c nuke blm4
+--Each time you hit the End key, you'll nuke a spell from the blm4 list.
+--Essentially, it turns the End key into a "nuke button."  If you keep pushing it, you keep casting spells.
+
+--The shortcuts lua needs to be running in order for this function to work.
 --The function chooses the spell based on only the recast timer.  MP has nothing to do with it.
 --If you don't have enough mp, it will try casting the spell anyway, and you'll get "not enough MP" message.
---The shortcuts lua needs to be running in order for this to work.
+--You need to target a mob before using the function.
+--The mob also needs to be in ranage.
 
-
---This function should probably be it's own addon lua, but idk how to do that
+--I'd like to create an addon for this and call it nuke button, but I don't know how to do that.
 --It could have a data file with different nuke_arrays.  Kind of like azuresets data file.
 --It would also be good to have the choose_nuke function return an error message if there's no such set.
 --The number next to each spell is it's spell number or something.  I need that to get the recast.
 --I'd like to be able to look up recast or the recast # from the spell's name.  But idk how to do that.
 
---Add 2 RUN sets: single target hate, AOE hate
+--Todo: Add 2 RUN sets: single target hate, AOE hate
 
 nuke_array = {}
+
+-----------------------------
+-- BLU NUKES
+-----------------------------
+
+-- //gs c nuke blu
+nuke_array.blu= {
+           {'Spectral Floe',720},
+           {'Tenebral Crush',728},
+           {'Anvil Lightning',721},
+           {'Entomb',722},
+           {'Subduction',708},
+}
+
+-- //gs c nuke blu2
+nuke_array.blu2 = {
+           {'Anvil Lightning',721},
+           {'Entomb',722},
+           {'Subduction',708},
+}
+
+-- //gs c nuke blu3
+-- same as blu
 nuke_array.blu3= {
            {'Spectral Floe',720},
            {'Tenebral Crush',728},
@@ -149,37 +184,66 @@ nuke_array.blu3= {
            {'Entomb',722},
            {'Subduction',708},
 }
-nuke_array.blu2 = {
-           {'Anvil Lightning',721},
-           {'Entomb',722},
-           {'Subduction',708},
-}
 
 
---These are nukes for Naga Raja.
---When the dragon flies, melee hits don't work, but nukes do!
---Naga seems to resist Subduction and Spectral Floe.  But Dark and Light based nukes work.
---Three of the nukes are AOE spells, which are good for nuking the adds.
---Make sure Erratic Flutter is up to reduce the recast times.
---Magic Hammer works well on Naga too.  Cast that if the other spells are down.
+--This is a nuke list for Naga Raja.
+--I like to go BLU when fighting Naga. 
+--When the dragon flies, and melee hits don't work, I can nuke to continue dealing damage.
+
+--Naga resists Subduction (wind) and Spectral Floe (ice) because it's an ice-based mob.
+--Light and Dark based nukes work well.  Fire does ok too.
+
+--Most of these are AOE spells, which are good for nuking the adds.
+--This is where BLU shines over COR and RNG.
+--COR and RNG can do great damage to Naga with Leaden Salute and Trueflight, maybe even more than BLU.
+--But BLU AOE spells are great for killing the adds when they pop.
+
+--Other tips:
+--Make sure to keep up Erratic Flutter in order to reduce the recast times.
+--Magic Hammer works well on Naga.  Even in the air.  Cast that to get back your MP.
+--Naga is also weak to Sanguine Blade.  But he has to be on the ground for it to work.
 
 --Recast times:
---Retinal Glare 45 seconds
---Tenebral Crush 60 seconds
---Blinding Fulgor 60 seconds
---Palling Salvo 60 seconds
---Rail Cannon 80 seconds
---Magic Hammer 180 seconds
+--Retinal Glare 45 seconds, 26 MP
+--Tenebral Crush 60 seconds, 116 MP
+--Blinding Fulgor 60 seconds, 116 MP
+--Searing Tempest  60 seconds, 116 MP
+--Palling Salvo 60 seconds, 175 MP
+--Rail Cannon 80 seconds, 200 MP
+--Magic Hammer 180 seconds, 40 MP
 
+-- //gs c nuke naga
 nuke_array.naga= {
            {'Retinal Glare',707},
            {'Tenebral Crush',728},
            {'Blinding Fulgor',725},
+           {'Searing Tempest',719},
            {'Palling Salvo',724},
            {'Rail Cannon',712},
            {'Magic Hammer',646},
 }
 
+-- Spells to nuke Fomor mobs in Vagary.
+-- //gs c nuke vag1
+nuke_array.vag1= {
+           {'Searing Tempest',719},
+           {'Anvil Lightning',721},
+           {'Silent Storm',727},
+}
+
+-- Spells to nuke Amorph mobs in the Vagary lottery zone.
+-- //gs c nuke vag2
+nuke_array.vag2= {
+           {'Spectral Floe',720},
+           {'Tenebral Crush',728},
+           {'Anvil Lightning',721},
+}
+
+
+
+-----------------------------
+-- BLM NUKES
+-----------------------------
 
 --On the blm lists, I have AOE spells for Thunder, Blizzard, Fire, and Stone.
 --The mobs I like to nuke a lot resist Water and Aero, so I left those spells off the list.
@@ -187,18 +251,24 @@ nuke_array.naga= {
 --blm1 for pulling mobs
 --blm4 for nuking them
 --I might not use the others much.  Maaaybe when I'm cleaving weakened?  We'll see.
+
+-- //gs c nuke blm1
 nuke_array.blm1 = {
            {'Thundaga',194},
            {'Blizzaga',179},
            {'Firaga',174},
            {'Stonega',189},
 }
+
+-- //gs c nuke blm1rev 
 nuke_array.blm1rev = {
            {'Stonega',189},
            {'Firaga',174},
            {'Blizzaga',179},
            {'Thundaga',194},
 }
+
+-- //gs c nuke blm2
 nuke_array.blm2 = {
            {'Thundaga II',195},
            {'Blizzaga II',180},
@@ -209,6 +279,8 @@ nuke_array.blm2 = {
            {'Firaga',174},
            {'Stonega',189},
 }
+
+-- //gs c nuke blm3
 nuke_array.blm3 = {
            {'Thundaga III',196},
            {'Blizzaga III',181},
@@ -223,6 +295,8 @@ nuke_array.blm3 = {
            {'Firaga',174},
            {'Stonega',189},
 }
+
+-- //gs c nuke blm4
 nuke_array.blm4 = {
            {'Thundaja',500},
            {'Blizzaja',497},
@@ -242,12 +316,48 @@ nuke_array.blm4 = {
            {'Stonega',189},
 }
 
+
+-----------------------------
+-- RUN "NUKES"
+-----------------------------
+
+--Spells for hate on RUN
+--Flash       0.5 second cast, 45 second recast, 25 MP, 1280 VE, 180 CE
+--Foil          1 second cast, 45 second recast, 48 MP, 880 VE, 320 CE
+--Blank Gaze    3 second cast, 10 second recast, 25 MP, 320 VE, 320 CE
+
+-- //gs c nuke run1
+nuke_array.run1 = {
+           {'Flash',112},
+           {'Foil',840},
+           {'Blank Gaze',592},          
+           {'Sheep Song',584},
+           {'Geist Wall',605},
+           {'Stinking Gas',537},
+           {'Soporific',598},
+}
+
+--AOE blue spells for hate.
+--Sheep Song    3 second cast, 60 second recast, 22 MP, 320 VE, 320 CE
+--Geist Wall    3 second cast, 30 second recast, 35 MP, 320 VE, 320 CE
+--Stinking Gas  4 second cast, 37 second recast, 37 MP, 320 VE, 320 CE
+--Soporific     3 second cast, 90 second recast, 38 MP, 320 VE, 320 CE
+
+-- //gs c nuke run2
+nuke_array.run2 = {
+           {'Sheep Song',584},
+           {'Geist Wall',605},
+           {'Stinking Gas',537},
+           {'Soporific',598},
+}
+
+
 function choose_nuke(array, label)
         for i,v in pairs(array) do
             recasttime = windower.ffxi.get_spell_recasts()[v[2]]
             if recasttime == 0 then
                 send_command(string.gsub(v[1], "%s+", ""))
-                add_to_chat(5,'('..label..' spell	 #'..i..') '..v[1]..' >> '..tostring(player.target.name))
+                add_to_chat(7,'<<NUKE '..label..' #'..i..'>>  '..v[1]..' >> '..tostring(player.target.name))
                 return
             else
                 --add_to_chat(4,v[1]..' recast time: '..recasttime / 100)
@@ -257,16 +367,83 @@ function choose_nuke(array, label)
 end
 
 
---This is needed to pass commands with the //gs c syntax.
+------------------------------------------------------
+-- BUFFING ARRAYS
+------------------------------------------------------
+
+--I just wrote this during maintenance when game was down.  Need to test it.
+--First item in each line is the spell to cast.  Second item is the buff it produces.
+--Example: Erratic Flutter is the spell, but the buff effect is called Haste.
+--The synatx of the fuction checks for Haste.  If no Haste is detected, it casts Erratic Flutter.
+--I named the table "buffme_array" because there might already be some other table named buff or buffs.
+--The developers probably wouldn't name something buffme.  But you never know!
+
+buffme_array = {}
+
+--haoc: Haste, Aquaveil, Occultation, Cocon
+-- //gs c buffme haoc
+buffme_array.haoc = {
+    {'Erratic Flutter','Haste'},
+    {'Aquaveil','Aquaveil'},
+    {'Occultation','Blink'},
+    {'Cocoon','Defense Boost'},
+}
+
+-- //gs c buffme run
+buffme_array.run = {
+    {'Shell V','Shell'},
+    {'Protect IV','Protect'},
+    {'Crusade','Enmity Boost'},
+    {'Phalanx','Phalanx'},
+    {'Cocoon','Defense Boost'},
+}
+
+
+function choose_buffme(array, label)
+        for i,v in pairs(array) do
+            if not buffactive[v[2]] then
+                send_command(string.gsub(v[1], "%s+", ""))
+                add_to_chat(4,'<<BUFF '..label..' #'..i..'>>  '..v[1])
+                return
+            else
+                --add_to_chat(4,v[1]..' recast time: '..recasttime / 100)
+            end
+        end
+        add_to_chat(4,'All buffs on')
+end
+
+
+------------------------------------------------------
+-- SELF-COMMAND FUNCTION
+------------------------------------------------------
+
+--This is how to to pass commands with the //gs c syntax.
 --I guess if a particular gearswap lua has a job_self_command function, it will over-ride this.
---Most of my luas don't have one, so I don't need to worry about those.
---But if a lua has this in it, then it needs to add a rule for how to handle the nuke argument.
+--Most of my luas don't have one.
+--If a lua has a job_self_command function alreay,this in it, then you need to add rules for "nuke" and "buffme" commands.
+--I'd like to set up an error message if the arument after 'nuke' isn't entered.
+--ATM, uppercase letters don't work for function argumentfs.  Change that.
+--FIgure out how to have 2+ colors of text on the same line.
+
 function job_self_command(commandArgs, eventArgs)    
     if commandArgs[1] == 'nuke' then
         choose_nuke(nuke_array[commandArgs[2]],commandArgs[2])        
     end    
+
+    if commandArgs[1] == 'buffme' then
+        choose_buffme(buffme_array[commandArgs[2]],commandArgs[2])
+        --print('hi mom')
+    end
+
+    --if cmdParams[1]:lower() == 'rune' then
+    --cmdParams or commandArgs?  The funciton from the RUN lua used cmdParams.  But that didn't work here.
+    if commandArgs[1] == 'rune' then
+        send_command('@input /ja '..state.Runes.value..' <me>')
+        
+    end
     
-    --Generalize this.
+    --Delete this after I confirm the above function works.    
+    --[[
     if commandArgs[1] == 'buffme' then
         if not buffactive.Haste then
             send_command('erraticflutter')
@@ -276,6 +453,7 @@ function job_self_command(commandArgs, eventArgs)
             send_command('occultation')
         end
     end    
+    ]]--
     
 end
 
