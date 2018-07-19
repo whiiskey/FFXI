@@ -1,7 +1,4 @@
 function init_gear_sets()
---------------------------------------
--- Start defining the sets
---------------------------------------
 
 -----------------------------------------------------
 -- #Special sets
@@ -14,7 +11,7 @@ sets.enmity = {
     hands="Kurys Gloves",
     legs="Eri. Leg Guards +1",
     feet="Erilaz Greaves +1",
-    neck="Unmoving Collar +1",
+    neck="Moonlight Necklace",
     waist="Goading Belt",
     left_ear="Trux Earring",
     right_ear="Cryptic Earring",
@@ -22,6 +19,26 @@ sets.enmity = {
     right_ring="Eihwaz Ring",
     back={ name="Ogma's cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','VIT+10','Enmity+10',}},
 }
+
+-- Spell interrupt rate
+-- Total 106: 96 gear, 10 merits.
+-- DT 36.  (DT 39 with grip.)  PDT 2.
+sets.sir = {
+    ammo="Staunch Tathlum +1",
+    head={ name="Taeon Chapeau", augments={'Spell interruption rate down -10%',}},
+    body={ name="Futhark Coat +3", augments={'Enhances "Elemental Sforzo" effect',}},
+    hands={ name="Rawhide Gloves", augments={'HP+50','Accuracy+15','Evasion+20',}},
+    legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
+    feet={ name="Taeon Boots", augments={'Spell interruption rate down -10%',}},
+    neck="Moonlight Necklace",
+    waist="Rumination Sash",
+    left_ear="Halasz Earring",
+    right_ear="Genmei Earring",
+    left_ring="Defending Ring",
+    right_ring="Vocane Ring +1",
+    back="Moonlight Cape",
+}
+
 
 sets.TreasureHunter = {
     head={ name="Herculean Helm", augments={'"Fast Cast"+2','"Store TP"+2','"Treasure Hunter"+1','Accuracy+4 Attack+4','Mag. Acc.+19 "Mag.Atk.Bns."+19',}},
@@ -55,11 +72,11 @@ sets.af1 = {
 }
     
 sets.af2 = {
-    head={ name="Fu. Bandeau +2", augments={'Enhances "Battuta" effect',}},
-    body={ name="Futhark Coat +1", augments={'Enhances "Elemental Sforzo" effect',}},
-    hands={ name="Futhark Mitons +1", augments={'Enhances "Sleight of Sword" effect',}},
-    legs={ name="Futhark Trousers +1", augments={'Enhances "Inspire" effect',}},
-    feet={ name="Futhark Boots +1", augments={'Enhances "Rayke" effect',}},
+    head={ name="Fu. Bandeau +3", augments={'Enhances "Battuta" effect',}},
+    body={ name="Futhark Coat +3", augments={'Enhances "Elemental Sforzo" effect',}},
+    hands={ name="Futhark Mitons +3", augments={'Enhances "Sleight of Sword" effect',}},
+    legs={ name="Futhark Trousers +3", augments={'Enhances "Inspire" effect',}},
+    feet={ name="Futhark Boots +3", augments={'Enhances "Rayke" effect',}},
 }    
 
 sets.af3 = {
@@ -89,28 +106,28 @@ sets.ambus2 = {
 sets.Turms = {
     head="Turms Cap",
     body="Turms Harness",
-    hands="Turms Mittens",
+    hands="Turms Mittens +1",
     legs="Turms Subligar",
-    feet="Turms Leggings",
+    feet="Turms Leggings +1",
 }
 
 sets.CapacityMantle = {back="Mecistopins Mantle"}
-sets.buff.Doom = {ring2="Purity Ring", waist="Gishdubar Sash",}
+sets.buff.Doom = {ring1="Eshmun's Ring",ring2="Eshmun's Ring", waist="Gishdubar Sash",}
 sets.buff.Embolden = {back={ name="Evasionist's Cape", augments={'Enmity+2','"Embolden"+15','"Dbl.Atk."+3','Damage taken-3%',}},}
 
 
 -----------------------------------------------------
--- #Defense
+-- #Defense Sets
 -----------------------------------------------------
 
 -- DT 27. PDT 26. Total 53.
 -- I need to get Relic +3 head.
 sets.defense.DTdef = {
-    --main="Epeolatry",
+    main="Epeolatry",
     --sub="Refined Grip +1",
-    --sub="Utu Grip",
+    sub="Utu Grip",
     ammo="Staunch Tathlum +1",
-    head={ name="Fu. Bandeau +2", augments={'Enhances "Battuta" effect',}},
+    head={ name="Fu. Bandeau +3", augments={'Enhances "Battuta" effect',}},
     body="Runeist's Coat +3",
     hands="Runeist's Mitons +3",
     legs="Eri. Leg Guards +1",
@@ -127,9 +144,9 @@ sets.defense.DTdef = {
 -- DT 27. PDT 21. Total 48.
 -- Swaps out Relic +2 head for AF +3 head.  AF +3 head has more defense, VIT, and HP.
 sets.defense.DTdef.DTGrip = {
-    --main="Epeolatry",
+    main="Epeolatry",
     --sub="Refined Grip +1",
-    --sub="Utu Grip",    
+    sub="Utu Grip",    
     ammo="Staunch Tathlum +1",
     head="Rune. Bandeau +3",
     body="Runeist's Coat +3",
@@ -145,72 +162,72 @@ sets.defense.DTdef.DTGrip = {
     back={ name="Ogma's cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','VIT+10','Enmity+10',}},
 }
 
--- DT 33. PDT 18. Total 51.
--- I need to get Turms +1 hands and feet.
+-- DT 33 w/out grip. PDT 19. Total 52.
+-- When I got relic body +3, I took out Stanch Tathlum +1 for the Amar Cluster.
 sets.defense.Parry = {
     --main="Epeolatry",
     --sub="Refined Grip +1",
     --sub="Utu Grip",
-    ammo="Staunch Tathlum +1",
-    head={ name="Fu. Bandeau +2", augments={'Enhances "Battuta" effect',}},
-    body="Ayanmo Corazza +2",
-    hands="Turms Mittens",
+    --ammo="Staunch Tathlum +1",
+    ammo="Amar Cluster",
+    head={ name="Fu. Bandeau +3", augments={'Enhances "Battuta" effect',}},
+    body={ name="Futhark Coat +3", augments={'Enhances "Elemental Sforzo" effect',}},
+    hands="Turms Mittens +1",
     legs="Eri. Leg Guards +1",
-    feet="Turms Leggings",
+    feet="Turms Leggings +1",
     neck="Loricate Torque +1",
     waist="Flume Belt +1",
     left_ear="Impreg. Earring",
     right_ear="Genmei Earring",
     left_ring="Defending Ring",
     right_ring="Vocane Ring +1",
-    back={ name="Ogma's cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','VIT+10','Enmity+10',}},
+    back={ name="Ogma's cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','VIT+10','Enmity+10','DEF+50',}},
 }
 
--- DT 30. PDT 18. Total 48.
--- Swaps out Staunch Tahlum +1 for Amar Cluster.  The Amar Cluster has counter.
+-- Not quite sure what change, if anything.
 sets.defense.Parry.DTGrip = {
     --main="Epeolatry",
     --sub="Refined Grip +1",
     --sub="Utu Grip",
     ammo="Amar Cluster",
-    head={ name="Fu. Bandeau +2", augments={'Enhances "Battuta" effect',}},
-    body="Ayanmo Corazza +2",
-    hands="Turms Mittens",
+    head={ name="Fu. Bandeau +3", augments={'Enhances "Battuta" effect',}},
+    body={ name="Futhark Coat +3", augments={'Enhances "Elemental Sforzo" effect',}},
+    hands="Turms Mittens +1",
     legs="Eri. Leg Guards +1",
-    feet="Turms Leggings",
+    feet="Turms Leggings +1",
     neck="Loricate Torque +1",
     waist="Flume Belt +1",
     left_ear="Impreg. Earring",
     right_ear="Genmei Earring",
     left_ring="Defending Ring",
     right_ring="Vocane Ring +1",
-    back={ name="Ogma's cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','VIT+10','Enmity+10',}},
+    back={ name="Ogma's cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','VIT+10','Enmity+10','DEF+50',}},
 }
 
 
--- DT 38. PDT 13. Total 51.
--- Get better augments on Herc Gloves.
+-- DT 33. PDT 18. Total 51.
 sets.defense.Hybrid = {
     --main="Epeolatry",
     --sub="Refined Grip +1",
-    --sub="Utu Grip",    
+    --sub="Utu Grip",
     ammo="Yamarang",
     head="Aya. Zucchetto +2",
     body="Ayanmo Corazza +2",
-    hands={ name="Herculean Gloves", augments={'"Triple Atk."+4','"Fast Cast"+2','Mag. Acc.+5 "Mag.Atk.Bns."+5',}},
+    hands={ name="Adhemar Wrist. +1", augments={'STR+12','DEX+12','Attack+20',}},
     legs="Meg. Chausses +2",
     feet={ name="Herculean Boots", augments={'Accuracy+22 Attack+22','Damage taken-3%','Accuracy+5','Attack+6',}},
     neck="Loricate Torque +1",
-    waist="Ioskeha Belt",
+    waist="Ioskeha Belt +1",
     left_ear="Telos Earring",
-    right_ear="Mache Earring +1",
+    right_ear="Sherida Earring",
     left_ring="Defending Ring",
     right_ring="Moonlight Ring",
-    back={ name="Evasionist's Cape", augments={'Enmity+2','"Dbl.Atk."+3','Damage taken-5%',}},
+    back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 }
 
--- DT 38. PDT 11. Total 49.
--- Drops Herc Gloves for Adhemar Wristbands +1.
+
+-- DT 30. PDT 18. Total 48.
+-- Changes to different Herc Feet.  3 less DT.  More DD stats.
 sets.defense.Hybrid.DTGrip = {
     --main="Epeolatry",
     --sub="Refined Grip +1",
@@ -220,20 +237,19 @@ sets.defense.Hybrid.DTGrip = {
     body="Ayanmo Corazza +2",
     hands={ name="Adhemar Wrist. +1", augments={'STR+12','DEX+12','Attack+20',}},
     legs="Meg. Chausses +2",
-    feet={ name="Herculean Boots", augments={'Accuracy+22 Attack+22','Damage taken-3%','Accuracy+5','Attack+6',}},
+    feet={ name="Herculean Boots", augments={'"Drain" and "Aspir" potency +11','"Store TP"+4','Quadruple Attack +2','Accuracy+19 Attack+19',}},
     neck="Loricate Torque +1",
-    waist="Ioskeha Belt",
+    waist="Ioskeha Belt +1",
     left_ear="Telos Earring",
-    right_ear="Mache Earring +1",
+    right_ear="Sherida Earring",
     left_ring="Defending Ring",
     right_ring="Moonlight Ring",
-    back={ name="Evasionist's Cape", augments={'Enmity+2','"Dbl.Atk."+3','Damage taken-5%',}},
+    back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 }
 
--- Would be nice to get a rule where you don't lose max HP for fast cast when in this set.
--- get hp on fast cast body
 
 -- DT 34. PDT 18. Total 52.
+-- If I actually start using this set, then I need to make a rule for using the high HP fast cast set.
 sets.defense.DThp = {
     --main="Epeolatry",
     --sub="Refined Grip +1",
@@ -276,6 +292,7 @@ sets.defense.DThp.DTGrip = {
 
 sets.defense.MaxHP = {
     --main="Epeolatry",
+    --sub="Refined Grip +1",
     --sub="Utu Grip",
     ammo="Psilomene",
     head="Rune. Bandeau +3",
@@ -297,12 +314,13 @@ sets.defense.MaxHP = {
 sets.defense.MDT26 = {
     --main="Epeolatry",
     --sub="Refined Grip +1",
+    --sub="UTU Grip",
     ammo="Staunch Tathlum +1",
     head="Turms Cap",
     body="Turms Harness",
-    hands="Turms Mittens",
+    hands="Turms Mittens +1",
     legs="Turms Subligar",
-    feet="Turms Leggings",
+    feet="Turms Leggings +1",
     neck="Loricate Torque +1",
     waist="Flax Sash",
     left_ear="Etiolation Earring",
@@ -317,7 +335,7 @@ sets.defense.MDT26 = {
 sets.defense.MDT50 = {
     ammo="Staunch Tathlum +1",
     head="Aya. Zucchetto +2",
-    body={ name="Futhark Coat +1", augments={'Enhances "Elemental Sforzo" effect',}},
+    body={ name="Futhark Coat +3", augments={'Enhances "Elemental Sforzo" effect',}},
     hands="Aya. Manopolas +2",
     legs="Aya. Cosciales +2",
     feet="Aya. Gambieras +2",
@@ -335,9 +353,9 @@ sets.defense.meva = {
     ammo="Yamarang",
     head="Turms Cap",
     body="Turms Harness",
-    hands="Turms Mittens",
+    hands="Turms Mittens +1",
     legs="Turms Subligar",
-    feet="Turms Leggings",
+    feet="Turms Leggings +1",
     neck="Warder's Charm +1",
     waist="Engraved Belt",
     left_ear="Eabani Earring",
@@ -357,21 +375,22 @@ sets.defense.mevat = sets.defense.mevab
 
 
 -----------------------------------------------------
--- #PRECAST SECTION
+-- #Precast sets
 -----------------------------------------------------
 
--- Precast sets to enhance JAs
+-- [JOB ABILITY SETS] --
+
 sets.precast.JA['Vallation'] = set_combine(sets.enmity, {
     body="Runeist's coat +3",
-    legs="Futhark Trousers +1",
+    legs="Futhark Trousers +3",
 })
 sets.precast.JA['Valiance'] = sets.precast.JA['Vallation']
 sets.precast.JA['Pflug'] = set_combine(sets.enmity, {feet="Runeist's Boots +3"})
-sets.precast.JA['Elemental Sforzo'] = set_combine(sets.enmity, {body="Futhark Coat +1"})
-sets.precast.JA['Liement'] = set_combine(sets.enmity, {body="Futhark Coat +1"})
-sets.precast.JA['Battuta'] = set_combine(sets.enmity, {head="Futhark Bandeau +2"})
-sets.precast.JA['Swordplay'] = set_combine(sets.enmity, {hands="Futhark Mitons +1"})
-sets.precast.JA['Rayke'] = set_combine(sets.enmity, {feet="Futhark Boots +1"})
+sets.precast.JA['Elemental Sforzo'] = set_combine(sets.enmity, {body="Futhark Coat +3"})
+sets.precast.JA['Liement'] = set_combine(sets.enmity, {body="Futhark Coat +3"})
+sets.precast.JA['Battuta'] = set_combine(sets.enmity, {head="Futhark Bandeau +3"})
+sets.precast.JA['Swordplay'] = set_combine(sets.enmity, {hands="Futhark Mitons +3"})
+sets.precast.JA['Rayke'] = set_combine(sets.enmity, {feet="Futhark Boots +3"})
 sets.precast.JA['Gambit'] = set_combine(sets.enmity, {hands="Runeist's Mitons +3"})
 sets.precast.JA['Embolden'] = {back={ name="Evasionist's Cape", augments={'Enmity+2','"Embolden"+15','"Dbl.Atk."+3','Damage taken-3%',}}}
 
@@ -379,6 +398,8 @@ sets.precast.JA['Embolden'] = {back={ name="Evasionist's Cape", augments={'Enmit
 sets.precast.JA['One for All'] = sets.defense.MaxHP
 sets.precast.JA['Provoke'] = sets.enmity
 sets.precast.JA['Warcry'] =  sets.enmity
+
+-- I just threw a set together.  I could look into this more.
 sets.precast.JA['Vivacious Pulse'] = {
     ammo="Jukukik Feather",
     head="Erilaz Galea +1",
@@ -434,7 +455,9 @@ sets.precast.Step = {
     back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}},
 }	
 
--- Fast cast sets for spells
+
+-- [MAGIC FAST CAST SETS] --
+
 -- Total 63: ammo 2, head 14, neck 4, ear1 2, ear2 2, body 9, hands 8, ring1 4, ring2 2, legs 6, feet 8
 -- I kept Moonlight Cape on to keep up max HP.
 sets.precast.FC = {
@@ -454,7 +477,8 @@ sets.precast.FC = {
 }
 
 -- If i can get a 37+ HP augment on body that would be great.
--- I need a rule to use this set.  Also need to assign priority to the order of swaps.
+-- I don't currently use this set.  I would need to add a rule to use this set.
+-- I would also need to assign priority to the gear slots.
 sets.precast.FC.HighHP = {
     ammo="Sapience Orb",
     head="Rune. Bandeau +3",
@@ -472,13 +496,12 @@ sets.precast.FC.HighHP = {
 }
 
 sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, {body="Passion Jacket",neck="Magoraga Beads",})
-sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {waist="Siegel Sash",legs="Futhark Trousers +1"})	
+sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {waist="Siegel Sash",legs="Futhark Trousers +3"})	
 sets.precast.Cure = set_combine(sets.precast.FC, {ear2="Mendicant's Earring"})
 sets.precast.Curaga = sets.precast.Cure
        
------------------------------------------------------
--- #Weaponskill
------------------------------------------------------
+
+-- [WEAPONSKILL SETS] --
 
 sets.precast.WS = {
     ammo="Knobkierrie",
@@ -489,7 +512,7 @@ sets.precast.WS = {
     feet={ name="Herculean Boots", augments={'Accuracy+17','Weapon skill damage +4%','STR+7','Attack+15',}},
     neck="Fotia Gorget",
     waist="Fotia Belt",
-    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +25',}},
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Sherida Earring",
     left_ring="Niqmaddu Ring",
     right_ring="Regal Ring",
@@ -521,7 +544,7 @@ sets.precast.WS.Dimidiation = {
     feet={ name="Lustra. Leggings +1", augments={'HP+65','STR+15','DEX+15',}},
     neck="Caro Necklace",
     waist="Grunfeld Rope",
-    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +25',}},
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Sherida Earring",
     left_ring="Niqmaddu Ring",
     right_ring="Ilabrat Ring",
@@ -541,7 +564,7 @@ sets.precast.WS.Resolution = {
     feet="Meg. Jam. +2",
     neck="Fotia Gorget",
     waist="Fotia Belt",
-    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +25',}},
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Sherida Earring",
     --left_ring="Niqmaddu Ring",
     left_ring="Shukuyu Ring",
@@ -566,7 +589,7 @@ sets.precast.WS['Savage Blade'] = {
     feet={ name="Lustra. Leggings +1", augments={'HP+65','STR+15','DEX+15',}},
     neck="Caro Necklace",
     waist="Prosilio Belt +1",
-    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +25',}},
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Sherida Earring",
     left_ring="Niqmaddu Ring",
     right_ring="Regal Ring",
@@ -583,11 +606,29 @@ sets.precast.WS.Upheaval.Acc = sets.precast.WS.Acc
 
 sets.precast.WS['Full Break'] = sets.precast.WS.Resolution
 
+sets.precast.WS['Fell Cleave'] = {
+    ammo="Knobkierrie",
+    head={ name="Adhemar Bonnet +1", augments={'STR+12','DEX+12','Attack+20',}},
+    body={ name="Adhemar Jacket +1", augments={'STR+12','DEX+12','Attack+20',}},
+    --hands={ name="Adhemar Wrist. +1", augments={'STR+12','DEX+12','Attack+20',}},
+    hands="Meg. Gloves +2",
+    legs="Meg. Chausses +2",
+    feet="Meg. Jam. +2",
+    neck="Fotia Gorget",
+    waist="Fotia Belt",
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear="Sherida Earring",
+    --left_ring="Niqmaddu Ring",
+    left_ring="Shukuyu Ring",
+    right_ring="Regal Ring",
+    back={ name="Ogma's cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10',}},
+}
+
 sets.precast.MaxTP = {ear1="Ishvara Earring"}
 
 
 -----------------------------------------------------
--- #Midcast
+-- #Midcast sets
 -----------------------------------------------------
 
 sets.midcast.FastRecast = {
@@ -615,7 +656,7 @@ sets.midcast.Flash = {
     --legs="Aya. Cosciales +2",
     legs="Eri. Leg Guards +1",
     feet={ name="Carmine Greaves +1", augments={'Accuracy+12','DEX+12','MND+20',}},
-    neck="Unmoving Collar +1",
+    neck="Moonlight Necklace",
     waist="Goading Belt",
     left_ear="Trux Earring",
     right_ear="Cryptic Earring",
@@ -627,13 +668,13 @@ sets.midcast.Flash = {
 sets.midcast.Foil = set_combine(sets.midcast.Flash, {
     head="Erilaz Galea +1",
     ammo="Staunch Tathlum +1",
-    legs="Futhark Trousers +1",
+    legs="Futhark Trousers +3",
 })
 
 sets.midcast['Enhancing Magic'] = set_combine(sets.midcast.FastRecast, {
     head="Erilaz Galea +1",
     hands="Runeist's Mitons +3",
-    legs="Futhark Trousers +1",
+    legs="Futhark Trousers +3",
     waist="Olympus Sash",
     neck="Incanter's Torque",
     ear2="Andoaa Earring",
@@ -694,7 +735,7 @@ sets.midcast.Stoneskin = set_combine(sets.midcast.FastRecast,{neck="Stone Gorget
 -- Total damage reduction from phalanx 52: base 34 + gear 18
 sets.phalanx473 = {
     ammo="Staunch Tathlum +1",
-    head={ name="Fu. Bandeau +2", augments={'Enhances "Battuta" effect',}},
+    head={ name="Fu. Bandeau +3", augments={'Enhances "Battuta" effect',}},
     body={ name="Taeon Tabard", augments={'Evasion+24','Spell interruption rate down -10%','Phalanx +3',}},
     hands={ name="Taeon Gloves", augments={'Evasion+24','Spell interruption rate down -10%','Phalanx +3',}},
     legs={ name="Taeon Tights", augments={'Evasion+25','Spell interruption rate down -10%','Phalanx +3',}},
@@ -712,10 +753,10 @@ sets.phalanx473 = {
 -- Enhancing skill 445: base 440, ear1 5
 -- Gear phalanx bonus 18: head 6, body 3, hands 3, legs 3, feet 3
 -- Total damage reduction from phalanx 51: base 33 + gear 18
--- DT 33. PDT 11. Total 44. It could be 50 with a DT grip and vorseal buffs.
+-- DT 33. (DT 36 with DT 3 grip.)  PDT 11. Total 44 (47 with grip). It could be 50 vorseal effects.
 sets.phalanx445 = {
     ammo="Staunch Tathlum +1",
-    head={ name="Fu. Bandeau +2", augments={'Enhances "Battuta" effect',}},
+    head={ name="Fu. Bandeau +3", augments={'Enhances "Battuta" effect',}},
     body={ name="Taeon Tabard", augments={'Evasion+24','Spell interruption rate down -10%','Phalanx +3',}},
     hands={ name="Taeon Gloves", augments={'Evasion+24','Spell interruption rate down -10%','Phalanx +3',}},
     legs={ name="Taeon Tights", augments={'Evasion+25','Spell interruption rate down -10%','Phalanx +3',}},
@@ -766,14 +807,14 @@ sets.midcast.Regen = {
     ammo="Staunch Tathlum +1",
     neck="Incanter's Torque",
     head="Rune. Bandeau +3",
-    legs="Futhark Trousers +1"
+    legs="Futhark Trousers +3"
 }
 	
 sets.midcast.Protect = {
     ammo="Staunch Tathlum +1",
     head="Erilaz Galea +1",
     neck="Incanter's Torque",
-    legs="Futhark Trousers +1",
+    legs="Futhark Trousers +3",
     ring1="Sheltered Ring"
 }
 	
@@ -781,6 +822,10 @@ sets.midcast.Shell = sets.midcast.Protect
 sets.midcast.Cursade = sets.midcast.DTdef
 
 sets.midcast['Blue Magic'] = sets.midcast.Flash
+sets.midcast['Sheep Song'] = sets.sir
+sets.midcast['Geist Wall'] = sets.sir
+sets.midcast['Soporific'] = sets.sir
+sets.midcast['Stinking Gas'] = sets.sir
 sets.midcast.Cocoon = sets.defense.DTdef	
 sets.midcast['Healing Breeze'] = sets.midcast.Cure
 sets.midcast['Wild Carrot'] = sets.midcast.Cure
@@ -799,7 +844,7 @@ sets.idle.Refresh = {
     body="Runeist's Coat +3",
     hands={ name="Herculean Gloves", augments={'Pet: "Store TP"+2','Enmity-2','"Refresh"+2','Accuracy+4 Attack+4',}},
     legs={ name="Rawhide Trousers", augments={'MP+50','"Fast Cast"+5','"Refresh"+1',}},
-    feet={ name="Herculean Boots", augments={'Attack+7','"Refresh"+1','Accuracy+9 Attack+9',}},
+    feet={ name="Herculean Boots", augments={'"Dual Wield"+3','Crit. hit damage +1%','"Refresh"+2',}},
     neck="Bathy Choker +1",
     waist="Flume Belt +1",
     left_ear="Impreg. Earring",
@@ -815,9 +860,9 @@ sets.idle.Regen = {
     ammo="Homiliary",
     head="Turms Cap",
     body="Turms Harness",
-    hands="Turms Mittens",
+    hands="Turms Mittens +1",
     legs="Turms Subligar",
-    feet="Turms Leggings",
+    feet="Turms Leggings +1",
     neck="Bathy Choker +1",
     waist="Flume Belt +1",
     left_ear="Etiolation Earring",
@@ -879,5 +924,12 @@ sets.engaged.Acc.DD = sets.engaged.Acc
 sets.engaged.Acc.Hybrid = sets.defense.Hybrid
 sets.engaged.Acc.Parry = sets.defense.Parry
 
+-- DD100 is the DD set with Turms Mittens +1.  For that 100HP per parry.
+sets.engaged.DDt = set_combine(sets.engaged.DD, {hands="Turms Mittens +1"})
+sets.engaged.Acc.DD100 = set_combine(sets.engaged.Acc, {hands="Turms Mittens +1"})
+
+-- DD100parry has the Turms Mittens +1 and the Inquartata legs and feet.  For extra parry.
+sets.engaged.DD100parry = set_combine(sets.engaged, {hands="Turms Mittens +1",legs="Eri. Leg Guards +1",feet="Turms Leggings +1"})
+sets.engaged.Acc.DD100parry = set_combine(sets.engaged, {hands="Turms Mittens +1",legs="Eri. Leg Guards +1",feet="Turms Leggings +1"})
 
 end
