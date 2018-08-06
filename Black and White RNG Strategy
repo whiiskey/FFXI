@@ -1,42 +1,33 @@
-HATE CONTROL
-The biggest problem with RNG strategy on this fight is hate control.
-Do everything possible to manage hate!
+BLACK AND WHITE -- RNG style
+People say RNG setup is harder than SMN setup.  I guess I like a challenge.
 
-GEO/WHM
-Keep up haste on the tank.
-Erase the tank so the WHM can focus on cures.
-Erase song debuffs, especially Massacre Elegy.
-Entrust-Haste the Tank so they can spam hate spells.
+REFERENCES
+Comeatmebro post: https://www.ffxiah.com/forum/topic/49748/master-trial-black-and-white/
+Verda video: https://youtu.be/pXrRJkl6uAs
 
-WHM
-Keep cureskin up on the tank as much as possible.
-Damage on the tank causes hate loss.  Cureskin prevents damage!
-
-RNG
-Use Annihilator for the gun and Coronach for the WS.
-Get Enmimty -50 in your midshot and WS sets.  This is the max.
-Get enmity -5 in merits for this fight.
-Coronach aftermath is enmity -25.
-You need -20 in gear.
-I can't look at gear right now.  But from memory, possible gear choices include:
-Relic head, artifact body, axe/dagger, ennervating earring.
-Use Decoy shot whenever possible.
-
-COR
-Is there a problem with COR pulling hate?  I don't know, we'll have to find out.
-
-RUN
-Reduce damage taken as much as possible.  Make enmity as high as possible.
-Get enmity +5 in merits for this fight.
-Consider 5/5 Battuta and 5/5 Inspiration.  The Inspiration will give 50% fast cast which will help with spamming hate spells.
-I normally do 4/5 Inspiration and 1/5 Rayyke.  But if Rayke is not needed in this fight, might as well 5/5 Inspiration.
-Precast set: cap DT and fast cast.  If 4/5 or 5/5 Inspiration, only need 40 or 30 fast cast in gear.
-Midcast set for Foil/Flash/etc: cap DT, balance enmity+ and fast cast.
-Defense set: For the first mob, have a magic defense focused defense set: capped DT and as much magic defense as possible.
+The two hardest mobs are the first one (Helwige) and the last one (Odin).  The rest aren't bad.
 
 HELMWIGE: SURVIVING THE FIRST MOB
-This mob loves to spam AOE nukes and magic WS and physical WS.
-We couldn't kill this mob on the first 5 attempts because the RUN couldn't hold hate.
-So our new goal is kill it as fast as possible while RUN keeps hate.
-GEO: Bolster Indi-Fury, Geo-Frailty, Entrust-Haste
-COR: Magus roll on RUN, crooked Sam Roll on RNG.  I don't know if Chaos Roll.
+After 5 tries, we got this down.
+RNG use Annihilator/Coronach, Decoy Shot.
+RUN put lots of effort into good positioning of mobs.
+RUN get as much hate as fast as possible.  Minimize magic damage taken in order to minimzie hate loss.
+Elemental Sforzo works great for this.  I opened with this and follow up with One for All
+
+ODIN: TRYING TO DIE LESS
+Odin loves to go on a death rampage.
+Mistake: 
+Mistakes: Formalhaut on Odin.  Don't do it.  Use Annihilator/Coronach.
+
+ODIN KO MOVES
+KO move #1: Shin Zantetsukin.  Reraise blocks this, but you still take ~1000 magic damage.  20' AOE around Odin.  Stay back 21'+.
+KO move #2: Zantetsukin Jin.  A single shadow blocks this.  You don't take any damage.  Conal.  Very narrow cone, very long range.
+We have survived KO move #1 but not KO move #2.
+
+SURVIVING ZANTETSUKIN JIN
+Odin will use this move after 50%.  On the Verda video it was at 47%.  With us it was also at about 47%.
+We see this move on the Verda video at 59:25.  Everyone survived the move.
+RUN and GEO used a blink shadow.  RNGs used Utsusemi.  WHM and COR were outside of the cone.
+The range is very long, at least 33'.  It might be 40' or 50'.
+
+RECOVERING FROM A WIPE
