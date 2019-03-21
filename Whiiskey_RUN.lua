@@ -176,12 +176,14 @@ function user_setup()
     state.Runes = M{['description']='Runes', "Lux","Tenebrae","Ignis","Unda","Sulpor","Tellus","Flabra","Gelus"}
     state.OffenseMode:options('Normal','Acc')
     state.RangedMode:options('Normal')
-    state.HybridMode:options('DTdef','Hybrid','Parry','DD')
+    state.HybridMode:options('DTdef','Parry','Hybrid','DD')
     state.WeaponskillMode:options('Normal','Acc')
     state.CastingMode:options('Normal')
     state.IdleMode:options('DTdef','Regen','Refresh')
+    --state.IdleMode:options('DTdef')
     state.RestingMode:options('Normal')
-    state.PhysicalDefenseMode:options('DTdef','Parry','Hybrid')
+    --state.PhysicalDefenseMode:options('DTdef','Parry','Hybrid')
+    state.PhysicalDefenseMode:options('DTdef','Parry')
     state.MagicalDefenseMode:options('MDT26','MDT50','meva')
 	
     -- This is used to check for weapons in the off-hand.  I don't use it and will eventually delete it.
@@ -194,6 +196,10 @@ function user_setup()
     send_command('bind !- gs c rune')
     send_command('bind ^- gs c cycle Runes')
     send_command('bind ^= gs c cycle treasuremode')
+    send_command('bind end gs c nuke run1')
+    --send_command('bind end gs c nuke runnin')
+    send_command('bind home gs c buffme run')
+    --send_command('bind home gs c buffme run2')
     
     select_default_macro_book()
 
@@ -213,6 +219,9 @@ function file_unload()
 	send_command('unbind !-')
 	send_command('unbind ^-')
 	send_command('unbind ^=')
+	send_command('unbind end')
+	send_command('unbind home')
+
 	
 end
 
@@ -337,7 +346,7 @@ function customize_idle_set(idleSet)
             idleSet = sets.defense.DTdef.DTGrip
         end
         if player.equipment.sub == "Refined Grip +1" and buffactive.Vorseal then
-            add_to_chat(8,'Vorseal active!  Use Utu grip!')
+            --add_to_chat(8,'Vorseal active!  Use Utu grip!')
         end
     end
 
@@ -487,7 +496,7 @@ function display_current_job_state(eventArgs)
     --msg = msg .. ',  TH: ' .. state.TreasureMode.value
 
     add_to_chat(123, msg)
-
+    send_command("input /lockstyleset 1")
     eventArgs.handled = true
 end
 
